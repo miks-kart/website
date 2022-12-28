@@ -38,9 +38,9 @@ socials:
       link: https://www.youtube.com/channel/UCt0kFkM1WTyPwL-01TXX4uA
 contacts:
   - subitem:
-      text: +7 495 123 4567
-      link: tel:+74951234567
+      text: +7 926 244 70 83
+      link: tel:+79262447083
   - subitem:
-      text: hello@miks.kart
-      link: mailto:hello@miks.kart
+      text: manager@miks-kart.ru
+      link: mailto:manager@miks-kart.ru
 ---
