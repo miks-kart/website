@@ -1,0 +1,379 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-dark: #1e1e1e;
+    --primary-red: #e20912;
+    --primary-red-hover: #ff000b;
+    --primary-red-active: #cb050d;
+    --primary-gray: #d9d9d9;
+    --primary-gray-dark: #a5a5a5;
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+  text-rendering: optimizeLegibility;
+}
+
+strong {
+  font-weight: 700;
+}
+
+html,
+body {
+  /* scroll-behavior: smooth; */
+  scroll-padding-top: 10.375rem;
+}
+
+/* Font Declaration */
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-Black.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-Black.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-BlackItalic.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-BlackItalic.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-Bold.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-Bold.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-BoldItalic.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-BoldItalic.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-ExtraThin.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-ExtraThin.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-ExtraThin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-ExtraThinItalic.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-ExtraThinItalic.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-ExtraThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-Light.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-Light.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-LightItalic.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-LightItalic.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-Medium.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-Medium.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-MediumItalic.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-MediumItalic.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-Regular.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-Regular.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-Italic.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-Italic.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-Thin.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-Thin.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PFDinDisplayPro";
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/PFDinDisplayPro-ThinItalic.woff2") format("woff2"),
+    url("../fonts/PFDinDisplayPro-ThinItalic.woff") format("woff"),
+    url("../fonts/PFDinDisplayPro-ThinItalic.ttf") format("truetype");
+}
+
+/* Font Declaration */
+
+::selection {
+  background: var(--primary-red);
+  color: white;
+  text-shadow: none;
+}
+
+/* Classes */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.narrow-text-mobile li {
+}
+.li {
+  list-style-image: url("/images/bullet.svg");
+  @apply pr-3 -mr-3;
+}
+
+.theme-border {
+  border: 1px solid #f6f6f6;
+}
+
+.theme-button {
+  @apply relative py-[0.9375rem] text-sm font-bold text-center text-white skew-x-[-8deg] bg-primary-red active:bg-primary-red-active hover:bg-primary-red-hover focus:bg-primary-red-hover px-[3.25rem] w-[11.2rem] inline-block duration-150;
+}
+.theme-button span {
+  @apply skew-x-[8deg] inline-block;
+}
+.text-leader strong {
+  @apply font-bold uppercase text-primary-red;
+}
+.theme-subheading {
+  @apply pb-5 text-xl italic font-bold uppercase whitespace-pre-line md:text-4xl text-primary-dark md:pb-7;
+}
+.theme-heading {
+  @apply pb-5 text-3xl italic font-bold leading-tight uppercase whitespace-pre-line md:text-6xl text-primary-dark;
+}
+.theme-heading-small {
+  @apply text-2xl font-bold uppercase whitespace-pre-line text-primary-dark;
+}
+.theme-text {
+  @apply text-base font-light whitespace-pre-line;
+}
+.nav-link {
+  @apply text-white hover:text-white active:text-white focus:text-white;
+}
+footer .nav-link {
+  @apply text-primary-gray-dark;
+}
+.nav-link.nav-active {
+  @apply text-white;
+}
+.nav-link.nav-dark {
+  @apply hover:text-primary-dark active:text-primary-dark focus:text-primary-dark text-primary-gray-dark;
+}
+.nav-link.nav-dark.nav-active {
+  @apply text-primary-dark;
+}
+.nav-icon {
+  @apply hover:fill-white active:fill-white focus:fill-white fill-white;
+}
+footer .nav-icon {
+  @apply fill-primary-gray-dark;
+}
+.nav-icon.nav-active {
+  @apply fill-white;
+}
+.nav-icon.nav-dark {
+  @apply hover:fill-primary-dark active:fill-primary-dark focus:fill-primary-dark fill-primary-gray-dark;
+}
+.nav-icon.nav-dark.nav-active {
+  @apply fill-primary-dark;
+}
+.page-container {
+  width: 90%;
+  max-width: 62.25rem;
+  @apply pt-10 md:pt-32 md:pb-40 pb-16 mx-auto space-y-10 md:space-y-[7.5rem];
+}
+.page-container.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+.header-height {
+  height: 5.625rem;
+}
+.\!whitespace-initial {
+  white-space: initial !important;
+}
+.default-container {
+  @apply mx-auto max-w-[62.25rem];
+}
+.narrow-container {
+  @apply mx-auto max-w-[36.875rem];
+}
+.narrow-container-margin {
+  width: max(2.5vw, calc((100vw - 62.25rem) / 2));
+  /* width: calc(110vw + min(calc(100vw * 0.9), calc(100vw - 62.25rem))); */
+  /* max-width: calc(120rem + min(calc(100vw * 0.9), calc(100vw - 62.25rem))); */
+  /* min-width: 150vw; */
+}
+.markdown-pre-line p {
+  @apply whitespace-pre-line;
+}
+.narrow-text-mobile ul {
+  max-width: 15.2rem;
+}
+/* .markdown-text {
+  @apply space-y-3;
+} */
+.markdown-text a {
+  @apply underline underline-offset-2;
+}
+.markdown-text.narrow-text-mobile ul {
+  list-style: outside url("/images/Group 493 copy.svg");
+  margin-left: 1.5rem;
+  padding-right: 1rem;
+}
+.markdown-text.narrow-text-mobile ul:first-of-type {
+  list-style-image: url("/images/Group 493.svg");
+}
+
+.prose:first-child {
+  margin-top: 0 !important;
+}
+.prose a {
+  font-weight: inherit !important;
+}
+
+#modal .prose :is(:where(h1, h2, h3, h4, h5, h6, th):first-child) {
+  margin-top: 0rem;
+}
+
+.theme-border-red,
+.theme-border-gray {
+  position: relative;
+}
+.theme-border-gray::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.0625rem solid #f6f6f6;
+  border-bottom: none;
+}
+.theme-border-red::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.125rem solid var(--primary-red);
+}
+.hover-theme-border-red:hover {
+  @apply duration-200 cursor-pointer theme-border-red;
+}
+.page-container.wide {
+  max-width: 75rem;
+}
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .group-hover-custom\:text-primary-dark {
+    color: var(--primary-dark);
+  }
+  .group:hover .group-hover-custom\:opacity-0 {
+    opacity: 0;
+  }
+  .group:hover .group-hover-custom\:opacity-100 {
+    opacity: 1;
+  }
+}
+@media (focus: focus) and (pointer: fine) {
+  .group:focus .group-focus-custom\:text-primary-dark {
+    color: var(--primary-dark);
+  }
+  .group:focus .group-focus-custom\:opacity-0 {
+    opacity: 0;
+  }
+  .group:focus .group-focus-custom\:opacity-100 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .header-height {
+    height: 4.375rem;
+  }
+  .page-container.full-width,
+  .page-container {
+    width: 95%;
+  }
+  .narrow-text-mobile ul {
+    max-width: none;
+  }
+}
+@media (min-width: 1280px) {
+  .page-container.full-width,
+  .page-container {
+    width: 90%;
+  }
+}

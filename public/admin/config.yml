@@ -1,0 +1,1480 @@
+backend:
+  name: git-gateway
+  repo: vradionovskii/miks
+  branch: main
+media_folder: public/images
+public_folder: /images
+locale: ru
+show_preview_links: false
+collections:
+  - name: seo
+    label: Конфигурация
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: SEO
+        name: siteSeo
+        file: cms/config/ru/seo.md
+        fields:
+          - label: URL
+            name: URL
+            widget: string
+          - label: Титул сайта
+            name: siteTitle
+            widget: string
+          - label: Описание сайта
+            name: siteDescription
+            widget: text
+          - label: Превью
+            name: socialCover
+            widget: image
+          - label: Ключевые слова
+            name: keywords
+            widget: text
+      - label: Шапка
+        name: header
+        file: cms/config/ru/header.md
+        fields:
+          - label: Лого Черное
+            name: logoDark
+            widget: image
+          - label: Лого Белое
+            name: logoLight
+            widget: image
+          - label: Навигация
+            name: links
+            widget: list
+            summary: "{{fields.links.item}}"
+            field:
+              label: Страница
+              name: item
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Социальные сети
+            name: socials
+            widget: list
+            summary: "{{fields.socials.social}}"
+            field:
+              label: Соц. сеть
+              name: social
+              widget: object
+              fields:
+                - label: Иконка
+                  name: icon
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Контакты
+            name: contacts
+            widget: list
+            summary: "{{fields.contacts.subitem}}"
+            field:
+              label: Контакт
+              name: subitem
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+      - label: Подвал
+        name: footer
+        file: cms/config/ru/footer.md
+        fields:
+          - label: Лого
+            name: logo
+            widget: image
+          - label: Навигация
+            name: links
+            widget: list
+            summary: "{{fields.links.item}}"
+            field:
+              label: Страница
+              name: item
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+                - label: Подменю
+                  name: sublinks
+                  required: false
+                  widget: list
+                  summary: "{{fields.sublinks.subitem}}"
+                  field:
+                    label: Контакт
+                    name: subitem
+                    widget: object
+                    fields:
+                      - label: Текст
+                        name: text
+                        widget: string
+                      - label: Ссылка
+                        name: link
+                        widget: string
+          - label: Социальные сети
+            name: socials
+            widget: list
+            summary: "{{fields.socials.social}}"
+            field:
+              label: Соц. сеть
+              name: social
+              widget: object
+              fields:
+                - label: Иконка
+                  name: icon
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+      - label: Форма обратной связи
+        name: contactForm
+        file: cms/config/ru/contactForm.md
+        fields:
+          - label: Имя
+            name: name
+            widget: string
+          - label: Email
+            name: email
+            widget: string
+          - label: Телефон
+            name: phone
+            widget: string
+          - label: Сообщение
+            name: message
+            widget: string
+          - label: Кнопка
+            name: button
+            widget: object
+            fields:
+              - label: Текст
+                name: default
+                widget: string
+              - label: Отправка
+                name: sending
+                widget: string
+              - label: Отправлено
+                name: sent
+                widget: string
+              - label: Ошибка
+                name: error
+                widget: string
+      - label: Форма покупки
+        name: contactSale
+        file: cms/config/ru/contactSale.md
+        fields:
+          - label: Заголовок
+            name: heading
+            widget: string
+          - label: Текст
+            name: text
+            widget: text
+          - label: Имя
+            name: name
+            widget: string
+          - label: Email
+            name: email
+            widget: string
+          - label: Телефон
+            name: phone
+            widget: string
+          - label: Кнопка
+            name: button
+            widget: object
+            fields:
+              - label: Текст
+                name: default
+                widget: string
+              - label: Отправка
+                name: sending
+                widget: string
+              - label: Отправлено
+                name: sent
+                widget: string
+              - label: Ошибка
+                name: error
+                widget: string
+  - label: Страницы
+    name: pages
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: Главная
+        name: homepage
+        file: cms/pages/ru/homepage.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Видео
+            name: heroVideo
+            widget: object
+            fields:
+              - label: Видео
+                name: video
+                widget: file
+              - label: Заглушка
+                name: placeholder
+                widget: image
+          - label: Заголовок 1
+            name: headingOne
+            widget: text
+          - label: Заявление 1
+            name: statementOne
+            widget: markdown
+          - label: Заявление 2
+            name: statementTwo
+            widget: markdown
+          - label: Лого Сколково
+            name: skolkovoLogo
+            widget: image
+          - label: Текст 1
+            name: textOne
+            widget: text
+          - label: Кнопка 1
+            name: buttonOne
+            widget: object
+            fields:
+              - label: Текст
+                name: text
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+          - label: Изображение 1
+            name: imageOne
+            widget: image
+          - label: Заголовок 2
+            name: headingTwo
+            widget: string
+          - label: Текст 2
+            name: textTwo
+            widget: markdown
+          - label: Кнопка 2
+            name: buttonTwo
+            widget: object
+            fields:
+              - label: Текст
+                name: text
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+          - label: Тест-драйв
+            name: testdrive
+            widget: object
+            fields:
+              - label: Обложка
+                name: image
+                widget: image
+              - label: Заголовок
+                name: heading
+                widget: text
+              - label: Текст
+                name: text
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+          - label: Заголовок 3
+            name: headingThree
+            widget: string
+          - label: Приоритеты
+            name: priorities
+            widget: list
+            summary: "{{fields.priorities.item}}"
+            field:
+              label: Приоритет
+              name: item
+              widget: object
+              fields:
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Изображение 2
+            name: imageTwo
+            widget: image
+          - label: Заголовок 4
+            name: headingFour
+            widget: string
+          - label: Текст 3
+            name: textThree
+            widget: text
+          - label: Кнопка 3
+            name: buttonThree
+            widget: object
+            fields:
+              - label: Текст
+                name: text
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+          - label: Заголовок Формы
+            name: headingForm
+            widget: string
+          - label: Текст Формы
+            name: textForm
+            widget: string
+          - label: Лого
+            name: logo
+            widget: image
+      - label: '404'
+        name: '404'
+        file: cms/pages/ru/404.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Текст
+            name: textOne
+            widget: text
+      - label: О Компании
+        name: about
+        file: cms/pages/ru/about.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Якорные ссылки
+            name: headerAnchors
+            widget: list
+            summary: "{{fields.headerAnchors.anchor}}"
+            field:
+              label: Ссылка
+              name: anchor
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Галерея
+            name: gallery
+            widget: list
+            summary: '{{fields.gallery.image}}'
+            field:
+              label: Изображение
+              name: image
+              widget: image
+          - label: Якорная ссылка 1
+            name: headingOneId
+            widget: string
+          - label: Заголовок 1
+            name: headingOne
+            widget: text
+          - label: Текст 1
+            name: textOne
+            widget: text
+          - label: Текст 2
+            name: textTwo
+            widget: text
+          - label: Лого Сколково
+            name: skolkovoLogo
+            widget: image
+          - label: Достижения
+            name: points
+            widget: list
+            summary: "{{fields.points.point}}"
+            field:
+              label: Достижение
+              name: point
+              widget: object
+              fields:
+                - label: Заголовок
+                  name: heading
+                  widget: markdown
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Якорная ссылка 2
+            name: headingTwoId
+            widget: string
+          - label: Заголовок 2
+            name: headingTwo
+            widget: string
+          - label: Модели
+            name: models
+            widget: list
+            summary: "{{fields.models.model}}"
+            field:
+              label: Модель
+              name: model
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Название
+                  name: name
+                  widget: string
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Тизер
+            name: teaser
+            widget: object
+            fields:
+              - label: Текст 1
+                name: one
+                widget: text
+              - label: Текст 2
+                name: two
+                widget: text
+              - label: Текст 3
+                name: three
+                widget: text
+              - label: Текст 4
+                name: four
+                widget: text
+              - label: Текст 5
+                name: five
+                widget: text
+              - label: Текст 6
+                name: six
+                widget: text
+              - label: Текст 7
+                name: seven
+                widget: text
+          - label: Якорная ссылка 3
+            name: headingThreeId
+            widget: string
+          - label: Заголовок 3
+            name: headingThree
+            widget: text
+          - label: Текст 4
+            name: textFour
+            widget: text
+          - label: Поддержка
+            name: pointsTwo
+            widget: list
+            summary: "{{fields.pointsTwo.point}}"
+            field:
+              label: Утверждение
+              name: point
+              widget: object
+              fields:
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок 4
+            name: headingFour
+            widget: string
+          - label: Заголовок 5
+            name: headingFive
+            widget: text
+          - label: Кнопка
+            name: buttonOne
+            widget: object
+            fields:
+              - label: Текст
+                name: text
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+      - label: Карт Юниор
+        name: cart-junior
+        file: cms/pages/ru/cart-junior.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Якорные ссылки
+            name: headerAnchors
+            widget: list
+            summary: "{{fields.headerAnchors.anchor}}"
+            field:
+              label: Ссылка
+              name: anchor
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Галерея
+            name: gallery
+            widget: list
+            summary: '{{fields.gallery.image}}'
+            field:
+              label: Изображение
+              name: image
+              widget: image
+          - label: Заголовок 1
+            name: headingOne
+            widget: string
+          - label: Текст 1
+            name: textOne
+            widget: text
+          - label: Текст 2
+            name: textTwo
+            widget: text
+          - label: Заголовок 2
+            name: headingTwo
+            widget: string
+          - label: Текст 3
+            name: textThree
+            widget: markdown
+          - label: Изображение 1
+            name: imageOne
+            widget: image
+          - label: Изображение 2
+            name: imageTwo
+            widget: image
+          - label: Карт
+            name: kart
+            widget: object
+            fields:
+              - label: Заголовок
+                name: headingSimple
+                widget: string
+              - label: Цена
+                name: price
+                widget: string
+          - label: Возможности
+            name: features
+            widget: list
+            summary: "{{fields.features.feature}}"
+            field:
+              label: Возможность
+              name: feature
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок 3
+            name: headingThree
+            widget: string
+          - label: Вы выбрали
+            name: youHaveChosen
+            widget: string
+          - label: Ничего не выбрано
+            name: youHaventChosen
+            widget: string
+          - label: Заголовок базовой комплектации
+            name: baseHeading
+            widget: string
+          - label: Подзаголовок базовой комплектации
+            name: baseSubText
+            widget: string
+          - label: Базовая комплектация
+            name: base
+            widget: list
+            summary: "{{fields.base.item}}"
+            field:
+              label: Опция
+              name: item
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок Двигателя
+            name: engineHeading
+            widget: string
+          - label: Двигатели
+            name: engines
+            widget: list
+            summary: "{{fields.engines.item}}"
+            field:
+              label: Двигатель
+              name: item
+              widget: object
+              fields:
+                - label: Заголовок с выделением
+                  name: heading
+                  widget: markdown
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Заголовок Шины
+            name: tiresHeading
+            widget: string
+          - label: Шины
+            name: tires
+            widget: list
+            summary: "{{fields.tires.item}}"
+            field:
+              label: Шины
+              name: item
+              widget: object
+              fields:
+                - label: Заголовок с выделением
+                  name: heading
+                  widget: markdown
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Заголовок Дополнительных опций
+            name: optionsHeading
+            widget: string
+          - label: Дополнительные опции
+            name: options
+            widget: list
+            summary: "{{fields.item.name}}"
+            field:
+              label: Опция
+              name: item
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Стоимость
+            name: summary
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: string
+              - label: Карт
+                name: kart
+                widget: string
+              - label: Двигатель
+                name: engine
+                widget: string
+              - label: Шины
+                name: tire
+                widget: string
+              - label: Дополнительные опции
+                name: extras
+                widget: string
+              - label: Итого
+                name: total
+                widget: string
+              - label: Кнопка
+                name: buy
+                widget: string
+      - label: Карт Спорт
+        name: cart-sport
+        file: cms/pages/ru/cart-sport.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Якорные ссылки
+            name: headerAnchors
+            widget: list
+            summary: "{{fields.headerAnchors.anchor}}"
+            field:
+              label: Ссылка
+              name: anchor
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Галерея
+            name: gallery
+            widget: list
+            summary: '{{fields.gallery.image}}'
+            field:
+              label: Изображение
+              name: image
+              widget: image
+          - label: Заголовок 1
+            name: headingOne
+            widget: string
+          - label: Текст 1
+            name: textOne
+            widget: text
+          - label: Текст 2
+            name: textTwo
+            widget: text
+          - label: Заголовок 2
+            name: headingTwo
+            widget: string
+          - label: Текст 3
+            name: textThree
+            widget: markdown
+          - label: Изображение 1
+            name: imageOne
+            widget: image
+          - label: Изображение 2
+            name: imageTwo
+            widget: image
+          - label: Карт
+            name: kart
+            widget: object
+            fields:
+              - label: Заголовок
+                name: headingSimple
+                widget: string
+              - label: Цена
+                name: price
+                widget: string
+          - label: Возможности
+            name: features
+            widget: list
+            summary: "{{fields.features.feature}}"
+            field:
+              label: Возможность
+              name: feature
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок 3
+            name: headingThree
+            widget: string
+          - label: Вы выбрали
+            name: youHaveChosen
+            widget: string
+          - label: Ничего не выбрано
+            name: youHaventChosen
+            widget: string
+          - label: Заголовок базовой комплектации
+            name: baseHeading
+            widget: string
+          - label: Подзаголовок базовой комплектации
+            name: baseSubText
+            widget: string
+          - label: Базовая комплектация
+            name: base
+            widget: list
+            summary: "{{fields.base.item}}"
+            field:
+              label: Опция
+              name: item
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок Двигателя
+            name: engineHeading
+            widget: string
+          - label: Двигатели
+            name: engines
+            widget: list
+            summary: "{{fields.engines.item}}"
+            field:
+              label: Двигатель
+              name: item
+              widget: object
+              fields:
+                - label: Заголовок с выделением
+                  name: heading
+                  widget: markdown
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Заголовок Дополнительных опций
+            name: optionsHeading
+            widget: string
+          - label: Дополнительные опции
+            name: options
+            widget: list
+            summary: "{{fields.options.item}}"
+            field:
+              label: Опция
+              name: item
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Стоимость
+            name: summary
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: string
+              - label: Карт
+                name: kart
+                widget: string
+              - label: Двигатель
+                name: engine
+                widget: string
+              - label: Шины
+                name: tire
+                widget: string
+              - label: Дополнительные опции
+                name: extras
+                widget: string
+              - label: Итого
+                name: total
+                widget: string
+              - label: Кнопка
+                name: buy
+                widget: string
+      - label: Карты
+        name: carts
+        file: cms/pages/ru/carts.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Карты
+            name: carts
+            widget: list
+            summary: "{{fields.carts.cart}}"
+            field:
+              label: Карт
+              name: cart
+              widget: object
+              fields:
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+                - label: Изображение
+                  name: image
+                  widget: image
+          - label: Изображение
+            name: imageOne
+            widget: image
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Текст
+            name: textOne
+            widget: string
+          - label: Кнопка
+            name: buttonOne
+            widget: object
+            fields:
+              - label: Текст
+                name: text
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+      - label: Контакты
+        name: contacts
+        file: cms/pages/ru/contacts.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Контакты
+            name: points
+            widget: list
+            summary: "{{fields.points.point}}"
+            field:
+              label: Контакт
+              name: point
+              widget: object
+              fields:
+                - label: Иконка
+                  name: icon
+                  widget: image
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: string
+          - label: Заголовок формы
+            name: headingForm
+            widget: string
+          - label: Текст формы
+            name: textForm
+            widget: text
+      - label: Франшиза
+        name: franchise
+        file: cms/pages/ru/franchise.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Текст
+            name: textOne
+            widget: text
+          - label: Пункты
+            name: points
+            widget: list
+            summary: "{{fields.points.point}}"
+            field:
+              label: Пункт
+              name: point
+              widget: object
+              fields:
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: string
+          - label: Заголовок формы
+            name: headingForm
+            widget: string
+          - label: Текст формы
+            name: textForm
+            widget: text
+      - label: Цены
+        name: price-list
+        file: cms/pages/ru/price-list.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Заголовок 1
+            name: headingOne
+            widget: string
+          - label: Заголовок 2
+            name: headingTwo
+            widget: string
+          - label: Вы не выбрали
+            name: youHaventChosen
+            widget: string
+          - label: Якорьные ссылки
+            name: headerAnchors
+            widget: list
+            summary: "{{fields.headerAnchors.anchor}}"
+            field:
+              label: Якорьная ссылка
+              name: anchor
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Якорьная ссылка 1
+            name: baseCartsId
+            widget: string
+          - label: Прокатные карты 
+            name: baseCarts
+            widget: list
+            summary: "{{fields.baseCarts.item}}"
+            field:
+              label: Карт
+              name: item
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Заголовок 3
+            name: headingThree
+            widget: string
+          # - label: Якорьная ссылка 2
+          #   name: sportCartsId
+          #   widget: string
+          # - label: Спортивные карты
+          #   name: sportCarts
+          #   widget: list
+          #   summary: "{{fields.sportCarts.item}}"
+          #   field:
+          #     label: Карт
+          #     name: item
+          #     widget: object
+          #     fields:
+          #       - label: Изображение
+          #         name: image
+          #         widget: image
+          #       - label: Заголовок
+          #         name: headingSimple
+          #         widget: string
+          #       - label: Цена
+          #         name: price
+          #         widget: string
+          - label: Заголовок 4
+            name: headingFive
+            widget: string
+          - label: Якорьная ссылка 2
+            name: enginesId
+            widget: string
+          - label: Двигатели
+            name: engines
+            widget: list
+            summary: "{{fields.engines.item}}"
+            field:
+              label: Двигатель
+              name: item
+              widget: object
+              fields:
+                - label: Заголовок с выделением
+                  name: heading
+                  widget: markdown
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Заголовок 5
+            name: headingSix
+            widget: string
+          - label: Якорьная ссылка 3
+            name: tiresId
+            widget: string
+          - label: Шины
+            name: tires
+            widget: list
+            summary: "{{fields.tires.item}}"
+            field:
+              label: Шины
+              name: item
+              widget: object
+              fields:
+                - label: Заголовок с выделением
+                  name: heading
+                  widget: markdown
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Заголовок 6
+            name: headingSeven
+            widget: string
+          - label: Якорьная ссылка 4
+            name: extrasId
+            widget: string
+          - label: Запчасти
+            name: extras
+            widget: list
+            summary: "{{fields.extras.item}}"
+            field:
+              label: Опция
+              name: item
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Кнопка
+            name: buttonOne
+            widget: object
+            fields:
+              - label: Текст
+                name: text
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+          - label: Стоимость
+            name: summary
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: string
+              - label: Карт
+                name: kart
+                widget: string
+              - label: Двигатель
+                name: engine
+                widget: string
+              - label: Шины
+                name: tire
+                widget: string
+              - label: Дополнительные опции
+                name: extras
+                widget: string
+              - label: Итого
+                name: total
+                widget: string
+              - label: Кнопка
+                name: buy
+                widget: string
+      - label: Новости
+        name: news
+        file: cms/pages/ru/news.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Текст
+            name: texts
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Якорьная ссылка
+              name: text
+              widget: object
+              fields:
+                - label: "Фото:"
+                  name: photo
+                  widget: string
+                - label: "Источник:"
+                  name: source
+                  widget: string
+                - label: Читать
+                  name: read
+                  widget: string
+                - label: Все статьи
+                  name: close
+                  widget: string
+      - label: Производство
+        name: production
+        file: cms/pages/ru/production.md
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Изображения
+            name: gallery
+            widget: list
+            summary: '{{fields.gallery.image}}'
+            field:
+              label: Изображение
+              name: image
+              widget: image
+          - label: Заголовок 1
+            name: headingOne
+            widget: string
+          - label: Текст 1
+            name: textOne
+            widget: text
+          - label: Якорьные ссылки
+            name: headerAnchors
+            widget: list
+            summary: "{{fields.headerAnchors.anchor}}"
+            field:
+              label: Якорьная ссылка
+              name: anchor
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Пункты
+            name: texts
+            widget: list
+            summary: "{{fields.texts.link}}"
+            field:
+              label: Пункт
+              name: link
+              widget: object
+              fields:
+                - label: Якорьная ссылка
+                  name: id
+                  widget: string
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст 1
+                  name: text
+                  widget: text
+                - label: Текст 2
+                  name: textTwo
+                  required: false
+                  widget: text
+                - label: Подпункты
+                  name: points
+                  required: false
+                  widget: list
+                  summary: '{{fields.points.text}}'
+                  field:
+                    label: Текст
+                    name: text
+                    widget: text
+          - label: Изображение 1
+            name: imageOne
+            widget: image
+          - label: Изображение 2
+            name: imageTwo
+            widget: image
+          - label: Якорьная ссылка 1
+            name: headingSevenId
+            widget: string
+          - label: Заголовок 2
+            name: headingSeven
+            widget: string
+          - label: Пункты
+            name: pointsFive
+            widget: list
+            summary: "{{fields.pointsFive.point}}"
+            field:
+              label: Пункт
+              name: point
+              widget: object
+              fields:
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Якорьная ссылка 2
+            name: headingEightId
+            widget: string
+          - label: Заголовок 3
+            name: headingEight
+            widget: string
+          - label: Текст 2
+            name: textEight
+            widget: text
+          - label: Заголовок 4
+            name: headingNine
+            widget: string
+          - label: Пункты
+            name: pointsSix
+            widget: list
+            summary: "{{fields.pointsSix.point}}"
+            field:
+              label: Пункт
+              name: point
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок 5
+            name: headingTen
+            widget: string
+          - label: Пункты
+            name: pointsSeven
+            widget: list
+            summary: "{{fields.pointsSeven.point}}"
+            field:
+              label: Пункт
+              name: point
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок 6
+            name: headingEleven
+            widget: string
+          - label: Пункты
+            name: pointsEight
+            widget: list
+            summary: "{{fields.pointsEight.point}}"
+            field:
+              label: Пункт
+              name: point
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: text
+  - name: "Новости"
+    label: "Новости"
+    folder: "cms/news"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    editor:
+      preview: false
+    fields:
+      - label: На всю ширину
+        name: isWide
+        widget: boolean
+      - label: Заголовок
+        name: title
+        widget: text
+      - label: Фото
+        name: image
+        widget: image
+      - label: Дата
+        name: dateTitle
+        widget: string
+      - label: "Дата для сортировки"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DDThh:mm:ss"
+        dateFormat: "YYYY-MM-DDThh:mm:ss"
+        timeFormat: false
+      - label: Источник
+        name: source
+        widget: string
+      - label: Выдержка
+        name: pre
+        widget: markdown
+      - label: Источник Фото
+        name: photoSource
+        required: false
+        widget: object
+        fields:
+          - label: Текст
+            name: text
+            widget: string
+          - label: Ссылка
+            name: link
+            widget: string
+      - label: Текст
+        name: text
+        widget: markdown
