@@ -52,7 +52,7 @@ tires:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
       price: 9000
-headingSeven: Дополнительные опции
+headingSeven: дополнительные опции
 extras:
   - item:
       image: /images/Rectangle 176.jpg
