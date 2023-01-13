@@ -1,25 +1,21 @@
 ---
-description: 
 title: Цены
 headingOne: Цены
 headingTwo: Прокатные карты
-youHaveChosen: "Вы выбрали:"
-youHaventChosen: Вы ничего не выбрали
 headerAnchors:
   - anchor:
-      text: Прокатные карты 
+      text: Прокатные карты
       link: "#prokatnye-karty"
   - anchor:
-      text: Двигатель 
+      text: Двигатель
       link: "#dvigatel"
   - anchor:
       text: Резина
       link: "#resina"
   - anchor:
-      text: Запчасти 
+      text: Запчасти
       link: "#zapchasti"
-baseCartsId: "prokatnye-karty"
-baseCarts: 
+baseCarts:
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 1.jpg
       headingSimple: МИКС Карт Спорт
@@ -29,11 +25,13 @@ baseCarts:
       headingSimple: МИКС Карт Юниор
       price: 245000
 headingFive: двигатель
-enginesId: "dvigatel"
-engines: 
+enginesId: dvigatel
+engines:
   - item:
-      heading: "**Zongshen ZS GB 168 FB-4** с редуктором\n(200 см.куб) **6.5 лс**"
-      headingSimple: "Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс"
+      heading: |-
+        **Zongshen ZS GB 168 FB-4** с редуктором
+        (200 см.куб) **6.5 лс**
+      headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
       price: 16500
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
@@ -44,19 +42,18 @@ engines:
       headingSimple: Хонда GX 270 c редуктором 9 лс
       price: 115000
 headingSix: резина
-tiresId: "resina"
-tires: 
+tiresId: resina
+tires:
   - item:
-      heading: "Резина **Мега (Россия)**"
+      heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
       price: 8000
   - item:
-      heading: "Резина **Duro (Китай)**"
+      heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
       price: 9000
-headingSeven: запчасти
-extrasId: "zapchasti"
-extras: 
+headingSeven: Дополнительные опции
+extras:
   - item:
       image: /images/Rectangle 176.jpg
       headingSimple: Топливный бак в рулевой стойке
@@ -121,7 +118,13 @@ summary:
   kart: Карт
   engine: Двигатель
   tire: Резина
-  extras: Запчасти
+  extras: Дополнительные опции
   total: "Итого:"
   buy: Купить
+youHaveChosen: "Вы выбрали:"
+description: null
+youHaventChosen: Вы ничего не выбрали
+baseCartsId: prokatnye-karty
+headingThree: "-"
+extrasId: options
 ---
