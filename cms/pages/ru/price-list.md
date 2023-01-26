@@ -70,7 +70,7 @@ extras:
   - item:
       image: /images/photo_2022-07-31 22.23 23.jpg
       headingSimple: Пластиковая защита на заднюю ось
-      price: 10000
+      price: "95000"
   - item:
       image: /images/image 10.jpg
       headingSimple: Ручное управление
