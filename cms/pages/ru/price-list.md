@@ -62,7 +62,7 @@ extras:
   - item:
       image: /images/Rectangle 176.jpg
       headingSimple: Топливный бак в рулевой стойке
-      price: "14000"
+      price: "11000"
   - item:
       image: /images/Rectangle 171.jpg
       headingSimple: Защита ног
