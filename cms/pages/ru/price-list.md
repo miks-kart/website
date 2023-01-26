@@ -1,7 +1,9 @@
 ---
+description: null
 title: Цены
 headingOne: Цены
 headingTwo: Прокатные карты
+youHaventChosen: Вы ничего не выбрали
 headerAnchors:
   - anchor:
       text: Прокатные карты
@@ -15,6 +17,7 @@ headerAnchors:
   - anchor:
       text: Запчасти
       link: "#zapchasti"
+baseCartsId: prokatnye-karty
 baseCarts:
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 1.jpg
@@ -24,6 +27,7 @@ baseCarts:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 3.jpg
       headingSimple: МИКС Карт Юниор
       price: 245000
+headingThree: "-"
 headingFive: двигатель
 enginesId: dvigatel
 engines:
@@ -53,11 +57,12 @@ tires:
       headingSimple: Резина Duro (Китай)
       price: 9000
 headingSeven: дополнительные опции
+extrasId: options
 extras:
   - item:
       image: /images/Rectangle 176.jpg
       headingSimple: Топливный бак в рулевой стойке
-      price: 10000
+      price: "14000"
   - item:
       image: /images/Rectangle 171.jpg
       headingSimple: Защита ног
@@ -122,9 +127,4 @@ summary:
   total: "Итого:"
   buy: Купить
 youHaveChosen: "Вы выбрали:"
-description: null
-youHaventChosen: Вы ничего не выбрали
-baseCartsId: prokatnye-karty
-headingThree: "-"
-extrasId: options
 ---
