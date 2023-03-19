@@ -7,6 +7,8 @@ export const useStore = create((set) => ({
     priceListEngines: null,
     priceListTires: null,
     priceListOptions: [],
+    priceListOptionsSport: [],
+    priceListOptionsJunior: [],
   },
   setShoppingCart: (item) => {
     set(() => ({

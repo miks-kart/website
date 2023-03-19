@@ -6,16 +6,20 @@ import { useEffect, useState } from "react";
 import markdownToHtml from "../lib/markdownToHtml";
 import { motion } from "framer-motion";
 import DropdownHeading from "@components/DropdownHeading";
+// import PDFTest from "@components/PDFTest";
+
 export default function Index({
   data,
   saleItemsOne,
   saleItemsTwo,
   contactSale,
+  pdf,
 }) {
   const [isOpenOne, setIsOpenOne] = useState(false);
   const [isOpenTwo, setIsOpenTwo] = useState(false);
   const [isOpenThree, setIsOpenThree] = useState(false);
   const [isOpenFour, setIsOpenFour] = useState(false);
+  const [isOpenFive, setIsOpenFive] = useState(false);
   const shoppingCart = useStore((state) => state.shoppingCart);
   const setShoppingCart = useStore((state) => state.setShoppingCart);
 
@@ -24,12 +28,14 @@ export default function Index({
       priceListKarts: [],
       priceListEngines: [],
       priceListTires: [],
-      priceListOptions: [],
+      priceListOptionsSport: [],
+      priceListOptionsJunior: [],
     });
   }, []);
 
   return (
     <AnchorSmoothScroll>
+      {/* <PDFTest shoppingCart={shoppingCart} data={data} pdf={pdf} /> */}
       <section className="w-screen ">
         <div className="page-container md:!pt-16 !pb-16 !space-y-0 ">
           <h1 className="!pb-5 md:!pb-16 theme-heading">{data.headingOne}</h1>
@@ -154,22 +160,26 @@ export default function Index({
             </motion.div>
           </article>
 
-          <article className="pt-5 md:pt-8" id={data.extrasId}>
+          <article className="pt-10 md:pt-20" id={data.extrasId}>
+            <h2 className="!text-3xl theme-subheading">{data.headingSeven}</h2>
             <button
               id={data.tiresId}
               onClick={() => setIsOpenFour((isOpenFour) => !isOpenFour)}
             >
-              <DropdownHeading state={isOpenFour} heading={data.headingSeven} />
+              <DropdownHeading
+                state={isOpenFour}
+                heading={data.headingExtrasSport}
+              />
             </button>
 
             <div className="text-[#969696] text-sm pt-2">
               <p className="font-bold">
-                {shoppingCart["priceListOptions"].length > 0
+                {shoppingCart["priceListOptionsSport"].length > 0
                   ? data.youHaveChosen
                   : data.youHaventChosen}
               </p>
-              {shoppingCart["priceListOptions"].length > 0 &&
-                shoppingCart["priceListOptions"].map((item) => (
+              {shoppingCart["priceListOptionsSport"].length > 0 &&
+                shoppingCart["priceListOptionsSport"].map((item) => (
                   <p className="pt-2 font-light" key={item.headingSimple}>
                     {item.headingSimple}
                   </p>
@@ -183,9 +193,51 @@ export default function Index({
               }}
             >
               <div className="grid gap-5 pb-5 mt-10 md:grid-cols-2 md:pb-8">
-                {data.extras.map(({ item }) => (
+                {data.extrasSport.map(({ item }) => (
                   <SaleItem
-                    category="priceListOptions"
+                    category="priceListOptionsSport"
+                    key={item.headingSimple}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </article>
+          <article className="pt-5 md:pt-8">
+            <button
+              id={data.tiresId}
+              onClick={() => setIsOpenFive((isOpenFive) => !isOpenFive)}
+            >
+              <DropdownHeading
+                state={isOpenFive}
+                heading={data.headingExtrasJunior}
+              />
+            </button>
+
+            <div className="text-[#969696] text-sm pt-2">
+              <p className="font-bold">
+                {shoppingCart["priceListOptionsJunior"].length > 0
+                  ? data.youHaveChosen
+                  : data.youHaventChosen}
+              </p>
+              {shoppingCart["priceListOptionsJunior"].length > 0 &&
+                shoppingCart["priceListOptionsJunior"].map((item) => (
+                  <p className="pt-2 font-light" key={item.headingSimple}>
+                    {item.headingSimple}
+                  </p>
+                ))}
+            </div>
+            <motion.div
+              transition={{ duration: 0.5 }}
+              className="h-0 overflow-hidden"
+              animate={{
+                height: !isOpenFive ? 0 : "auto",
+              }}
+            >
+              <div className="grid gap-5 pb-5 mt-10 md:grid-cols-2 md:pb-8">
+                {data.extrasJunior.map(({ item }) => (
+                  <SaleItem
+                    category="priceListOptionsJunior"
                     key={item.headingSimple}
                     item={item}
                   />
@@ -222,7 +274,12 @@ export default function Index({
               />
             </span>
           </a>
-          <PurchaseSummary contactSale={contactSale} data={data} />
+          <PurchaseSummary
+            pdf={pdf}
+            ceny
+            contactSale={contactSale}
+            data={data}
+          />
         </div>
       </section>
     </AnchorSmoothScroll>
@@ -231,6 +288,7 @@ export default function Index({
 
 export async function getStaticProps() {
   const locale = "ru";
+  const pdf = await import(`../cms/pages/${locale}/pdf.md`);
   const content = await import(`../cms/pages/${locale}/price-list.md`);
   const contactSale = await import(`../cms/config/${locale}/contactSale.md`);
   const header = await import(`../cms/config/${locale}/header.md`);
@@ -256,6 +314,7 @@ export async function getStaticProps() {
       header: header.default.attributes,
       contactSale: contactSale.default.attributes,
       footer: footer.default.attributes,
+      pdf: pdf.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
       headerNotTrasnparent: true,

@@ -8,7 +8,14 @@ const Schema = Yup.object().shape({
   phone: Yup.string().min(8).max(25).required(),
 });
 
-export default function FormSale({ contactForm, shoppingCart, data, close }) {
+export default function FormSale({
+  contactForm,
+  shoppingCart,
+  data,
+  close,
+  ceny,
+  pdf,
+}) {
   const [sendingStatus, setSendingStatus] = useState("notSending");
 
   const inputStyles =
@@ -67,9 +74,38 @@ ${
           ? `${data.summary.tire}: ${shoppingCart.priceListTires.headingSimple} x${shoppingCart.priceListTires.amount}\n`
           : ""
       }${
-        shoppingCart.priceListOptions &&
-        shoppingCart.priceListOptions.length > 0
+        ceny
+          ? ""
+          : shoppingCart.priceListOptions &&
+            shoppingCart.priceListOptions.length > 0
           ? `${data.summary.extras}: ${shoppingCart.priceListOptions
+              .map((item) => `${item.headingSimple} x${item.amount}`)
+              .join(", ")}`
+          : ""
+      }${
+        !ceny
+          ? ""
+          : (shoppingCart.priceListOptionsSport &&
+              shoppingCart.priceListOptionsSport.length > 0) ||
+            (shoppingCart.priceListOptionsJunior &&
+              shoppingCart.priceListOptionsJunior.length > 0)
+          ? `${data.summary.extras}:\n`
+          : ""
+      }${
+        !ceny
+          ? ""
+          : shoppingCart.priceListOptionsSport &&
+            shoppingCart.priceListOptionsSport.length > 0
+          ? `${data.headingExtrasSport}: ${shoppingCart.priceListOptionsSport
+              .map((item) => `${item.headingSimple} x${item.amount}`)
+              .join(", ")}\n`
+          : ""
+      }${
+        !ceny
+          ? ""
+          : shoppingCart.priceListOptionsJunior &&
+            shoppingCart.priceListOptionsJunior.length > 0
+          ? `${data.headingExtrasJunior}: ${shoppingCart.priceListOptionsJunior
               .map((item) => `${item.headingSimple} x${item.amount}`)
               .join(", ")}`
           : ""
@@ -77,24 +113,45 @@ ${
 `,
     };
 
-    fetch("/api/send", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(emailData),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          showSuccess(actions);
-        } else {
-          showError();
-        }
+    if (!ceny) {
+      fetch("/api/send", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailData),
       })
-      .catch(() => {
-        showError();
-      });
+        .then((res) => {
+          if (res.status === 200) {
+            showSuccess(actions);
+          } else {
+            showError();
+          }
+        })
+        .catch(() => {
+          showError();
+        });
+    } else {
+      fetch("/api/sendAttachment", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...emailData, pdf, shoppingCart, data }),
+      })
+        .then((res) => {
+          if (res.status === 200) {
+            showSuccess(actions);
+          } else {
+            showError();
+          }
+        })
+        .catch(() => {
+          showError();
+        });
+    }
   }
   function clearForm(actions) {
     actions.resetForm();
@@ -234,21 +291,62 @@ ${
                       </p>
                     </div>
                   )}
-                {shoppingCart.priceListOptions.length > 0 && (
-                  <div className="">
-                    <p className="pb-0 font-bold text-primary-dark">
-                      {data.summary.extras}
-                    </p>
-                    {shoppingCart.priceListOptions.map((item) => (
-                      <p
-                        className="theme-text !text-sm"
-                        key={item.headingSimple}
-                      >
-                        {item.headingSimple}
-                      </p>
-                    ))}
-                  </div>
-                )}
+                {!ceny
+                  ? shoppingCart.priceListOptions.length > 0 && (
+                      <div className="">
+                        <p className="pb-0 font-bold text-primary-dark">
+                          {data.summary.extras}
+                        </p>
+                        {shoppingCart.priceListOptions.map((item) => (
+                          <p
+                            className="theme-text !text-sm"
+                            key={item.headingSimple}
+                          >
+                            {item.headingSimple}
+                          </p>
+                        ))}
+                      </div>
+                    )
+                  : (shoppingCart.priceListOptionsSport.length > 0 ||
+                      shoppingCart.priceListOptionsJunior.length > 0) && (
+                      <div className="">
+                        <p className="pb-0 font-bold text-primary-dark">
+                          {data.summary.extras}
+                        </p>
+                        {shoppingCart.priceListOptionsSport.length > 0 && (
+                          <>
+                            <p className="py-1 font-bold !text-sm text-[#969696]">
+                              {data.headingExtrasSport}
+                            </p>
+
+                            {shoppingCart.priceListOptionsSport.map((item) => (
+                              <p
+                                className="theme-text !text-sm"
+                                key={item.headingSimple}
+                              >
+                                {item.headingSimple}
+                              </p>
+                            ))}
+                          </>
+                        )}
+                        {shoppingCart.priceListOptionsJunior.length > 0 && (
+                          <>
+                            <p className="py-1 !text-sm font-bold text-[#969696]">
+                              {data.headingExtrasJunior}
+                            </p>
+
+                            {shoppingCart.priceListOptionsJunior.map((item) => (
+                              <p
+                                className="theme-text !text-sm"
+                                key={item.headingSimple}
+                              >
+                                {item.headingSimple}
+                              </p>
+                            ))}
+                          </>
+                        )}
+                      </div>
+                    )}
               </div>
             </div>
             <button

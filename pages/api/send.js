@@ -17,7 +17,7 @@ export default function handler(req, res) {
     to: "manager@miks-kart.ru",
     subject: `Сообщение от ${req.body.name}`,
     text: req.body.message + " | Отправлено от: " + req.body.email,
-    html: `<div>${req.body.message}</div><p>Телефон: ${req.body.phone}</p><p>Email: ${req.body.email}</p>`,
+    html: `<p style="white-space: pre-line;">${req.body.message}</p><p>Телефон: ${req.body.phone}</p><p>Email: ${req.body.email}</p>`,
   };
 
   transporter.sendMail(mailData, (err) => {

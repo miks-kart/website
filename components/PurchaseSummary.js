@@ -3,7 +3,7 @@ import { useStore } from "./Store";
 import { Dialog, Transition } from "@headlessui/react";
 import FormSale from "./FormSale";
 
-export default function PurchaseSummary({ data, contactSale }) {
+export default function PurchaseSummary({ data, contactSale, ceny, pdf }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const shoppingCart = useStore((state) => state.shoppingCart);
@@ -101,24 +101,71 @@ export default function PurchaseSummary({ data, contactSale }) {
               </div>
             </div>
           )}
-        {shoppingCart.priceListOptions.length > 0 && (
-          <div className="">
-            <p className="pb-3 font-bold text-primary-dark">
-              {data.summary.extras}
-            </p>
-            <div className="space-y-[0.625rem]">
-              {shoppingCart.priceListOptions.map((item) => (
-                <Item
-                  key={item.headingSimple}
-                  category={"priceListOptions"}
-                  changeAmount={changeAmount}
-                  removeFromShoppingCart={removeFromShoppingCart}
-                  item={item}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+        {!ceny
+          ? shoppingCart.priceListOptions.length > 0 && (
+              <div className="">
+                <p className="pb-3 font-bold text-primary-dark">
+                  {data.summary.extras}
+                </p>
+                <div className="space-y-[0.625rem]">
+                  {shoppingCart.priceListOptions.map((item) => (
+                    <Item
+                      key={item.headingSimple}
+                      category={"priceListOptions"}
+                      changeAmount={changeAmount}
+                      removeFromShoppingCart={removeFromShoppingCart}
+                      item={item}
+                    />
+                  ))}
+                </div>
+              </div>
+            )
+          : (shoppingCart.priceListOptionsSport.length > 0 ||
+              shoppingCart.priceListOptionsJunior.length > 0) && (
+              <div className="">
+                <p className="font-bold text-primary-dark">
+                  {data.summary.extras}
+                </p>
+                {shoppingCart.priceListOptionsSport.length > 0 && (
+                  <>
+                    <p className="py-3 font-bold text-[#969696]">
+                      {data.headingExtrasSport}
+                    </p>
+
+                    <div className="space-y-[0.625rem]">
+                      {shoppingCart.priceListOptionsSport.map((item) => (
+                        <Item
+                          key={item.headingSimple}
+                          category={"priceListOptionsSport"}
+                          changeAmount={changeAmount}
+                          removeFromShoppingCart={removeFromShoppingCart}
+                          item={item}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
+                {shoppingCart.priceListOptionsJunior.length > 0 && (
+                  <>
+                    <p className="py-3 font-bold text-[#969696]">
+                      {data.headingExtrasJunior}
+                    </p>
+
+                    <div className="space-y-[0.625rem]">
+                      {shoppingCart.priceListOptionsJunior.map((item) => (
+                        <Item
+                          key={item.headingSimple}
+                          category={"priceListOptionsJunior"}
+                          changeAmount={changeAmount}
+                          removeFromShoppingCart={removeFromShoppingCart}
+                          item={item}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
       </div>
       <hr className="border-[1px] text-primary-gray" />
 
@@ -166,6 +213,8 @@ export default function PurchaseSummary({ data, contactSale }) {
               >
                 <Dialog.Panel className="w-full p-5 md:px-24 md:!py-16 !space-y-0 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl">
                   <FormSale
+                    pdf={pdf}
+                    ceny={ceny}
                     close={() => setIsOpen(false)}
                     data={data}
                     shoppingCart={shoppingCart}

@@ -207,6 +207,61 @@ collections:
               - label: Ошибка
                 name: error
                 widget: string
+      - label: PDF
+        name: pdf
+        file: cms/pages/ru/pdf.md
+        fields:
+          - label: Лого
+            name: logo
+            widget: image
+          - label: Лого серое
+            name: logoGray
+            widget: image
+          - label: Уважаемый
+            name: dear
+            widget: string
+          - label: (ая)
+            name: aya
+            widget: string
+          - label: Спасибо
+            name: thanks
+            widget: text
+          - label: Текст 1
+            name: textOne
+            widget: text
+          - label: Телефон
+            name: phone
+            widget: string
+          - label: Текст 2
+            name: textTwo
+            widget: text
+          - label: email
+            name: email
+            widget: string
+          - label: Заказ
+            name: order
+            widget: string
+          - label: Итого
+            name: total
+            widget: string
+          - label: Контакты
+            name: items
+            widget: list
+            summary: "{{fields.items.items}}"
+            field:
+              label: Пункт
+              name: item
+              widget: object
+              fields:
+                - label: Текст
+                  name: text
+                  widget: string
+                - label: Контакт
+                  name: link
+                  widget: string
+                - label: Иконка
+                  name: icon
+                  widget: image
   - label: Страницы
     name: pages
     delete: false
