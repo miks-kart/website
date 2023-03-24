@@ -30,6 +30,7 @@ export default function Index({
       priceListTires: [],
       priceListOptionsSport: [],
       priceListOptionsJunior: [],
+      priceListOptions: [],
     });
   }, []);
 

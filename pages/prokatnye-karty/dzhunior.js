@@ -31,6 +31,8 @@ export default function Index({
       priceListEngines: null,
       priceListTires: null,
       priceListOptions: [],
+      priceListOptionsSport: [],
+      priceListOptionsJunior: [],
     });
   }, []);
 
