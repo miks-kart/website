@@ -116,15 +116,15 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 16500
+      price: от 16500
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
       headingSimple: Zongshen ZS GB 270 B с редуктором 9 лс
-      price: 34000
+      price: " от 34000"
   - item:
       heading: "**Хонда GX 270** c редуктором **9 лс**"
       headingSimple: Хонда GX 270 c редуктором 9 лс
-      price: 115000
+      price: от 115000
 optionsHeading: дополнительные опции
 options:
   - item:
