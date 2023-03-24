@@ -1147,9 +1147,9 @@ collections:
                 - label: Цена
                   name: price
                   widget: string
-          - label: Заголовок 3
-            name: headingThree
-            widget: string
+#           - label: Заголовок 3
+#             name: headingThree
+#             widget: string
           # - label: Якорьная ссылка 2
           #   name: sportCartsId
           #   widget: string
