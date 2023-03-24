@@ -1225,8 +1225,32 @@ collections:
           - label: Якорьная ссылка 4
             name: extrasId
             widget: string
-          - label: Запчасти
-            name: extras
+          - label: Заголовок МИКС КАРТ Спорт
+            name: headingExtrasSport
+            widget: string
+          - label: Запчасти Для МИКС КАРТ Спорт
+            name: extrasSport
+            widget: list
+            summary: "{{fields.extras.item}}"
+            field:
+              label: Опция
+              name: item
+              widget: object
+              fields:
+                - label: Изображение
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: string
+          - label: Заголовок МИКС КАРТ Юниор
+            name: headingExtrasJunior
+            widget: string
+          - label: Запчасти Для МИКС КАРТ Юниор
+            name: extrasJunior
             widget: list
             summary: "{{fields.extras.item}}"
             field:
