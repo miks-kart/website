@@ -732,6 +732,9 @@ collections:
           - label: Заголовок Дополнительных опций
             name: optionsHeading
             widget: string
+          - label: Заголовок МИКС КАРТ Юниор
+            name: headingExtrasJunior
+            widget: string
           - label: Дополнительные опции
             name: options
             widget: list
@@ -917,6 +920,9 @@ collections:
                   widget: string
           - label: Заголовок Дополнительных опций
             name: optionsHeading
+            widget: string
+          - label: Заголовок МИКС КАРТ Спорт
+            name: headingExtrasSport
             widget: string
           - label: Дополнительные опции
             name: options

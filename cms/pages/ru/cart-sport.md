@@ -126,6 +126,7 @@ engines:
       headingSimple: Хонда GX 270 c редуктором 9 лс
       price: от 115000
 optionsHeading: дополнительные опции
+headingExtrasSport: Для МИКС КАРТ Спорт
 options:
   - item:
       image: /images/Rectangle 176.jpg

@@ -123,6 +123,7 @@ tires:
       headingSimple: Резина Duro (Китай)
       price: "10000"
 optionsHeading: дополнительные опции
+headingExtrasJunior: Для МИКС КАРТ Юниор
 options:
   - item:
       image: /images/Rectangle 176.jpg

@@ -9,6 +9,8 @@ const Schema = Yup.object().shape({
 });
 
 export default function FormSale({
+  dzhunior,
+  sport,
   contactForm,
   shoppingCart,
   data,
@@ -37,7 +39,7 @@ export default function FormSale({
     setTimeout(() => close(), 10000);
   }
 
-  function handleSubmit(values, actions) {
+  async function handleSubmit(values, actions) {
     setSendingStatus("sending");
 
     let emailData = {
@@ -113,44 +115,46 @@ ${
 `,
     };
 
-    if (!ceny) {
-      fetch("/api/send", {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(emailData),
-      })
-        .then((res) => {
-          if (res.status === 200) {
-            showSuccess(actions);
-          } else {
-            showError();
-          }
-        })
-        .catch(() => {
-          showError();
-        });
+    const sendAdmin = await fetch("/api/sendToAdmin", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...emailData,
+        pdf,
+        shoppingCart,
+        data,
+        dzhunior,
+        sport,
+      }),
+    })
+      .then((res) => res.status !== 500)
+      .catch(() => false);
+
+    const sendCustomer = await fetch("/api/sendToCustomer", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...emailData,
+        pdf,
+        shoppingCart,
+        data,
+        dzhunior,
+        sport,
+      }),
+    })
+      .then((res) => res.status !== 500)
+      .catch(() => false);
+
+    if (sendCustomer && sendAdmin) {
+      showSuccess(actions);
     } else {
-      fetch("/api/sendAttachment", {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...emailData, pdf, shoppingCart, data }),
-      })
-        .then((res) => {
-          if (res.status === 200) {
-            showSuccess(actions);
-          } else {
-            showError();
-          }
-        })
-        .catch(() => {
-          showError();
-        });
+      showError();
     }
   }
   function clearForm(actions) {

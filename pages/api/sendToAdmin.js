@@ -25,6 +25,8 @@ export default async function handler(req, res) {
         filename: `Заказ ${req.body.name}.pdf`,
         content: await renderToStream(
           <PDF
+            sport={req.body.sport}
+            dzhunior={req.body.dzhunior}
             name={req.body.name}
             data={req.body.data}
             pdf={req.body.pdf}

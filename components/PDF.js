@@ -105,17 +105,34 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function PDF({ name, data, shoppingCart, pdf }) {
+export default function PDF({
+  name,
+  data,
+  shoppingCart,
+  pdf,
+  dzhunior,
+  sport,
+}) {
+  const shoppingCartCopy = { ...shoppingCart };
+  if (dzhunior) {
+    shoppingCartCopy.priceListOptionsJunior = shoppingCartCopy.priceListOptions;
+    shoppingCartCopy.priceListOptions = [];
+  }
+  if (sport) {
+    shoppingCartCopy.priceListOptionsSport = shoppingCartCopy.priceListOptions;
+    shoppingCartCopy.priceListOptions = [];
+  }
   function getTotalPrice() {
     let total = 0;
-    for (let category in shoppingCart) {
-      if (Array.isArray(shoppingCart[category])) {
-        shoppingCart[category].forEach((item) => {
+    for (let category in shoppingCartCopy) {
+      if (Array.isArray(shoppingCartCopy[category])) {
+        shoppingCartCopy[category].forEach((item) => {
           total += item.price * item.amount;
         });
       } else {
-        total += shoppingCart[category]
-          ? shoppingCart[category]?.price * shoppingCart[category]?.amount
+        total += shoppingCartCopy[category]
+          ? shoppingCartCopy[category]?.price *
+            shoppingCartCopy[category]?.amount
           : 0;
       }
     }
@@ -189,8 +206,8 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
             borderColor: "#D9D9D9",
           }}
         >
-          {JSON.stringify(shoppingCart.priceListKarts) !== "[]" &&
-            JSON.stringify(shoppingCart.priceListKarts) !== "null" && (
+          {JSON.stringify(shoppingCartCopy.priceListKarts) !== "[]" &&
+            JSON.stringify(shoppingCartCopy.priceListKarts) !== "null" && (
               <>
                 <Text
                   style={{
@@ -202,9 +219,9 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                 >
                   {data.summary.kart}
                 </Text>
-                {(Array.isArray(shoppingCart.priceListKarts)
-                  ? shoppingCart.priceListKarts
-                  : [shoppingCart.priceListKarts]
+                {(Array.isArray(shoppingCartCopy.priceListKarts)
+                  ? shoppingCartCopy.priceListKarts
+                  : [shoppingCartCopy.priceListKarts]
                 ).map((item) => (
                   <View
                     style={{
@@ -234,8 +251,8 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
               </>
             )}
 
-          {JSON.stringify(shoppingCart.priceListEngines) !== "[]" &&
-            JSON.stringify(shoppingCart.priceListEngines) !== "null" && (
+          {JSON.stringify(shoppingCartCopy.priceListEngines) !== "[]" &&
+            JSON.stringify(shoppingCartCopy.priceListEngines) !== "null" && (
               <>
                 <Text
                   style={{
@@ -247,9 +264,9 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                 >
                   {data.summary.engine}
                 </Text>
-                {(Array.isArray(shoppingCart.priceListEngines)
-                  ? shoppingCart.priceListEngines
-                  : [shoppingCart.priceListEngines]
+                {(Array.isArray(shoppingCartCopy.priceListEngines)
+                  ? shoppingCartCopy.priceListEngines
+                  : [shoppingCartCopy.priceListEngines]
                 ).map((item) => (
                   <View
                     style={{
@@ -278,8 +295,8 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                 ))}
               </>
             )}
-          {JSON.stringify(shoppingCart.priceListTires) !== "[]" &&
-            JSON.stringify(shoppingCart.priceListTires) !== "null" && (
+          {JSON.stringify(shoppingCartCopy.priceListTires) !== "[]" &&
+            JSON.stringify(shoppingCartCopy.priceListTires) !== "null" && (
               <>
                 <Text
                   style={{
@@ -291,9 +308,9 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                 >
                   {data.summary.tire}
                 </Text>
-                {(Array.isArray(shoppingCart.priceListTires)
-                  ? shoppingCart.priceListTires
-                  : [shoppingCart.priceListTires]
+                {(Array.isArray(shoppingCartCopy.priceListTires)
+                  ? shoppingCartCopy.priceListTires
+                  : [shoppingCartCopy.priceListTires]
                 ).map((item) => (
                   <View
                     style={{
@@ -322,8 +339,9 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                 ))}
               </>
             )}
-          {(JSON.stringify(shoppingCart.priceListOptionsSport) !== "[]" ||
-            JSON.stringify(shoppingCart.priceListOptionsJunior) !== "[]") && (
+          {(JSON.stringify(shoppingCartCopy.priceListOptionsSport) !== "[]" ||
+            JSON.stringify(shoppingCartCopy.priceListOptionsJunior) !==
+              "[]") && (
             <>
               <Text
                 style={{
@@ -335,7 +353,7 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
               >
                 {data.summary.extras}
               </Text>
-              {shoppingCart.priceListOptionsSport.length > 0 && (
+              {shoppingCartCopy.priceListOptionsSport.length > 0 && (
                 <>
                   <Text
                     style={{
@@ -347,9 +365,9 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                   >
                     {data.headingExtrasSport}
                   </Text>
-                  {(Array.isArray(shoppingCart.priceListOptionsSport)
-                    ? shoppingCart.priceListOptionsSport
-                    : [shoppingCart.priceListOptionsSport]
+                  {(Array.isArray(shoppingCartCopy.priceListOptionsSport)
+                    ? shoppingCartCopy.priceListOptionsSport
+                    : [shoppingCartCopy.priceListOptionsSport]
                   ).map((item) => (
                     <View
                       style={{
@@ -379,7 +397,7 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                 </>
               )}
 
-              {shoppingCart.priceListOptionsJunior.length > 0 && (
+              {shoppingCartCopy.priceListOptionsJunior.length > 0 && (
                 <>
                   <Text
                     style={{
@@ -389,11 +407,11 @@ export default function PDF({ name, data, shoppingCart, pdf }) {
                       fontWeight: "600",
                     }}
                   >
-                    {data.headingExtrasSport}
+                    {data.headingExtrasJunior}
                   </Text>
-                  {(Array.isArray(shoppingCart.priceListOptionsJunior)
-                    ? shoppingCart.priceListOptionsJunior
-                    : [shoppingCart.priceListOptionsJunior]
+                  {(Array.isArray(shoppingCartCopy.priceListOptionsJunior)
+                    ? shoppingCartCopy.priceListOptionsJunior
+                    : [shoppingCartCopy.priceListOptionsJunior]
                   ).map((item) => (
                     <View
                       style={{

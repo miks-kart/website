@@ -9,6 +9,7 @@ import DropdownHeading from "@components/DropdownHeading";
 import { getFluidImage } from "@components/image/imageFunctions";
 import PurchaseSummary from "@components/PurchaseSummary";
 import HorizontalScrolling from "@components/HorizontalScrolling";
+// import PDFTest from "@components/PDFTest";
 
 export default function Index({
   data,
@@ -17,6 +18,7 @@ export default function Index({
   saleItemsTwo,
   gallery,
   contactSale,
+  pdf,
 }) {
   const [isOpenOne, setIsOpenOne] = useState(false);
   const [isOpenTwo, setIsOpenTwo] = useState(false);
@@ -38,6 +40,7 @@ export default function Index({
 
   return (
     <section className="w-screen">
+      {/* <PDFTest sport shoppingCart={shoppingCart} data={data} pdf={pdf} /> */}
       <div className="!py-0 page-container full-width wide">
         <Carousel slides={gallery} />
       </div>
@@ -213,7 +216,12 @@ export default function Index({
               </div>
             </motion.div>
           </article>
-          <PurchaseSummary contactSale={contactSale} data={data} />
+          <PurchaseSummary
+            sport
+            pdf={pdf}
+            contactSale={contactSale}
+            data={data}
+          />
         </div>
       </div>
     </section>
@@ -222,6 +230,7 @@ export default function Index({
 
 export async function getStaticProps() {
   const locale = "ru";
+  const pdf = await import(`../../cms/pages/${locale}/pdf.md`);
   const content = await import(`../../cms/pages/${locale}/cart-sport.md`);
   const contactSale = await import(`../../cms/config/${locale}/contactSale.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
@@ -250,6 +259,7 @@ export async function getStaticProps() {
   ).then((res) => res);
   return {
     props: {
+      pdf: pdf.default.attributes,
       header: header.default.attributes,
       contactSale: contactSale.default.attributes,
       footer: footer.default.attributes,

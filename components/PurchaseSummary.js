@@ -3,7 +3,14 @@ import { useStore } from "./Store";
 import { Dialog, Transition } from "@headlessui/react";
 import FormSale from "./FormSale";
 
-export default function PurchaseSummary({ data, contactSale, ceny, pdf }) {
+export default function PurchaseSummary({
+  data,
+  contactSale,
+  ceny,
+  pdf,
+  sport,
+  dzhunior,
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const shoppingCart = useStore((state) => state.shoppingCart);
@@ -213,6 +220,8 @@ export default function PurchaseSummary({ data, contactSale, ceny, pdf }) {
               >
                 <Dialog.Panel className="w-full p-5 md:px-24 md:!py-16 !space-y-0 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl">
                   <FormSale
+                    dzhunior={dzhunior}
+                    sport={sport}
                     pdf={pdf}
                     ceny={ceny}
                     close={() => setIsOpen(false)}
