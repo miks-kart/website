@@ -635,7 +635,11 @@ collections:
                 widget: string
               - label: Цена
                 name: price
-                widget: string
+                widget: number
+              - label: От
+                name: from
+                default: false
+                widget: boolean
           - label: Возможности
             name: features
             widget: list
@@ -707,7 +711,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Заголовок Шины
             name: tiresHeading
             widget: string
@@ -728,7 +736,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Заголовок Дополнительных опций
             name: optionsHeading
             widget: string
@@ -755,7 +767,11 @@ collections:
                   widget: text
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Стоимость
             name: summary
             widget: object
@@ -845,7 +861,11 @@ collections:
                 widget: string
               - label: Цена
                 name: price
-                widget: string
+                widget: number
+              - label: От
+                name: from
+                default: false
+                widget: boolean
           - label: Возможности
             name: features
             widget: list
@@ -917,7 +937,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Заголовок Дополнительных опций
             name: optionsHeading
             widget: string
@@ -944,7 +968,11 @@ collections:
                   widget: text
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Стоимость
             name: summary
             widget: object
@@ -1152,7 +1180,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
 #           - label: Заголовок 3
 #             name: headingThree
 #             widget: string
@@ -1200,7 +1232,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Заголовок 5
             name: headingSix
             widget: string
@@ -1224,7 +1260,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Заголовок 6
             name: headingSeven
             widget: string
@@ -1251,7 +1291,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Заголовок МИКС КАРТ Юниор
             name: headingExtrasJunior
             widget: string
@@ -1272,7 +1316,11 @@ collections:
                   widget: string
                 - label: Цена
                   name: price
-                  widget: string
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  widget: boolean
           - label: Кнопка
             name: buttonOne
             widget: object

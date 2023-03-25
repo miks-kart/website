@@ -116,15 +116,18 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: от 16500
+      price: 16500
+      from: true
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
       headingSimple: Zongshen ZS GB 270 B с редуктором 9 лс
-      price: " от 34000"
+      price: 34000
+      from: true
   - item:
       heading: "**Хонда GX 270** c редуктором **9 лс**"
       headingSimple: Хонда GX 270 c редуктором 9 лс
-      price: от 115000
+      price: 115000
+      from: true
 optionsHeading: дополнительные опции
 headingExtrasSport: Для МИКС КАРТ Спорт
 options:
@@ -136,7 +139,7 @@ options:
         возгорания при аварии; улучшить доступ для обслуживания двигателя,
         демонтировав штатный бак; повысить удобство управления, за счет снижения
         габаритов навесного оборудования двигателя
-      price: "14000"
+      price: 14000
   - item:
       image: /images/Rectangle 171.jpg
       headingSimple: Защита ног

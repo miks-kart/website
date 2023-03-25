@@ -59,6 +59,7 @@ export default function SaleItem({ item, category, disabled, priceList }) {
           )}
           {item.price && (
             <p className="pl-4 text-xl font-bold whitespace-nowrap md:text-2xl text-primary-dark">
+              {item.from ? "От " : ""}
               {isNaN(parseInt(item.price))
                 ? item.price
                 : `${numberWithCommas(parseInt(item.price))} р.`}

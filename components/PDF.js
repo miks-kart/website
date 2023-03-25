@@ -241,11 +241,10 @@ export default function PDF({
                         >{`${item.amount}x`}</Text>
                       )}
                     </Text>
-                    <Text
-                      style={{ fontSize: "1.8vw", fontWeight: "600" }}
-                    >{`${numberWithCommas(
-                      item.price * item.amount
-                    )} руб.`}</Text>
+                    <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
+                      {item.from ? "От " : ""}
+                      {`${numberWithCommas(item.price * item.amount)} руб.`}
+                    </Text>
                   </View>
                 ))}
               </>
@@ -286,11 +285,10 @@ export default function PDF({
                         >{`${item.amount}x`}</Text>
                       )}
                     </Text>
-                    <Text
-                      style={{ fontSize: "1.8vw", fontWeight: "600" }}
-                    >{`${numberWithCommas(
-                      item.price * item.amount
-                    )} руб.`}</Text>
+                    <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
+                      {item.from ? "От " : ""}
+                      {`${numberWithCommas(item.price * item.amount)} руб.`}
+                    </Text>
                   </View>
                 ))}
               </>
@@ -330,11 +328,10 @@ export default function PDF({
                         >{`${item.amount}x`}</Text>
                       )}
                     </Text>
-                    <Text
-                      style={{ fontSize: "1.8vw", fontWeight: "600" }}
-                    >{`${numberWithCommas(
-                      item.price * item.amount
-                    )} руб.`}</Text>
+                    <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
+                      {item.from ? "От " : ""}
+                      {`${numberWithCommas(item.price * item.amount)} руб.`}
+                    </Text>
                   </View>
                 ))}
               </>
@@ -387,11 +384,10 @@ export default function PDF({
                           >{`${item.amount}x`}</Text>
                         )}
                       </Text>
-                      <Text
-                        style={{ fontSize: "1.8vw", fontWeight: "600" }}
-                      >{`${numberWithCommas(
-                        item.price * item.amount
-                      )} руб.`}</Text>
+                      <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
+                        {item.from ? "От " : ""}
+                        {`${numberWithCommas(item.price * item.amount)} руб.`}
+                      </Text>
                     </View>
                   ))}
                 </>
@@ -431,11 +427,10 @@ export default function PDF({
                           >{`${item.amount}x`}</Text>
                         )}
                       </Text>
-                      <Text
-                        style={{ fontSize: "1.8vw", fontWeight: "600" }}
-                      >{`${numberWithCommas(
-                        item.price * item.amount
-                      )} руб.`}</Text>
+                      <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
+                        {item.from ? "От " : ""}
+                        {`${numberWithCommas(item.price * item.amount)} руб.`}
+                      </Text>
                     </View>
                   ))}
                 </>

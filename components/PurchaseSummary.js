@@ -257,6 +257,7 @@ function Item({ item, removeFromShoppingCart, changeAmount, category }) {
       </p>
       <div className="flex items-center justify-between w-full md:justify-end">
         <p className="inline-block pr-5 font-bold text-primary-dark">
+          {item.from ? "От " : ""}
           {numberWithCommas(item.price * item.amount)} руб.
         </p>
         <div className="-mr-5">
