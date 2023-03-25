@@ -639,6 +639,7 @@ collections:
               - label: От
                 name: from
                 default: false
+                required: false
                 widget: boolean
           - label: Возможности
             name: features
@@ -715,6 +716,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Заголовок Шины
             name: tiresHeading
@@ -740,6 +742,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Заголовок Дополнительных опций
             name: optionsHeading
@@ -771,6 +774,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Стоимость
             name: summary
@@ -865,6 +869,7 @@ collections:
               - label: От
                 name: from
                 default: false
+                required: false
                 widget: boolean
           - label: Возможности
             name: features
@@ -941,6 +946,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Заголовок Дополнительных опций
             name: optionsHeading
@@ -972,6 +978,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Стоимость
             name: summary
@@ -1184,6 +1191,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
 #           - label: Заголовок 3
 #             name: headingThree
@@ -1236,6 +1244,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Заголовок 5
             name: headingSix
@@ -1264,6 +1273,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Заголовок 6
             name: headingSeven
@@ -1295,6 +1305,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Заголовок МИКС КАРТ Юниор
             name: headingExtrasJunior
@@ -1320,6 +1331,7 @@ collections:
                 - label: От
                   name: from
                   default: false
+                  required: false
                   widget: boolean
           - label: Кнопка
             name: buttonOne
