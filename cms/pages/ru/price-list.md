@@ -50,11 +50,11 @@ tires:
   - item:
       heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
-      price: 8000
+      price: 8500
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
-      price: 9000
+      price: 10000
 headingSeven: запчасти
 extrasId: zapchasti
 headingExtrasSport: Для МИКС КАРТ Спорт
