@@ -948,6 +948,32 @@ collections:
                   default: false
                   required: false
                   widget: boolean
+          - label: Заголовок Шины
+            name: tiresHeading
+            widget: string
+          - label: Шины
+            name: tires
+            widget: list
+            summary: "{{fields.tires.item}}"
+            field:
+              label: Шины
+              name: item
+              widget: object
+              fields:
+                - label: Заголовок с выделением
+                  name: heading
+                  widget: markdown
+                - label: Заголовок
+                  name: headingSimple
+                  widget: string
+                - label: Цена
+                  name: price
+                  widget: number
+                - label: От
+                  name: from
+                  default: false
+                  required: false
+                  widget: boolean
           - label: Заголовок Дополнительных опций
             name: optionsHeading
             widget: string
