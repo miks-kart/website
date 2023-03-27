@@ -116,7 +116,7 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 16500
+      price: 18000
       from: true
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"

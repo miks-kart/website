@@ -35,7 +35,7 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 16500
+      price: 18000
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
       headingSimple: Zongshen ZS GB 270 B с редуктором 9 лс
@@ -50,11 +50,11 @@ tires:
   - item:
       heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
-      price: 8000
+      price: 8500
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
-      price: 9000
+      price: 10000
 headingSeven: запчасти
 extrasId: zapchasti
 headingExtrasSport: Для МИКС КАРТ Спорт
