@@ -65,7 +65,12 @@ const ImageBlur = forwardRef(
       const imgResources = resources.filter(
         (resource) => resource.name === imageEl.currentSrc
       );
-      if (imgResources.length > 0 && wasLoaded.current === false) {
+      if (
+        imgResources.length > 0 &&
+        (imgResources[0].decodedBodySize === 0 ||
+          imgResources[0].duration <= 70) &&
+        wasLoaded.current === false
+      ) {
         wasLoaded.current = true;
         imagePlaceholder.classList.add(styles.wasLoaded);
       }

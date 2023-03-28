@@ -43,7 +43,7 @@ export default function Slideshow({ slides }) {
         <div
           style={{ width: "100%" }}
           key={slide.src}
-          className="keen-slider__slide"
+          className="min-w-full keen-slider__slide"
         >
           <Image
             preload={i === 0}
