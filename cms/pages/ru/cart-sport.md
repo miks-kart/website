@@ -128,6 +128,16 @@ engines:
       headingSimple: Хонда GX 270 c редуктором 9 лс
       price: 115000
       from: true
+tiresHeading: резина
+tires:
+  - item:
+      heading: Резина **Мега (Россия)**
+      headingSimple: Резина Мега (Россия)
+      price: 8500
+  - item:
+      heading: Резина **Duro (Китай)**
+      headingSimple: Резина Duro (Китай)
+      price: 10000
 optionsHeading: дополнительные опции
 headingExtrasSport: Для МИКС КАРТ Спорт
 options:
@@ -240,14 +250,4 @@ summary:
   extras: Запчасти
   total: "Итого:"
   buy: Купить
-tires:
-  - item:
-      heading: Резина **Мега (Россия)**
-      headingSimple: Резина Мега (Россия)
-      price: 8000
-  - item:
-      heading: Резина **Duro (Китай)**
-      headingSimple: Резина Duro (Китай)
-      price: 9000
-tiresHeading: резина
 ---
