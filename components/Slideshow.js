@@ -1,5 +1,4 @@
 import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import Image from "./image/Image";
 
 export default function Slideshow({ slides }) {
@@ -39,10 +38,20 @@ export default function Slideshow({ slides }) {
     ]
   );
   return (
-    <div ref={sliderRef} className="h-full keen-slider">
-      {slides.map((slide) => (
-        <div key={slide.src} className="keen-slider__slide">
-          <Image loading="eager" className="h-full" alt="slide" image={slide} />
+    <div ref={sliderRef} className="h-full min-w-full keen-slider">
+      {slides.map((slide, i) => (
+        <div
+          style={{ width: "100%" }}
+          key={slide.src}
+          className="keen-slider__slide"
+        >
+          <Image
+            preload={i === 0}
+            loading="eager"
+            className="h-full min-w-full"
+            alt="slide"
+            src={slide}
+          />
         </div>
       ))}
     </div>

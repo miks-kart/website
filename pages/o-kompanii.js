@@ -1,5 +1,9 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
-import { getFluidImage } from "@components/image/imageFunctions";
+import Image from "@components/image/Image";
+import {
+  getFluidImage,
+  getOptimizedImage,
+} from "@components/image/imageFunctions";
 import ListItem from "@components/ListItem";
 import Slideshow from "@components/Slideshow";
 import Link from "next/link";
@@ -52,9 +56,10 @@ export default function Index({ data, gallery, points }) {
           <article id={data.headingTwoId}>
             <h2 className="md:!pb-16 theme-heading">{data.headingTwo}</h2>
             <div className="grid gap-5 md:gap-3 md:grid-cols-2">
-              {data.models.map(({ model }) => (
+              {data.models.map((model) => (
                 <div className="" key={model.name}>
-                  <img
+                  <Image
+                    sizes="(max-width: 1200px) 100vw, 800px"
                     src={model.image}
                     alt={model.name}
                     className="w-full h-auto"
@@ -144,9 +149,19 @@ export async function getStaticProps() {
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
 
+  content.default.attributes.models = await Promise.all(
+    content.default.attributes.models.map(async ({ model }) => ({
+      ...model,
+      image: await getOptimizedImage(model.image),
+    }))
+  ).then((res) => res);
+
   const gallery = await Promise.all(
     content.default.attributes.gallery.map(
-      async (img) => await getFluidImage(img)
+      async (img) =>
+        await getFluidImage(img, {
+          webp: true,
+        })
     )
   ).then((res) => res);
 

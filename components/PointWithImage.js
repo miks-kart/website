@@ -1,7 +1,10 @@
+import Image from "./image/Image";
+
 export default function PointWithImage({ point }) {
   return (
     <div className="grid-cols-2 md:grid theme-border max-w-[50rem] mx-auto md:bg-[#F6F6F6]">
-      <img
+      <Image
+        sizes="(max-width: 1200px) 100vw, 400px"
         src={point.image}
         alt={point.heading}
         className="object-cover w-full aspect-[1.54]"

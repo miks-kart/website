@@ -2,18 +2,16 @@ import { forwardRef, useCallback, useEffect, useRef } from "react";
 import styles from "./index.module.css";
 import Preload from "./Preload";
 
-const BackgroundImage = forwardRef(
+const ImageBlur = forwardRef(
   (
     {
       image,
       preload,
-      children,
       alt = "",
-      className,
       sizes = "100vw",
-      containerClassName,
+      className,
       imageClassName = "object-cover w-full h-full",
-      loading = "eager",
+      loading = "lazy",
       ...props
     },
     forwardedRef
@@ -23,6 +21,7 @@ const BackgroundImage = forwardRef(
 
     const sources = image.formats.map((format) => (
       <source
+        sizes={sizes}
         key={format.srcSet}
         srcSet={format.srcSet}
         type={`${format.format}`}
@@ -75,7 +74,6 @@ const BackgroundImage = forwardRef(
     return (
       <>
         <div ref={imageRef} className={`relative ${className}`}>
-          <div className={containerClassName}>{children}</div>
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
             <div
               style={{
@@ -88,9 +86,10 @@ const BackgroundImage = forwardRef(
           </div>
           <picture
             {...props}
-            className={`absolute top-0 left-0 w-full h-full pointer-events-none  no-select`}
+            className={`relative top-0 left-0 w-full h-full pointer-events-none  no-select`}
           >
             {sources}
+
             <img
               decoding="async"
               loading={loading}
@@ -125,5 +124,5 @@ const BackgroundImage = forwardRef(
   }
 );
 
-BackgroundImage.displayName = "BackgroundImage";
-export default BackgroundImage;
+ImageBlur.displayName = "ImageBlur";
+export default ImageBlur;

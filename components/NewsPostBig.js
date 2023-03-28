@@ -10,7 +10,7 @@ export default function NewsPostBig({ post, texts, onClick, i }) {
       >
         <Image
           loading="eager"
-          image={post.image}
+          src={post.image}
           alt={post.title}
           className="w-full aspect-[3.32] object-cover"
         />

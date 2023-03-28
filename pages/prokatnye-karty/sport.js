@@ -6,9 +6,13 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import SaleItem from "@components/SaleItem";
 import { useStore } from "@components/Store";
 import DropdownHeading from "@components/DropdownHeading";
-import { getFluidImage } from "@components/image/imageFunctions";
+import {
+  getFluidImage,
+  getOptimizedImage,
+} from "@components/image/imageFunctions";
 import PurchaseSummary from "@components/PurchaseSummary";
 import HorizontalScrolling from "@components/HorizontalScrolling";
+import Image from "@components/image/Image";
 // import PDFTest from "@components/PDFTest";
 
 export default function Index({
@@ -58,17 +62,21 @@ export default function Index({
             className="markdown-text theme-text"
             dangerouslySetInnerHTML={{ __html: postOne }}
           />
-          <img src={data.imageTwo} alt="slide" className="w-full md:hidden" />
+          <Image src={data.imageTwo} alt="slide" className="w-full md:hidden" />
         </article>
       </div>
       <div className="relative hidden w-full md:block">
         <HorizontalScrolling>
           <div className="inline-flex items-center justify-center h-screen min-w-screen">
             <div className="h-12 narrow-container-margin"></div>
-            <img
+            <Image
+              style={{
+                aspectRatio: data.imageOne.aspectRatio,
+              }}
+              className="w-[172.5vh] object-left max-w-none mt-24"
+              sizes="173w"
               src={data.imageOne}
               alt="slide"
-              className="object-contain w-[172.5vh] object-left max-w-none h-[75vh] mt-24"
             />
             <div className="h-12 narrow-container-margin"></div>
           </div>
@@ -99,7 +107,7 @@ export default function Index({
               }}
             >
               <div className="grid gap-5 pt-10 pb-5 md:pb-8 md:grid-cols-2">
-                {data.base.map(({ item }) => (
+                {data.base.map((item) => (
                   <SaleItem disabled key={item.headingSimple} item={item} />
                 ))}
               </div>
@@ -206,7 +214,7 @@ export default function Index({
               }}
             >
               <div className="grid gap-5 mt-10 md:grid-cols-2">
-                {data.options.map(({ item }) => (
+                {data.options.map((item) => (
                   <SaleItem
                     category="priceListOptions"
                     key={item.headingSimple}
@@ -239,10 +247,30 @@ export async function getStaticProps() {
 
   const postOne = await markdownToHtml(content.default.attributes.textThree);
 
+  content.default.attributes.imageOne = await getOptimizedImage(
+    content.default.attributes.imageOne
+  );
+  content.default.attributes.imageTwo = await getOptimizedImage(
+    content.default.attributes.imageTwo
+  );
+
   const gallery = await Promise.all(
     content.default.attributes.gallery.map(
-      async (img) => await getFluidImage(img)
+      async (img) => await getFluidImage(img, { avif: false, webp: true })
     )
+  ).then((res) => res);
+
+  content.default.attributes.base = await Promise.all(
+    content.default.attributes.base.map(async ({ item }) => ({
+      ...item,
+      image: await getOptimizedImage(item.image),
+    }))
+  ).then((res) => res);
+  content.default.attributes.options = await Promise.all(
+    content.default.attributes.options.map(async ({ item }) => ({
+      ...item,
+      image: await getOptimizedImage(item.image),
+    }))
   ).then((res) => res);
 
   const saleItemsOne = await Promise.all(
@@ -257,6 +285,7 @@ export async function getStaticProps() {
       heading: await markdownToHtml(item.heading),
     }))
   ).then((res) => res);
+
   return {
     props: {
       pdf: pdf.default.attributes,

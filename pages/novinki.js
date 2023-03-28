@@ -81,7 +81,9 @@ export async function getStaticProps() {
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
 
-  const hero = await getFluidImage(content.default.attributes.hero);
+  const hero = await getFluidImage(content.default.attributes.hero, {
+    webp: true,
+  });
 
   return {
     props: {

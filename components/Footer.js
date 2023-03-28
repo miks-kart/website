@@ -67,6 +67,7 @@ export default function Footer({ data, currentPage }) {
                 target="_blank"
                 rel="noreferrer"
                 href={social.link}
+                aria-label="social"
                 key={social.icon}
               >
                 {social.icon === "vk" ? (

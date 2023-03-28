@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import markdownToHtml from "../lib/markdownToHtml";
 import { motion } from "framer-motion";
 import DropdownHeading from "@components/DropdownHeading";
+import { getOptimizedImage } from "@components/image/imageFunctions";
 // import PDFTest from "@components/PDFTest";
 
 export default function Index({
@@ -73,7 +74,7 @@ export default function Index({
               }}
             >
               <div className="grid gap-5 pb-5 mt-10 md:grid-cols-2 md:pb-8">
-                {data.baseCarts.map(({ item }) => (
+                {data.baseCarts.map((item) => (
                   <SaleItem
                     category="priceListKarts"
                     key={item.headingSimple}
@@ -163,10 +164,7 @@ export default function Index({
 
           <article className="pt-10 md:pt-20" id={data.extrasId}>
             <h2 className="!text-3xl theme-subheading">{data.headingSeven}</h2>
-            <button
-              id={data.tiresId}
-              onClick={() => setIsOpenFour((isOpenFour) => !isOpenFour)}
-            >
+            <button onClick={() => setIsOpenFour((isOpenFour) => !isOpenFour)}>
               <DropdownHeading
                 state={isOpenFour}
                 heading={data.headingExtrasSport}
@@ -194,7 +192,7 @@ export default function Index({
               }}
             >
               <div className="grid gap-5 pb-5 mt-10 md:grid-cols-2 md:pb-8">
-                {data.extrasSport.map(({ item }) => (
+                {data.extrasSport.map((item) => (
                   <SaleItem
                     category="priceListOptionsSport"
                     key={item.headingSimple}
@@ -205,10 +203,7 @@ export default function Index({
             </motion.div>
           </article>
           <article className="pt-5 md:pt-8">
-            <button
-              id={data.tiresId}
-              onClick={() => setIsOpenFive((isOpenFive) => !isOpenFive)}
-            >
+            <button onClick={() => setIsOpenFive((isOpenFive) => !isOpenFive)}>
               <DropdownHeading
                 state={isOpenFive}
                 heading={data.headingExtrasJunior}
@@ -236,7 +231,7 @@ export default function Index({
               }}
             >
               <div className="grid gap-5 pb-5 mt-10 md:grid-cols-2 md:pb-8">
-                {data.extrasJunior.map(({ item }) => (
+                {data.extrasJunior.map((item) => (
                   <SaleItem
                     category="priceListOptionsJunior"
                     key={item.headingSimple}
@@ -295,6 +290,27 @@ export async function getStaticProps() {
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
+
+  content.default.attributes.baseCarts = await Promise.all(
+    content.default.attributes.baseCarts.map(async ({ item }) => ({
+      ...item,
+      image: await getOptimizedImage(item.image),
+    }))
+  ).then((res) => res);
+
+  content.default.attributes.extrasSport = await Promise.all(
+    content.default.attributes.extrasSport.map(async ({ item }) => ({
+      ...item,
+      image: await getOptimizedImage(item.image),
+    }))
+  ).then((res) => res);
+
+  content.default.attributes.extrasJunior = await Promise.all(
+    content.default.attributes.extrasJunior.map(async ({ item }) => ({
+      ...item,
+      image: await getOptimizedImage(item.image),
+    }))
+  ).then((res) => res);
 
   const saleItemsOne = await Promise.all(
     content.default.attributes.engines.map(async ({ item }) => ({

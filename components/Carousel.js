@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import Image from "./image/Image";
 
 export default function Carousel({ slides }) {
@@ -25,12 +24,18 @@ export default function Carousel({ slides }) {
           className="keen-slider aspect-[0.83333333] md:aspect-[2.66666667]"
         >
           {slides.map((slide, i) => (
-            <div key={i} className="keen-slider__slide number-slide">
+            <div
+              key={i}
+              style={{ width: "100%" }}
+              className="min-w-full keen-slider__slide number-slide"
+            >
               <Image
+                preload={i === 0}
                 loading="eager"
-                image={slide}
+                src={slide}
+                sizes="(max-width: 1200px) 100vw, 1200px"
                 alt="slide"
-                className="w-full h-full"
+                className="w-full h-full "
               />
             </div>
           ))}
@@ -38,6 +43,7 @@ export default function Carousel({ slides }) {
         {loaded && instanceRef.current && (
           <>
             <Arrow
+              aria-label="Предыдущий слайд"
               left
               onClick={(e) =>
                 e.stopPropagation() || instanceRef.current?.prev()
@@ -46,6 +52,7 @@ export default function Carousel({ slides }) {
             />
 
             <Arrow
+              aria-label="Следующий слайд"
               onClick={(e) =>
                 e.stopPropagation() || instanceRef.current?.next()
               }
@@ -63,6 +70,7 @@ export default function Carousel({ slides }) {
             ].map((idx) => {
               return (
                 <button
+                  aria-label="слайд"
                   key={idx}
                   onClick={() => {
                     instanceRef.current?.moveToIdx(idx);
@@ -140,6 +148,7 @@ function Arrow(props) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
   return (
     <button
+      aria-label={props.left ? "Следующий слайд" : "Предыдущий слайд"}
       className={`arrow hidden md:block -translate-y-1/2  ${
         props.left
           ? "arrow--left md:translate-x-[2rem]"

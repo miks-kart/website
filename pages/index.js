@@ -1,7 +1,11 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import ContactForm from "@components/ContactForm";
 import BackgroundImage from "@components/image/BackgroundImage";
-import { getFluidImage } from "@components/image/imageFunctions";
+import Image from "@components/image/Image";
+import {
+  getFluidImage,
+  getOptimizedImage,
+} from "@components/image/imageFunctions";
 import Priorities from "@components/Priorities";
 import VideoHero from "@components/VideoHero";
 import Link from "next/link";
@@ -48,7 +52,8 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
             </Link>
           </article>
           <article>
-            <img
+            <Image
+              sizes="(max-width: 1200px) 100vw, 1200px"
               src={data.imageOne}
               className="w-full aspect-[1.67] md:aspect-[2.5] object-cover"
               loading="lazy"
@@ -154,12 +159,18 @@ export async function getStaticProps() {
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
 
+  content.default.attributes.imageOne = await getOptimizedImage(
+    content.default.attributes.imageOne
+  );
+
   content.default.attributes.textTwo = await markdownToHtml(
     content.default.attributes.textTwo
   );
   const postOne = await markdownToHtml(content.default.attributes.statementOne);
   const postTwo = await markdownToHtml(content.default.attributes.statementTwo);
-  const hero = await getFluidImage(content.default.attributes.testdrive.image);
+  const hero = await getFluidImage(content.default.attributes.testdrive.image, {
+    webp: true,
+  });
 
   return {
     props: {

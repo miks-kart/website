@@ -1,15 +1,17 @@
 import SmartOutline from "@components/utils/SmartOutline";
+import { ProgressiveImageSupportProvider } from "@components/ProgressiveImageSupportContext";
 import { useRouter } from "next/router";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import SEO from "@components/seo";
+import "keen-slider/keen-slider.min.css";
 import "../styles/style.css";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
 
   return (
-    <>
+    <ProgressiveImageSupportProvider>
       <SmartOutline />
 
       <SEO
@@ -26,7 +28,7 @@ function App({ Component, pageProps }) {
       />
       <Component {...pageProps} />
       <Footer data={pageProps.footer} currentPage={router.route} />
-    </>
+    </ProgressiveImageSupportProvider>
   );
 }
 

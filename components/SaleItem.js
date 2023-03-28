@@ -1,5 +1,6 @@
 import { useStore } from "@components/Store";
 import _ from "lodash";
+import Image from "./image/Image";
 
 export default function SaleItem({ item, category, disabled, priceList }) {
   const shoppingCart = useStore((state) => state.shoppingCart);
@@ -33,8 +34,11 @@ export default function SaleItem({ item, category, disabled, priceList }) {
       onClick={() => handleOnClick()}
     >
       {item.image && (
-        <div className="theme-border-gray">
-          <img
+        <div className="w-full theme-border-gray">
+          <Image
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
             src={item.image}
             alt={item.headingSimple}
             className={`w-full object-cover aspect-[2]`}

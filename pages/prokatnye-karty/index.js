@@ -32,14 +32,15 @@ export default function Index({ data, heroOne, heroTwo }) {
     <section className="w-screen bg-white">
       <div className="relative flex items-end justify-start object-cover w-full h-screen">
         <Image
+          preload
           loading="eager"
-          image={heroOne}
+          src={heroOne}
           alt=""
           className="!absolute inset-0 w-full h-full"
         />
         <Image
           loading="eager"
-          image={heroTwo}
+          src={heroTwo}
           alt=""
           className={`${
             isFirst ? "opacity-0" : "opacity-100"
@@ -173,10 +174,16 @@ export async function getStaticProps() {
   const seo = await import(`../../cms/config/${locale}/seo.md`);
 
   const heroOne = await getFluidImage(
-    content.default.attributes.carts[0].cart.image
+    content.default.attributes.carts[0].cart.image,
+    {
+      webp: true,
+    }
   );
   const heroTwo = await getFluidImage(
-    content.default.attributes.carts[1].cart.image
+    content.default.attributes.carts[1].cart.image,
+    {
+      webp: true,
+    }
   );
 
   return {

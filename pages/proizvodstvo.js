@@ -3,7 +3,10 @@ import ListItem from "@components/ListItem";
 import markdownToHtml from "../lib/markdownToHtml";
 import PointWithImage from "@components/PointWithImage";
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
-import { getFluidImage } from "@components/image/imageFunctions";
+import {
+  getFluidImage,
+  getOptimizedImage,
+} from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
 
 export default function Index({ data, gallery }) {
@@ -117,7 +120,7 @@ export default function Index({ data, gallery }) {
               {data.headingNine}
             </h4>
             <div className="space-y-5">
-              {data.pointsSix.map(({ point }) => (
+              {data.pointsSix.map((point) => (
                 <PointWithImage key={point.text} point={point} />
               ))}
             </div>
@@ -127,7 +130,7 @@ export default function Index({ data, gallery }) {
               {data.headingTen}
             </h5>
             <div className="space-y-5">
-              {data.pointsSeven.map(({ point }) => (
+              {data.pointsSeven.map((point) => (
                 <PointWithImage key={point.text} point={point} />
               ))}
             </div>
@@ -137,7 +140,7 @@ export default function Index({ data, gallery }) {
               {data.headingEleven}
             </h6>
             <div className="space-y-5">
-              {data.pointsEight.map(({ point }) => (
+              {data.pointsEight.map((point) => (
                 <PointWithImage key={point.text} point={point} />
               ))}
             </div>
@@ -155,6 +158,27 @@ export async function getStaticProps() {
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
 
+  content.default.attributes.pointsSix = await Promise.all(
+    content.default.attributes.pointsSix.map(async ({ point }) => ({
+      ...point,
+      image: await getOptimizedImage(point.image),
+    }))
+  ).then((res) => res);
+
+  content.default.attributes.pointsSeven = await Promise.all(
+    content.default.attributes.pointsSeven.map(async ({ point }) => ({
+      ...point,
+      image: await getOptimizedImage(point.image),
+    }))
+  ).then((res) => res);
+
+  content.default.attributes.pointsEight = await Promise.all(
+    content.default.attributes.pointsEight.map(async ({ point }) => ({
+      ...point,
+      image: await getOptimizedImage(point.image),
+    }))
+  ).then((res) => res);
+
   content.default.attributes.newTexts = await Promise.all(
     content.default.attributes.texts.map(async ({ link }) => ({
       ...link,
@@ -164,7 +188,7 @@ export async function getStaticProps() {
 
   const gallery = await Promise.all(
     content.default.attributes.gallery.map(
-      async (img) => await getFluidImage(img)
+      async (img) => await getFluidImage(img, { avif: true, webp: true })
     )
   ).then((res) => res);
 

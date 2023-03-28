@@ -174,6 +174,7 @@ export default function Header({ data, bg, currentPage, headerAnchors }) {
                 <a
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="social"
                   href={social.link}
                   key={social.icon}
                 >
@@ -252,7 +253,7 @@ function AnchorLinks({
               </Link>
             ) : (
               <a
-                id={anchor.link}
+                // id={anchor.link}
                 key={anchor.text}
                 href={anchor.link}
                 onClick={(e) => {

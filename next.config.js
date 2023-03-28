@@ -3,6 +3,7 @@ module.exports = {
   //   locales: ["en", "ru"],
   //   defaultLocale: "ru",
   // },
+  staticPageGenerationTimeout: 240,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,

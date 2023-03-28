@@ -78,7 +78,7 @@ export default function NewsModal({
 
                   <Image
                     loading="eager"
-                    image={post.image}
+                    src={post.image}
                     alt="slide"
                     className="w-full h-full "
                   />

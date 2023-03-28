@@ -268,6 +268,7 @@ function Item({ item, removeFromShoppingCart, changeAmount, category }) {
             -
           </button>
           <input
+            aria-label="Количество"
             className="w-[5.125rem] text-primary-dark font-bold text-center h-8 bg-[#f6f6f6]"
             type="number"
             name="number"

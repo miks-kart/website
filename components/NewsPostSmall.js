@@ -8,7 +8,7 @@ export default function NewsPostSmall({ post, texts, onClick, i }) {
     >
       <Image
         loading="eager"
-        image={post.image}
+        src={post.image}
         alt={post.title}
         className="w-full aspect-[2] object-cover"
       />

@@ -1,57 +1,48 @@
-import { useEffect, useRef } from "react";
-import styles from "./index.module.css";
+import { forwardRef } from "react";
+import ImageBlur from "./ImageBlur";
+import ImageSimple from "./ImageSimple";
 
-export default function Image({
-  image,
-  alt = "",
-  className,
-  imageClassName = "object-cover w-full h-full",
-  loading = "lazy",
-  ...props
-}) {
-  const imageRef = useRef();
-
-  function imageLoaded() {
-    const imagePlaceholder = imageRef.current.getElementsByClassName(
-      styles.responsiveImage
-    )[0];
-    imagePlaceholder.classList.add(styles.loaded);
-  }
-
-  useEffect(() => {
-    const imagePlaceholder = imageRef.current.getElementsByClassName(
-      styles.responsiveImage
-    )[0];
-    const imageEl = imageRef.current.getElementsByClassName("onload")[0];
-    if (imageEl.complete) {
-      imagePlaceholder.classList.add(styles.loaded);
-    }
-  }, []);
-
-  return (
-    <div {...props} ref={imageRef} className={`relative ${className}`}>
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div
-          style={{
-            backgroundImage: `url("${image.placeholder}")`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-          className={`relative pointer-events-none ease-in-out w-full h-full ${styles.responsivePlaceholder} ${styles.responsiveImage}`}
-        />
-      </div>
-      <picture
-        className={`relative top-0 left-0 w-full h-full pointer-events-none  no-select`}
-      >
-        <source srcSet={image.srcset} />
-        <img
-          onLoad={() => imageLoaded()}
-          loading={loading}
-          className={`${imageClassName} onload`}
-          src={image.src}
+const Image = forwardRef(
+  (
+    {
+      src,
+      alt = "",
+      sizes = "100vw",
+      preload,
+      className,
+      imageClassName,
+      loading = "lazy",
+      ...props
+    },
+    forwardedRef
+  ) => {
+    return src.placeholder ? (
+      <>
+        <ImageBlur
           alt={alt}
+          image={src}
+          className={className}
+          preload={preload}
+          loading={loading}
+          sizes={sizes}
+          imageClassName={imageClassName}
+          ref={forwardedRef}
+          {...props}
         />
-      </picture>
-    </div>
-  );
-}
+      </>
+    ) : (
+      <ImageSimple
+        alt={alt}
+        src={src}
+        preload={preload}
+        sizes={sizes}
+        className={className}
+        loading={loading}
+        {...props}
+      />
+    );
+  }
+);
+
+Image.displayName = "Image";
+export default Image;
