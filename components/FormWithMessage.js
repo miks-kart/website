@@ -125,7 +125,7 @@ export default function FormWithMessage({ contactForm }) {
                 name="message"
                 className={`${
                   touched.message && errors.message ? "border-primary-red" : ""
-                } ${inputStyles} md:!h-[100%] h-56 mt-5 md:mt-0`}
+                } ${inputStyles} md:!h-[100%] !h-56 mt-5 md:mt-0`}
                 placeholder={contactForm.message}
                 component="textarea"
               />
