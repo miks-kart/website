@@ -133,7 +133,7 @@ tires:
   - item:
       heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
-      price: 8600
+      price: 8499
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
