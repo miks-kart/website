@@ -21,7 +21,7 @@ export function ProgressiveImageSupportProvider(props) {
           webp: false,
         });
       };
-      img.src = "http://www.gstatic.com/webp/gallery/1.webp";
+      img.src = "https://www.gstatic.com/webp/gallery/1.webp";
     }
 
     checkImageFormatSupport();
@@ -31,6 +31,7 @@ export function ProgressiveImageSupportProvider(props) {
     webp: true,
     avif: true,
   });
+  console.log(ProgressiveImageSupport);
 
   return (
     <ProgressiveImageSupportContext.Provider
