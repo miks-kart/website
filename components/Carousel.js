@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
-import Image from "./image/Image";
+import ImageBlur from "./image/ImageBlur";
 
 export default function Carousel({ slides }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -29,10 +29,10 @@ export default function Carousel({ slides }) {
               style={{ width: "100%" }}
               className="min-w-full keen-slider__slide number-slide"
             >
-              <Image
+              <ImageBlur
                 preload={i === 0}
                 loading="eager"
-                src={slide}
+                image={slide}
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 alt="slide"
                 className="w-full h-full "

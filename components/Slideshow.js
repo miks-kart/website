@@ -1,5 +1,5 @@
 import { useKeenSlider } from "keen-slider/react";
-import Image from "./image/Image";
+import ImageBlur from "./image/ImageBlur";
 
 export default function Slideshow({ slides }) {
   const [sliderRef] = useKeenSlider(
@@ -45,12 +45,12 @@ export default function Slideshow({ slides }) {
           key={slide.src}
           className="min-w-full keen-slider__slide"
         >
-          <Image
+          <ImageBlur
             preload={i === 0}
             loading="eager"
             className="h-full min-w-full"
             alt="slide"
-            src={slide}
+            image={slide}
           />
         </div>
       ))}
