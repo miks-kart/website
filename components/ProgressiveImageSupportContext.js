@@ -4,30 +4,27 @@ export const ProgressiveImageSupportContext = createContext();
 
 export function ProgressiveImageSupportProvider(props) {
   useEffect(() => {
-    function checkAvifSupport() {
+    async function checkImageFormatSupport() {
+      var img = new Image();
       const avif = new Image();
       avif.src =
         "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
-      return avif.decode ? true : false;
+      img.onload = function () {
+        setProgressiveImageSupport({
+          avif: avif.decode ? true : false,
+          webp: true,
+        });
+      };
+      img.onerror = function () {
+        setProgressiveImageSupport({
+          avif: avif.decode ? true : false,
+          webp: false,
+        });
+      };
+      img.src = "http://www.gstatic.com/webp/gallery/1.webp";
     }
 
-    function checkWebpSupport() {
-      const elem = document.createElement("canvas");
-
-      // eslint-disable-next-line no-extra-boolean-cast
-      if (!!(elem.getContext && elem.getContext("2d"))) {
-        // canvas is supported
-        return elem.toDataURL("image/webp").indexOf("data:image/webp") === 0;
-      } else {
-        // canvas is not supported
-        return false;
-      }
-    }
-
-    setProgressiveImageSupport({
-      webp: checkWebpSupport(),
-      avif: checkAvifSupport(),
-    });
+    checkImageFormatSupport();
   }, []);
 
   const [ProgressiveImageSupport, setProgressiveImageSupport] = useState({
