@@ -27,7 +27,7 @@ export default function Carousel({ slides }) {
             <div
               key={i}
               style={{ width: "100%" }}
-              className="min-w-full keen-slider__slide number-slide"
+              className="z-10 min-w-full keen-slider__slide number-slide"
             >
               <ImageBlur
                 preload={i === 0}
@@ -94,7 +94,12 @@ export default function Carousel({ slides }) {
       </div>
       <style jsx global>
         {`
-          [class^="number-slide"],
+          .keen-slider__slide {
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translateZ(0) scale(1, 1);
+            transform: translateZ(0);
+            isolation: isolate;
+          }
           [class*=" number-slide"] {
             display: flex;
             align-items: center;
@@ -106,6 +111,7 @@ export default function Carousel({ slides }) {
           }
 
           .arrow {
+            z-index: 11;
             width: 3.125rem;
             height: 3.125rem;
             position: absolute;
@@ -122,6 +128,7 @@ export default function Carousel({ slides }) {
             right: 5px;
           }
           .dots {
+            z-index: 11;
             display: flex;
             padding: 0.75rem 0;
             justify-content: center;

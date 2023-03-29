@@ -59,6 +59,7 @@ export default function Index({ data, gallery, points }) {
               {data.models.map((model) => (
                 <div className="" key={model.name}>
                   <Image
+                    style={{ aspectRatio: model.image.aspectRatio }}
                     sizes="(max-width: 1200px) 100vw, 800px"
                     src={model.image}
                     alt={model.name}

@@ -43,7 +43,7 @@ export default function Slideshow({ slides }) {
         <div
           style={{ width: "100%" }}
           key={slide.src}
-          className="min-w-full keen-slider__slide"
+          className="z-10 min-w-full keen-slider__slide"
         >
           <ImageBlur
             preload={i === 0}

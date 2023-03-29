@@ -344,6 +344,7 @@ export async function getOptimizedImage(image) {
       .join(", ");
   }
 
+  imageObj.aspectRatio = (dimensions.width / dimensions.height).toFixed(2);
   imageObj.src =
     dimensions.width >= 2000
       ? `/optimised/${2000}${imageName}`

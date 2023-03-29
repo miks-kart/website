@@ -23,6 +23,7 @@ const BackgroundImage = forwardRef(
 
     const sources = image.formats.map((format) => (
       <source
+        sizes={sizes}
         key={format.srcSet}
         srcSet={format.srcSet}
         type={`${format.format}`}
@@ -35,6 +36,8 @@ const BackgroundImage = forwardRef(
       if (!img) {
         return;
       }
+
+      checkImageCachedEvent(img);
 
       const p = "decode" in img ? img.decode() : Promise.resolve();
       p.catch(() => {}).then(() => {
@@ -57,19 +60,40 @@ const BackgroundImage = forwardRef(
       imagePlaceholder.classList.add(styles.loaded);
     }
 
-    useEffect(() => {
+    function checkImageCached() {
       const imagePlaceholder = imageRef.current.getElementsByClassName(
         styles.responsiveImage
       )[0];
       const imageEl = imageRef.current.getElementsByClassName("onload")[0];
+
+      if (imageEl.complete && wasLoaded.current === false) {
+        wasLoaded.current = true;
+        imagePlaceholder.classList.add(styles.wasLoaded);
+      }
+    }
+
+    function checkImageCachedEvent(target) {
+      const imagePlaceholder =
+        target.parentElement.parentElement.children[0].children[0];
+      const imageEl = target;
       const resources = performance.getEntriesByType("resource");
       const imgResources = resources.filter(
         (resource) => resource.name === imageEl.currentSrc
       );
-      if (imgResources.length > 0 && wasLoaded.current === false) {
+
+      if (
+        imgResources.length > 0 &&
+        (imgResources[0].decodedBodySize === 0 ||
+          imgResources[0].duration <= 70) &&
+        wasLoaded.current === false
+      ) {
         wasLoaded.current = true;
         imagePlaceholder.classList.add(styles.wasLoaded);
       }
+    }
+
+    useEffect(() => {
+      checkImageCached();
     }, []);
 
     return (
