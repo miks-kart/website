@@ -22,11 +22,11 @@ baseCarts:
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 1.jpg
       headingSimple: МИКС Карт Спорт
-      price: 290000
+      price: 280000
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 3.jpg
       headingSimple: МИКС Карт Юниор
-      price: 245000
+      price: 235000
 headingFive: двигатель
 enginesId: dvigatel
 engines:
@@ -62,7 +62,7 @@ extrasSport:
   - item:
       image: /images/Rectangle 176.jpg
       headingSimple: Топливный бак в рулевой стойке
-      price: 14000
+      price: 12000
   - item:
       image: /images/Rectangle 171.jpg
       headingSimple: Защита ног
@@ -70,7 +70,7 @@ extrasSport:
   - item:
       image: /images/photo_2022-07-31 22.23 23.jpg
       headingSimple: Пластиковая защита на заднюю ось
-      price: 10000
+      price: 95000
   - item:
       image: /images/image 10.jpg
       headingSimple: Ручное управление
@@ -98,7 +98,7 @@ extrasSport:
   - item:
       image: /images/untitled 1.jpg
       headingSimple: Ременная передача
-      price: 6500
+      price: 3000
   - item:
       image: /images/Rectangle 134-1.jpg
       headingSimple: Спортивный руль
@@ -152,7 +152,7 @@ extrasJunior:
   - item:
       image: /images/untitled 1.jpg
       headingSimple: Ременная передача
-      price: 6500
+      price: 3000
   - item:
       image: /images/Rectangle 134-1.jpg
       headingSimple: Спортивный руль
