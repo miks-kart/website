@@ -2,6 +2,7 @@
   "private": "true",
   "scripts": {
     "dev": "next",
+    "prebuild": "node postbuild.js",
     "build": "next build",
     "postbuild": "next-sitemap && node postbuild.js",
     "start": "next start"
