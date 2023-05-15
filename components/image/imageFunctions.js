@@ -31,10 +31,7 @@ async function isImageOptimized(input) {
 
   if (!data.optimized.includes(input)) {
     data.optimized.push(input);
-    await fs.promises.writeFile(
-      OPTIMIZED_FILENAME,
-      JSON.stringify(data, null, 2)
-    );
+    fs.writeFileSync(OPTIMIZED_FILENAME, JSON.stringify(data, null, 2));
     return false;
   } else {
     return true;
