@@ -1,4 +1,4 @@
-import { ProgressiveImageSupportContext } from "@components/ProgressiveImageSupportContext";
+import { ProgressiveImageSupportContext } from "@components/image/ProgressiveImageSupportContext";
 import { useContext } from "react";
 import Preload from "./Preload";
 
@@ -15,6 +15,24 @@ export default function ImageSimple({
     ProgressiveImageSupportContext
   );
 
+  function getSrcSet() {
+    if (src.formats?.length === 0) {
+      return undefined;
+    } else if (ProgressiveImageSupport.webp) {
+      return src.formats
+        ? src.formats.find((item) => item.format === "image/webp").srcSet
+        : src.srcSetWebp;
+    } else {
+      return src.formats
+        ? src.formats.find(
+            (item) =>
+              item.format === "image/jpeg" || item.format === "image/png"
+          ).srcSet
+        : src.srcSetOriginal;
+    }
+  }
+  const srcSet = getSrcSet();
+
   return (
     <>
       <img
@@ -23,9 +41,7 @@ export default function ImageSimple({
         loading={loading}
         className={className}
         alt={alt}
-        srcSet={
-          ProgressiveImageSupport.webp ? src.srcSetWebp : src.srcSetOriginal
-        }
+        srcSet={srcSet}
         src={src.src}
         {...props}
       />

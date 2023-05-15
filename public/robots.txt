@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://miks-kart.ru
+
+# Sitemaps
+Sitemap: https://miks-kart.ru/sitemap.xml
