@@ -15,11 +15,12 @@ const sizes = [320, 640, 960, 1200, 1440, 2000];
 
 const OPTIMIZED_FILENAME = "optimizedList.json";
 
-function isImageOptimized(input) {
+async function isImageOptimized(input) {
   let data = {};
 
   try {
-    data = JSON.parse(fs.readFileSync(OPTIMIZED_FILENAME));
+    const fileContents = await fs.promises.readFile(OPTIMIZED_FILENAME);
+    data = JSON.parse(fileContents);
   } catch (err) {
     if (err.code === "ENOENT") {
       data.optimized = [];
@@ -30,7 +31,10 @@ function isImageOptimized(input) {
 
   if (!data.optimized.includes(input)) {
     data.optimized.push(input);
-    fs.writeFileSync(OPTIMIZED_FILENAME, JSON.stringify(data, null, 2));
+    await fs.promises.writeFile(
+      OPTIMIZED_FILENAME,
+      JSON.stringify(data, null, 2)
+    );
     return false;
   } else {
     return true;
@@ -158,7 +162,7 @@ export async function getFluidImage(
     return image;
   }
 
-  const wasOptimized = isImageOptimized(image);
+  const wasOptimized = await isImageOptimized(image);
 
   const imageName = image.split("images").pop();
   image = "/public" + image;
@@ -320,7 +324,7 @@ export async function getOptimizedImage(image) {
     return image;
   }
 
-  const wasOptimized = isImageOptimized(image);
+  const wasOptimized = await isImageOptimized(image);
 
   const imageName = image.split("images").pop();
   image = "/public" + image;
