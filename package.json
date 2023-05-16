@@ -2,7 +2,6 @@
   "private": "true",
   "scripts": {
     "dev": "next",
-    "prebuild": "node postbuild.js",
     "build": "next build",
     "postbuild": "next-sitemap && node postbuild.js",
     "start": "next start"
@@ -22,6 +21,7 @@
     "next": "^13.2.4",
     "next-sitemap": "^4.0.9",
     "nodemailer": "^6.9.1",
+    "proper-lockfile": "^4.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark": "^14.0.2",
