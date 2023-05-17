@@ -1,9 +1,6 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import Image from "@components/image/Image";
-import {
-  getFluidImage,
-  getOptimizedImage,
-} from "@components/image/imageFunctions";
+import { getFluidImage } from "@components/image/imageFunctions";
 import ListItem from "@components/ListItem";
 import Slideshow from "@components/Slideshow";
 import Link from "next/link";
@@ -153,7 +150,7 @@ export async function getStaticProps() {
   content.default.attributes.models = await Promise.all(
     content.default.attributes.models.map(async ({ model }) => ({
       ...model,
-      image: await getOptimizedImage(model.image),
+      image: await getFluidImage(model.image),
     }))
   ).then((res) => res);
 

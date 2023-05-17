@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import markdownToHtml from "../lib/markdownToHtml";
 import { motion } from "framer-motion";
 import DropdownHeading from "@components/DropdownHeading";
-import { getOptimizedImage } from "@components/image/imageFunctions";
+import { getFluidImage } from "@components/image/imageFunctions";
 // import PDFTest from "@components/PDFTest";
 
 export default function Index({
@@ -294,21 +294,21 @@ export async function getStaticProps() {
   content.default.attributes.baseCarts = await Promise.all(
     content.default.attributes.baseCarts.map(async ({ item }) => ({
       ...item,
-      image: await getOptimizedImage(item.image),
+      image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
 
   content.default.attributes.extrasSport = await Promise.all(
     content.default.attributes.extrasSport.map(async ({ item }) => ({
       ...item,
-      image: await getOptimizedImage(item.image),
+      image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
 
   content.default.attributes.extrasJunior = await Promise.all(
     content.default.attributes.extrasJunior.map(async ({ item }) => ({
       ...item,
-      image: await getOptimizedImage(item.image),
+      image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
 

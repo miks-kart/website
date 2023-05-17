@@ -2,10 +2,7 @@ import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import ContactForm from "@components/ContactForm";
 import BackgroundImage from "@components/image/BackgroundImage";
 import Image from "@components/image/Image";
-import {
-  getFluidImage,
-  getOptimizedImage,
-} from "@components/image/imageFunctions";
+import { getFluidImage } from "@components/image/imageFunctions";
 import Priorities from "@components/Priorities";
 import VideoHero from "@components/VideoHero";
 import Link from "next/link";
@@ -159,7 +156,7 @@ export async function getStaticProps() {
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
 
-  content.default.attributes.imageOne = await getOptimizedImage(
+  content.default.attributes.imageOne = await getFluidImage(
     content.default.attributes.imageOne
   );
 

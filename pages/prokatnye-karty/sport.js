@@ -6,10 +6,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import SaleItem from "@components/SaleItem";
 import { useStore } from "@components/Store";
 import DropdownHeading from "@components/DropdownHeading";
-import {
-  getFluidImage,
-  getOptimizedImage,
-} from "@components/image/imageFunctions";
+import { getFluidImage } from "@components/image/imageFunctions";
 import PurchaseSummary from "@components/PurchaseSummary";
 import HorizontalScrolling from "@components/HorizontalScrolling";
 import Image from "@components/image/Image";
@@ -247,10 +244,10 @@ export async function getStaticProps() {
 
   const postOne = await markdownToHtml(content.default.attributes.textThree);
 
-  content.default.attributes.imageOne = await getOptimizedImage(
+  content.default.attributes.imageOne = await getFluidImage(
     content.default.attributes.imageOne
   );
-  content.default.attributes.imageTwo = await getOptimizedImage(
+  content.default.attributes.imageTwo = await getFluidImage(
     content.default.attributes.imageTwo
   );
 
@@ -263,13 +260,13 @@ export async function getStaticProps() {
   content.default.attributes.base = await Promise.all(
     content.default.attributes.base.map(async ({ item }) => ({
       ...item,
-      image: await getOptimizedImage(item.image),
+      image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
   content.default.attributes.options = await Promise.all(
     content.default.attributes.options.map(async ({ item }) => ({
       ...item,
-      image: await getOptimizedImage(item.image),
+      image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
 

@@ -3,10 +3,7 @@ import ListItem from "@components/ListItem";
 import markdownToHtml from "../lib/markdownToHtml";
 import PointWithImage from "@components/PointWithImage";
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
-import {
-  getFluidImage,
-  getOptimizedImage,
-} from "@components/image/imageFunctions";
+import { getFluidImage } from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
 
 export default function Index({ data, gallery }) {
@@ -161,21 +158,21 @@ export async function getStaticProps() {
   content.default.attributes.pointsSix = await Promise.all(
     content.default.attributes.pointsSix.map(async ({ point }) => ({
       ...point,
-      image: await getOptimizedImage(point.image),
+      image: await getFluidImage(point.image),
     }))
   ).then((res) => res);
 
   content.default.attributes.pointsSeven = await Promise.all(
     content.default.attributes.pointsSeven.map(async ({ point }) => ({
       ...point,
-      image: await getOptimizedImage(point.image),
+      image: await getFluidImage(point.image),
     }))
   ).then((res) => res);
 
   content.default.attributes.pointsEight = await Promise.all(
     content.default.attributes.pointsEight.map(async ({ point }) => ({
       ...point,
-      image: await getOptimizedImage(point.image),
+      image: await getFluidImage(point.image),
     }))
   ).then((res) => res);
 
