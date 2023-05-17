@@ -25,7 +25,6 @@ const BackgroundImage = forwardRef(
             <ImageBlur
               alt={alt}
               image={image}
-              className={className}
               preload={preload}
               loading={loading}
               sizes={sizes}

@@ -9,7 +9,7 @@ const ImageBlur = forwardRef(
       preload,
       alt = "",
       sizes = "100vw",
-      className,
+      className = "h-full",
       imageClassName = "object-cover w-full h-full",
       loading = "lazy",
       ...props

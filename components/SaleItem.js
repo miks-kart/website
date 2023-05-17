@@ -1,6 +1,6 @@
 import { useStore } from "@components/Store";
 import _ from "lodash";
-import Image from "./image/Image";
+import Image from "./image/ImageSimple";
 
 export default function SaleItem({ item, category, disabled, priceList }) {
   const shoppingCart = useStore((state) => state.shoppingCart);

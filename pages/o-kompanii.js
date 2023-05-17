@@ -1,5 +1,5 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
-import Image from "@components/image/Image";
+import Image from "@components/image/ImageSimple";
 import { getFluidImage } from "@components/image/imageFunctions";
 import ListItem from "@components/ListItem";
 import Slideshow from "@components/Slideshow";

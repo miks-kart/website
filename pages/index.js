@@ -1,7 +1,7 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import ContactForm from "@components/ContactForm";
 import BackgroundImage from "@components/image/BackgroundImage";
-import Image from "@components/image/Image";
+import Image from "@components/image/ImageSimple";
 import { getFluidImage } from "@components/image/imageFunctions";
 import Priorities from "@components/Priorities";
 import VideoHero from "@components/VideoHero";

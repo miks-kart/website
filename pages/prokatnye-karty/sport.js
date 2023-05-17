@@ -9,7 +9,7 @@ import DropdownHeading from "@components/DropdownHeading";
 import { getFluidImage } from "@components/image/imageFunctions";
 import PurchaseSummary from "@components/PurchaseSummary";
 import HorizontalScrolling from "@components/HorizontalScrolling";
-import Image from "@components/image/Image";
+import Image from "@components/image/ImageSimple";
 // import PDFTest from "@components/PDFTest";
 
 export default function Index({
