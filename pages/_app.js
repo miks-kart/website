@@ -27,7 +27,22 @@ function App({ Component, pageProps }) {
         data={pageProps.header}
         currentPage={router.route}
       />
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LFVH7J"
+      <Script
+       async
+       strategy="worker"
+       src={`https://www.googletagmanager.com/gtag/js?id=GTM-5LFVH7J`}
+     />
+     <Script
+       id="gtm-base"
+       strategy="worker"
+       dangerouslySetInnerHTML={{
+         __html: `window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'GTM-5LFVH7J}');`,
+       }}
+     />
+      <noscript><iframe id="gtm-frame" src="https://www.googletagmanager.com/ns.html?id=GTM-5LFVH7J"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <Component {...pageProps} />
       <Footer data={pageProps.footer} currentPage={router.route} />
