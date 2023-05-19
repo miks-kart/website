@@ -42,7 +42,7 @@ function App({ Component, pageProps }) {
          gtag('config', 'GTM-5LFVH7J}');`,
        }}
      />
-      <noscript><iframe id="gtm-frame" src="https://www.googletagmanager.com/ns.html?id=GTM-5LFVH7J"
+      <noscript><iframe id="gtm-frame" title="GTM" src="https://www.googletagmanager.com/ns.html?id=GTM-5LFVH7J"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <Component {...pageProps} />
       <Footer data={pageProps.footer} currentPage={router.route} />
