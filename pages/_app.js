@@ -17,15 +17,19 @@ function App({ Component, pageProps }) {
         src="https://www.googletagmanager.com/gtag/js?id=GTM-5LFVH7J"
         strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'GTM-5LFVH7J');
-        `}
-      </Script>
+        `,
+        }}
+      />
       <noscript>
         <iframe
           id="gtm-frame"
