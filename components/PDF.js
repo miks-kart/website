@@ -242,7 +242,7 @@ export default function PDF({
                       )}
                     </Text>
                     <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
-                      {item.from ? "От " : ""}
+                      {item.from === "true" ? "От " : ""}
                       {`${numberWithCommas(item.price * item.amount)} руб.`}
                     </Text>
                   </View>
@@ -286,7 +286,7 @@ export default function PDF({
                       )}
                     </Text>
                     <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
-                      {item.from ? "От " : ""}
+                      {item.from === "true" ? "От " : ""}
                       {`${numberWithCommas(item.price * item.amount)} руб.`}
                     </Text>
                   </View>
@@ -329,7 +329,7 @@ export default function PDF({
                       )}
                     </Text>
                     <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
-                      {item.from ? "От " : ""}
+                      {item.from === "true" ? "От " : ""}
                       {`${numberWithCommas(item.price * item.amount)} руб.`}
                     </Text>
                   </View>
@@ -385,7 +385,7 @@ export default function PDF({
                         )}
                       </Text>
                       <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
-                        {item.from ? "От " : ""}
+                        {item.from === "true" ? "От " : ""}
                         {`${numberWithCommas(item.price * item.amount)} руб.`}
                       </Text>
                     </View>
@@ -428,7 +428,7 @@ export default function PDF({
                         )}
                       </Text>
                       <Text style={{ fontSize: "1.8vw", fontWeight: "600" }}>
-                        {item.from ? "От " : ""}
+                        {item.from === "true" ? "От " : ""}
                         {`${numberWithCommas(item.price * item.amount)} руб.`}
                       </Text>
                     </View>

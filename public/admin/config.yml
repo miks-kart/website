@@ -638,8 +638,12 @@ collections:
                 widget: number
               - label: От
                 name: from
-                widget: boolean
-                default: false
+                widget: select
+                default: { label: "Выкл", value: 'false' }
+                required: false
+                options:
+                  - { label: "Выкл", value: 'false' }
+                  - { label: "Вкл", value: 'true' }
           - label: Возможности
             name: features
             widget: list
@@ -714,8 +718,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Заголовок Шины
             name: tiresHeading
             widget: string
@@ -739,8 +747,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Заголовок Дополнительных опций
             name: optionsHeading
             widget: string
@@ -770,8 +782,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Стоимость
             name: summary
             widget: object
@@ -864,8 +880,12 @@ collections:
                 widget: number
               - label: От
                 name: from
-                widget: boolean
-                default: false
+                widget: select
+                default: { label: "Выкл", value: 'false' }
+                required: false
+                options:
+                  - { label: "Выкл", value: 'false' }
+                  - { label: "Вкл", value: 'true' }
           - label: Возможности
             name: features
             widget: list
@@ -940,8 +960,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Заголовок Шины
             name: tiresHeading
             widget: string
@@ -965,8 +989,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Заголовок Дополнительных опций
             name: optionsHeading
             widget: string
@@ -996,8 +1024,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Стоимость
             name: summary
             widget: object
@@ -1208,8 +1240,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
 #           - label: Заголовок 3
 #             name: headingThree
 #             widget: string
@@ -1260,8 +1296,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Заголовок 5
             name: headingSix
             widget: string
@@ -1288,8 +1328,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Заголовок 6
             name: headingSeven
             widget: string
@@ -1319,8 +1363,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Заголовок МИКС КАРТ Юниор
             name: headingExtrasJunior
             widget: string
@@ -1344,8 +1392,12 @@ collections:
                   widget: number
                 - label: От
                   name: from
-                  widget: boolean
-                  default: false
+                  widget: select
+                  default: { label: "Выкл", value: 'false' }
+                  required: false
+                  options:
+                    - { label: "Выкл", value: 'false' }
+                    - { label: "Вкл", value: 'true' }
           - label: Кнопка
             name: buttonOne
             widget: object

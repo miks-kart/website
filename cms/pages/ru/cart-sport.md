@@ -117,24 +117,24 @@ engines:
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
       price: 18000
-      from: true
+      from: "true"
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
       headingSimple: Zongshen ZS GB 270 B с редуктором 9 лс
       price: 34000
-      from: true
+      from: "true"
   - item:
       heading: "**Хонда GX 270** c редуктором **9 лс**"
       headingSimple: Хонда GX 270 c редуктором 9 лс
       price: 115000
-      from: true
+      from: "true"
 tiresHeading: резина
 tires:
   - item:
       heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
       price: 8500
-      from: false
+      from: "false"
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
@@ -151,7 +151,7 @@ options:
         демонтировав штатный бак; повысить удобство управления, за счет снижения
         габаритов навесного оборудования двигателя
       price: 12000
-      from: false
+      from: "false"
   - item:
       image: /images/Rectangle 171.jpg
       headingSimple: Защита ног

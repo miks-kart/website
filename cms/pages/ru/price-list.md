@@ -169,7 +169,7 @@ extrasJunior:
       image: /images/untitled-1.png
       headingSimple: Комплект наклеек
       price: 12000
-      from: false
+      from: "false"
 buttonOne:
   text: скачать весь прайс-лист в .pdf
   link: /MIKS-Pricelist.pdf
