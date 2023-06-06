@@ -44,6 +44,10 @@ engines:
       heading: "**Хонда GX 270** c редуктором **9 лс**"
       headingSimple: Хонда GX 270 c редуктором 9 лс
       price: 115000
+  - item:
+      heading: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
+      headingSimple: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
+      price: 17000
 headingSix: резина
 tiresId: resina
 tires:
