@@ -201,7 +201,7 @@ input[type="number"] {
 }
 
 .theme-button {
-  @apply relative py-[0.9375rem] text-sm font-bold text-center text-white skew-x-[-8deg] bg-primary-red active:bg-primary-red-active hover:bg-primary-red-hover focus:bg-primary-red-hover px-[3.25rem] w-[11.2rem] inline-block duration-150;
+  @apply relative py-[0.9375rem] text-sm font-bold text-center text-white skew-x-[-8deg] bg-primary-red active:bg-primary-red-active hover:bg-primary-red-hover focus:bg-primary-red-hover px-[1.25rem] w-[11.2rem] inline-block duration-150;
 }
 .theme-button span {
   @apply skew-x-[8deg] inline-block;
