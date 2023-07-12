@@ -110,7 +110,7 @@ extrasSport:
   - item:
       image: /images/Rectangle 131.jpg
       headingSimple: Довесы 25 кг
-      price: 7500
+      price: 8500
   - item:
       image: /images/Rectangle 119.jpg
       headingSimple: Корзина довесов
@@ -164,7 +164,7 @@ extrasJunior:
   - item:
       image: /images/Rectangle 131.jpg
       headingSimple: Довесы 25 кг
-      price: 7000
+      price: 8500
   - item:
       image: /images/Rectangle 119.jpg
       headingSimple: Корзина довесов
