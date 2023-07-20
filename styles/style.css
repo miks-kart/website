@@ -379,3 +379,6 @@ footer .nav-icon {
     width: 90%;
   }
 }
+.w-screen {
+    width: 100% !important;
+}
