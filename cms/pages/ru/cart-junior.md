@@ -39,7 +39,7 @@ imageOne: /images/Group 356.jpg
 imageTwo: /images/Group 513.jpg
 kart:
   headingSimple: МИКС Карт Юниор
-  price: 235000
+  price: 245000
   from: "false"
 features:
   - feature:
