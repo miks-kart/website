@@ -1,8 +1,8 @@
 ---
 isWide: true
 title: Новый класс в российском картинге – академия SMP Микро 4Т!
-image: /images/новый-класс-4.jpg
-dateTitle: 15.08.2023
+image: /images/новый-класс-3.jpg
+dateTitle: 15 августа 2023 г.
 date: 2023-08-15T03:37:51
 source: https://miks-kart.ru
 pre: >-
