@@ -9,7 +9,7 @@ title: Главная
 heroVideo:
   video: /images/video-for-main-page-web_2-opt.mp4
   placeholder: /images/screenshot-2023-06-02-at-17.59.19 (1).jpg
-headingOne: российский производитель картов для проката и спорта
+headingOne: Российский производитель картов для проката и спорта
 statementOne: "***20 лет*** *на рынке*"
 statementTwo: "***5 лет*** *инноваций*"
 skolkovoLogo: /images/skolkovo-logo.svg
