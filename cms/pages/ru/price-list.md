@@ -116,13 +116,13 @@ extrasSport:
       headingSimple: Корзина довесов
       price: 4000
   - item:
-      image: /images/untitled 1-1.jpg
-      headingSimple: Комплект наклеек
-      price: 12000
-  - item:
       headingSimple: Система принудительного сброса газа
       price: 8000
       image: /images/image 5.jpg
+  - item:
+      image: /images/untitled 1-1.jpg
+      headingSimple: Комплект наклеек
+      price: 12000
 headingExtrasJunior: Для МИКС КАРТ Юниор
 extrasJunior:
   - item:
