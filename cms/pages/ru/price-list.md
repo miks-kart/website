@@ -174,14 +174,14 @@ extrasJunior:
       headingSimple: Корзина довесов
       price: 4000
   - item:
+      headingSimple: Система принудительного сброса газа
+      price: 8000
+      image: /images/image 5.jpg
+  - item:
       image: /images/untitled-1.png
       headingSimple: Комплект наклеек
       price: 12000
       from: "false"
-  - item:
-      headingSimple: Система принудительного сброса газа
-      price: 8000
-      image: /images/image 5.jpg
 buttonOne:
   text: скачать весь прайс-лист в .pdf
   link: /MIKS-Pricelist.pdf
