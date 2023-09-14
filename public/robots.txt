@@ -1,6 +1,7 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /novinki
 
 # Host
 Host: https://miks-kart.ru
