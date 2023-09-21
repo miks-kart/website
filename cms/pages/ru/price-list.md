@@ -100,7 +100,7 @@ extrasSport:
       price: 9000
   - item:
       image: /images/Rectangle 174.jpg
-      headingSimple: Защита двигателя
+      headingSimple: "Защита двигателя "
       price: 7500
   - item:
       image: /images/untitled 1.jpg
