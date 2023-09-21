@@ -77,7 +77,7 @@ extrasSport:
   - item:
       image: /images/photo_2022-07-31 22.23 23.jpg
       headingSimple: Пластиковая защита на заднюю ось
-      price: 95000
+      price: 10500
   - item:
       image: /images/image 10.jpg
       headingSimple: Ручное управление
@@ -93,7 +93,7 @@ extrasSport:
   - item:
       image: /images/Rectangle 177.jpg
       headingSimple: Спортивный глушитель
-      price: 7000
+      price: 8000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
@@ -101,7 +101,7 @@ extrasSport:
   - item:
       image: /images/Rectangle 174.jpg
       headingSimple: Защита двигателя
-      price: 6500
+      price: 7500
   - item:
       image: /images/untitled 1.jpg
       headingSimple: Ременная передача
@@ -139,7 +139,7 @@ extrasJunior:
   - item:
       image: /images/photo_2022-07-31 22.23 23.jpg
       headingSimple: Пластиковая защита на заднюю ось
-      price: 9500
+      price: 10500
   - item:
       image: /images/image 11.jpg
       headingSimple: Безлюфтовая регулируемая рулевая стойка
@@ -151,7 +151,7 @@ extrasJunior:
   - item:
       image: /images/Rectangle 177.jpg
       headingSimple: Спортивный глушитель
-      price: 7000
+      price: 8000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
@@ -159,7 +159,7 @@ extrasJunior:
   - item:
       image: /images/Rectangle 174.jpg
       headingSimple: Защита двигателя
-      price: 6500
+      price: 7500
   - item:
       image: /images/untitled 1.jpg
       headingSimple: Ременная передача
