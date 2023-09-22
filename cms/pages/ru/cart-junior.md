@@ -119,7 +119,7 @@ tires:
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
-      price: 10000
+      price: 12000
 optionsHeading: дополнительные опции
 headingExtrasJunior: Для МИКС КАРТ Юниор
 options:
