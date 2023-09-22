@@ -29,7 +29,7 @@ baseCarts:
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 3.jpg
       headingSimple: МИКС Карт Юниор
-      price: 235000
+      price: 250000
 headingFive: двигатель
 enginesId: dvigatel
 engines:
