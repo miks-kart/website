@@ -39,7 +39,7 @@ imageOne: /images/Group 356.jpg
 imageTwo: /images/Group 513.jpg
 kart:
   headingSimple: МИКС Карт Юниор
-  price: 245000
+  price: 250000
   from: "false"
 features:
   - feature:
@@ -105,7 +105,7 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 18000
+      price: 20000
   - item:
       heading: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
       headingSimple: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
@@ -146,14 +146,14 @@ options:
       text: Защищает пилота от вращающихся механизмов задней оси и главной передачи,
         устраняет брызги при езде по мокрой трассе,  придает эстетичный внешний
         вид
-      price: 9500
+      price: 10500
   - item:
       image: /images/Rectangle 174.jpg
       headingSimple: Защита двигателя
       text: Повышает эстетичность внешнего вида карта, устраняет риск ожогов пилота о
         горячий двигатель, способствует быстрому прогреву двигателя в зимних
         условиях эксплуатации
-      price: 6500
+      price: 7500
   - item:
       image: /images/image 11.jpg
       headingSimple: Безлюфтовая регулируемая рулевая стойка
@@ -177,7 +177,7 @@ options:
       text: Устраняет риск ожогов для пилота, т.к. располагается сзади сиденья,
         снижает шум работы выхлопной системы мотора и улучшает доступ для
         обслуживания двигателя
-      price: 7000
+      price: 8000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
