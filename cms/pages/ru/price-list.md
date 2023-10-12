@@ -150,7 +150,7 @@ extrasJunior:
       price: 11000
   - item:
       image: /images/Rectangle 177.jpg
-      headingSimple: "Спортивный глушитель "
+      headingSimple: Спортивный глушитель
       price: 10000
   - item:
       image: /images/Rectangle 134.jpg
