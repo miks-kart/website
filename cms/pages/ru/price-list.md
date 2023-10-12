@@ -89,11 +89,11 @@ extrasSport:
   - item:
       image: /images/Rectangle 128.jpg
       headingSimple: Глушитель с катализатором
-      price: 9500
+      price: 11000
   - item:
       image: /images/Rectangle 177.jpg
       headingSimple: Спортивный глушитель
-      price: 8000
+      price: 10000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
@@ -147,11 +147,11 @@ extrasJunior:
   - item:
       image: /images/Rectangle 128.jpg
       headingSimple: Глушитель с катализатором
-      price: 9500
+      price: 11000
   - item:
       image: /images/Rectangle 177.jpg
       headingSimple: Спортивный глушитель
-      price: 8000
+      price: 10000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
