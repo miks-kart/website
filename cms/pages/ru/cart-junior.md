@@ -101,15 +101,9 @@ base:
 engineHeading: Двигатель
 engines:
   - item:
-      heading: |-
-        **Zongshen ZS GB 168 FB-4** с редуктором
-        (200 см.куб) **6.5 лс**
-      headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 20000
-  - item:
       heading: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
       headingSimple: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
-      price: 17000
+      price: 23000
 tiresHeading: резина
 tires:
   - item:
