@@ -53,7 +53,7 @@ engines:
       heading: "**Z﻿ongshen ZS 188 FA2**"
       headingSimple: Бензиновый, четырехтактный с ручным стартером, мощностью 10 л.с,
         7.4 кВт Объёмом 370 см3
-      from: "true"
+      from: "false"
       price: 55000
   - item:
       heading: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
