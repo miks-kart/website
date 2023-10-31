@@ -120,6 +120,12 @@ engines:
       headingSimple: Хонда GX 270 c редуктором 9 лс
       price: 115000
       from: "true"
+  - item:
+      heading: Z﻿ongshen ZS 188 FA2
+      price: 55000
+      from: "true"
+      headingSimple: Бензиновый, четырехтактный с ручным стартером, мощностью 10 л.с.,
+        7.4 кВт Объёмом 370 см3
 tiresHeading: резина
 tires:
   - item:
