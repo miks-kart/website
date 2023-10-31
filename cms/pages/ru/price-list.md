@@ -73,10 +73,6 @@ extrasSport:
       headingSimple: Топливный бак в рулевой стойке
       price: 12000
   - item:
-      image: /images/Rectangle 171.jpg
-      headingSimple: Защита ног
-      price: 6000
-  - item:
       image: /images/photo_2022-07-31 22.23 23.jpg
       headingSimple: Пластиковая защита на заднюю ось
       price: 10500
@@ -84,10 +80,6 @@ extrasSport:
       image: /images/image 10.jpg
       headingSimple: Ручное управление
       price: 60000
-  - item:
-      image: /images/image 11.jpg
-      headingSimple: Безлюфтовая регулируемая рулевая стойка
-      price: 3500
   - item:
       image: /images/Rectangle 128.jpg
       headingSimple: Глушитель с катализатором
@@ -127,7 +119,7 @@ extrasSport:
   - item:
       image: /images/untitled 1-1.jpg
       headingSimple: Комплект наклеек
-      price: 12000
+      price: 15000
 headingExtrasJunior: Для МИКС КАРТ Юниор
 extrasJunior:
   - item:
