@@ -66,7 +66,7 @@ tires:
       price: 12000
 headingSeven: запчасти
 extrasId: zapchasti
-headingExtrasSport: Для МИКС КАРТ Спорт
+headingExtrasSport: "Для МИКС КАРТ Спорт "
 extrasSport:
   - item:
       image: /images/Rectangle 176.jpg
