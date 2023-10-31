@@ -126,7 +126,7 @@ engines:
       from: "true"
       headingSimple: Бензиновый, четырехтактный с ручным стартером, мощностью 10 л.с.,
         7.4 кВт Объёмом 370 см3
-tiresHeading: резина
+tiresHeading: "резина "
 tires:
   - item:
       heading: Резина **Мега (Россия)**
