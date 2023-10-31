@@ -121,7 +121,7 @@ engines:
       price: 115000
       from: "true"
   - item:
-      heading: Z﻿ongshen ZS 188 FA2
+      heading: "**Z﻿ongshen ZS 188 FA2**"
       price: 55000
       from: "true"
       headingSimple: Бензиновый, четырехтактный с ручным стартером, мощностью 10 л.с,
