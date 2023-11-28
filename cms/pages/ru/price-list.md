@@ -109,7 +109,7 @@ extrasSport:
   - item:
       image: /images/Rectangle 134-1.jpg
       headingSimple: Спортивный руль
-      price: 3500
+      price: 5000
   - item:
       image: /images/Rectangle 131.jpg
       headingSimple: Довесы 25 кг
@@ -167,7 +167,7 @@ extrasJunior:
   - item:
       image: /images/Rectangle 134-1.jpg
       headingSimple: Спортивный руль
-      price: 3500
+      price: 5000
   - item:
       image: /images/Rectangle 131.jpg
       headingSimple: Довесы 25 кг
