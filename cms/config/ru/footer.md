@@ -46,6 +46,9 @@ links:
         - subitem:
             text: manager@miks-kart.ru
             link: mailto:manager@miks-kart.ru
+        - subitem:
+            text: Miks Karting
+            link: https://miks-karting.ru/
 socials:
   - social:
       icon: vk
