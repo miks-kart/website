@@ -18,7 +18,7 @@ points:
       heading: "Адрес:"
       text: Шарикоподшипниковская улица, 13с89
   - point:
-      text: <a href="https://miks-karting.ru/">Микс Картинг</a>
+      text: https://miks-karting.ru/
       icon: /images/mk-logo.svg
       heading: Микс Картинг
 headingForm: мы на связи
