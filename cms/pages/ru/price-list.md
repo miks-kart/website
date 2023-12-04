@@ -113,11 +113,11 @@ extrasSport:
   - item:
       image: /images/Rectangle 131.jpg
       headingSimple: Довесы 25 кг
-      price: 8500
+      price: 10500
   - item:
       image: /images/Rectangle 119.jpg
       headingSimple: Корзина довесов
-      price: 4000
+      price: 5500
   - item:
       headingSimple: Система принудительного сброса газа
       price: 8000
@@ -171,11 +171,11 @@ extrasJunior:
   - item:
       image: /images/Rectangle 131.jpg
       headingSimple: Довесы 25 кг
-      price: 8500
+      price: 10499
   - item:
       image: /images/Rectangle 119.jpg
       headingSimple: Корзина довесов
-      price: 4000
+      price: 5500
   - item:
       headingSimple: Система принудительного сброса газа
       price: 8000
