@@ -190,7 +190,7 @@ options:
       headingSimple: Спортивный руль
       text: Подчеркивает эксклюзивность карта, повышает удобство управления за счет
         особой эргономичной формы
-      price: 5000
+      price: 10000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
