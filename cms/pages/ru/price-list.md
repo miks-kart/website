@@ -125,7 +125,7 @@ extrasSport:
   - item:
       image: /images/untitled 1-1.jpg
       headingSimple: Комплект наклеек
-      price: 15000
+      price: 20000
 headingExtrasJunior: Для МИКС КАРТ Юниор
 extrasJunior:
   - item:
