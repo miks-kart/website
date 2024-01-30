@@ -39,7 +39,7 @@ imageOne: /images/Group 356.jpg
 imageTwo: /images/Group 513.jpg
 kart:
   headingSimple: МИКС Карт Юниор
-  price: 250000
+  price: 260000
   from: "false"
 features:
   - feature:
@@ -197,7 +197,7 @@ options:
         уровень шума при передаче крутящего момента на ведущую ось; позволяет
         снизить трудозатраты при обслуживании карта, т.к. практически не требует
         регулировки и смазки.
-      price: 3000
+      price: 8000
   - item:
       image: /images/Rectangle 131.jpg
       headingSimple: Довесы 25 кг
