@@ -126,6 +126,10 @@ extrasSport:
       image: /images/untitled 1-1.jpg
       headingSimple: Комплект наклеек
       price: 20000
+  - item:
+      image: /images/2f69eb9f-65d8-4c6b-9dbd-8ff4d2c5a393.jpg
+      headingSimple: Защита цепи или ремня
+      price: 3000
 headingExtrasJunior: Для МИКС КАРТ Юниор
 extrasJunior:
   - item:
