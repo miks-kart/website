@@ -25,11 +25,11 @@ baseCarts:
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 1.jpg
       headingSimple: МИКС Карт Спорт
-      price: 280000
+      price: 300000
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 3.jpg
       headingSimple: МИКС Карт Юниор
-      price: 250000
+      price: 260000
 headingFive: двигатель
 enginesId: dvigatel
 engines:
@@ -105,7 +105,7 @@ extrasSport:
   - item:
       image: /images/untitled 1.jpg
       headingSimple: Ременная передача
-      price: 3000
+      price: 8000
   - item:
       image: /images/Rectangle 134-1.jpg
       headingSimple: Спортивный руль
@@ -167,7 +167,7 @@ extrasJunior:
   - item:
       image: /images/untitled 1.jpg
       headingSimple: Ременная передача
-      price: 3000
+      price: 8000
   - item:
       image: /images/Rectangle 134-1.jpg
       headingSimple: Спортивный руль
