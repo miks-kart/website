@@ -41,7 +41,7 @@ imageOne: /images/group-356-_1_.webp
 imageTwo: /images/Group 513.png
 kart:
   headingSimple: МИКС Карт Спорт
-  price: 290000
+  price: 300000
 features:
   - feature:
       image: /images/Group.svg
@@ -204,7 +204,7 @@ options:
         уровень шума при передаче крутящего момента на ведущую ось; позволяет
         снизить трудозатраты при обслуживании карта, т.к. практически не требует
         регулировки и смазки.
-      price: 3000
+      price: 8000
   - item:
       image: /images/Rectangle 1192.jpg
       headingSimple: Корзина довесов
