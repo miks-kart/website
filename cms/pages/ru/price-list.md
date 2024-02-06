@@ -107,7 +107,7 @@ extrasSport:
       headingSimple: Ременная передача
       price: 8000
   - item:
-      image: /images/Rectangle 134-1.jpg
+      image: /images/rudder-1-.jpg
       headingSimple: Спортивный руль
       price: 10000
   - item:
@@ -169,7 +169,7 @@ extrasJunior:
       headingSimple: Ременная передача
       price: 8000
   - item:
-      image: /images/Rectangle 134-1.jpg
+      image: /images/rudder-1-.jpg
       headingSimple: Спортивный руль
       price: 10000
   - item:
