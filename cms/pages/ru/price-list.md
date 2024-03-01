@@ -190,8 +190,8 @@ extrasJunior:
       price: 12000
       from: "false"
 buttonOne:
-  text: скачать весь прайс-лист в .pdf
-  link: /MIKS-Pricelist.pdf
+  text: Прайс-лист комплектующие МИКС карт СПОРТ
+  link: /images/прайс-лист_комплектующие_микс_карт_спорт.pdf
 summary:
   heading: Стоимость товаров
   kart: Карт
