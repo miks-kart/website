@@ -31,6 +31,7 @@ export default function Index({ data, heroOne, heroTwo }) {
   return (
     <section className="w-screen bg-white">
       <div className="relative flex items-end justify-start object-cover w-full h-screen">
+        <h1 className="prokatnye-karty">Прокатные карты</h1>
         <Image
           preload
           loading="eager"
