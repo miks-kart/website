@@ -382,3 +382,21 @@ footer .nav-icon {
 .w-screen {
     width: 100% !important;
 }
+h1.prokatnye-karty {
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    bottom: 65vh;
+    font-size: 68px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+}
+@media(max-width:768px){
+    h1.prokatnye-karty{
+        font-size:38px;
+        bottom:unset;
+        position:relative;
+    }
+    
+}
