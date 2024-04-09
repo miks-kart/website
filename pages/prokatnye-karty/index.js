@@ -31,7 +31,7 @@ export default function Index({ data, heroOne, heroTwo }) {
   return (
     <section className="w-screen bg-white">
       <div className="relative flex items-end justify-start object-cover w-full h-screen">
-        <h1 className="prokatnye-karty">Прокатные карты</h1>
+       
         <Image
           preload
           loading="eager"
@@ -55,6 +55,7 @@ export default function Index({ data, heroOne, heroTwo }) {
           className="absolute inset-0 z-30"
         ></div>
         <div className="page-container relative z-40 wide md:!py-16 !py-5">
+             <h1 className="prokatnye-karty">Прокатные карты</h1>
           <Link
             href={data.carts[0].cart.link}
             onFocus={() => setFirst(true)}
