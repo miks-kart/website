@@ -125,7 +125,7 @@ extrasSport:
   - item:
       image: /images/untitled 1-1.jpg
       headingSimple: Комплект наклеек
-      price: 20000
+      price: 7000
   - item:
       image: /images/2f69eb9f-65d8-4c6b-9dbd-8ff4d2c5a393.jpg
       headingSimple: Защита цепи или ремня
@@ -187,7 +187,7 @@ extrasJunior:
   - item:
       image: /images/untitled-1.png
       headingSimple: Комплект наклеек
-      price: 12000
+      price: 7000
       from: "false"
 buttonOne:
   text: Прайс-лист комплектующие МИКС карт СПОРТ
