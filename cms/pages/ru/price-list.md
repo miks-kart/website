@@ -191,7 +191,7 @@ extrasJunior:
       from: "false"
 buttonOne:
   text: Прайс-лист комплектующие МИКС карт СПОРТ
-  link: /images/МИКС_КАРТ_цены_21.06.2024.pdf
+  link: МИКС_КАРТ_цены_21.06.2024.pdf
 summary:
   heading: Стоимость товаров
   kart: Карт
