@@ -48,7 +48,7 @@ engines:
   - item:
       heading: "**Хонда GX 270** c редуктором **9 лс**"
       headingSimple: Хонда GX 270 c редуктором 9 лс
-      price: 115000
+      price: 120000
   - item:
       heading: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
       headingSimple: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
@@ -89,15 +89,15 @@ extrasSport:
   - item:
       image: /images/Rectangle 128.jpg
       headingSimple: Глушитель с катализатором
-      price: 11000
+      price: 13000
   - item:
       image: /images/Rectangle 177.jpg
       headingSimple: Спортивный глушитель
-      price: 10000
+      price: 12000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
-      price: 9000
+      price: 12000
   - item:
       image: /images/Rectangle 174.jpg
       headingSimple: "Защита двигателя "
