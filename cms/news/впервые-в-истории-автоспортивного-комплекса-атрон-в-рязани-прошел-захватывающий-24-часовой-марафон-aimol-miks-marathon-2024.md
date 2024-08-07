@@ -14,7 +14,7 @@ pre: Этап собрал сразу 14 команд, а наши карты MI
   мощность.
 photoSource:
   link: https://miks-kart.ru/admin/#/collections/Новости/new
-  text: «МИКС Карт»
+  text: https://youtu.be/1biPuSxGW6I?si=q9Ym4NcsBZWiTYUk
 text: >-
   Этап собрал сразу 14 команд, а наши карты MIKS KART SPORT продемонстрировали
   исключительную выносливость и надежность, выдержав невероятную нагрузку. За
