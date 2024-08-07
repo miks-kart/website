@@ -13,8 +13,8 @@ pre: Этап собрал сразу 14 команд, а наши карты MI
   ночной езды техника не подвела ни на минуту, подтверждая высокое качество и
   мощность.
 photoSource:
-  link: https://miks-kart.ru/admin/#/collections/Новости/new
-  text: https://youtu.be/1biPuSxGW6I?si=q9Ym4NcsBZWiTYUk
+  link: https://youtu.be/1biPuSxGW6I?si=q9Ym4NcsBZWiTYUk
+  text: AIMOL MIKS MARATHON 2024 | 2 ЭТАП | РЯЗАНЬ
 text: >-
   Этап собрал сразу 14 команд, а наши карты MIKS KART SPORT продемонстрировали
   исключительную выносливость и надежность, выдержав невероятную нагрузку. За
