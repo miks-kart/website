@@ -49,6 +49,9 @@ links:
         - subitem:
             text: Miks Karting
             link: https://miks-karting.ru/
+        - subitem:
+            text: Мы на карте
+            link: https://yandex.ru/maps/-/CDs~jTLM
 socials:
   - social:
       icon: vk
