@@ -1,6 +1,5 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
-import ListItem from "@components/ListItem";
 import ContactForm from "@components/ContactForm";
 import markdownToHtml from "../lib/markdownToHtml";
 
