@@ -66,6 +66,13 @@ export default function Index({ data, points, contactForm }) {
         <div className="page-container md:!py-16 pb-16 wide">
           <article id={data.headingThreeId} className="narrow-container">
             <p className="theme-text">{data.textFour}</p>
+              {data.pointsSix.map(({ point }) => (
+                <div key={point.text}>
+                  <p className="pb-5 text-3xl italic font-black uppercase md:text-4xl">
+                    {point.heading}
+                  </p>
+                </div>
+              ))}
             <ul className="pt-5 pl-4 space-y-5 md:pt-8">
               {data.pointsSix.map(({ point }) => (
                 <ListItem key={point.text} point={point} />
