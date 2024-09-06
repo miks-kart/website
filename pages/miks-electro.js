@@ -92,23 +92,25 @@ export default function Index({ data, gallery, gallery2, hero }) {
         </div>
     </section>
 
-    <div className="page-container !pt-10 md:!pt-16 !pb-4">
-        <article className="narrow-container">
-          <h3 className="!pb-5 md:!pb-16 theme-heading">
-            {data.headingThree}
-          </h3>
-          <div className="space-y-10 md:space-y-16">
-            {data.priorities.map(({ item }, i) => (
-              <Priorities
-                length={data.priorities.length}
-                item={item}
-                i={i}
-                key={i}
-              />
-            ))}
-          </div>
-        </article>
-      </div>
+    <section className="w-screen bg-white">
+      <div className="page-container !pt-10 md:!pt-16 !pb-4">
+          <article className="narrow-container">
+            <h3 className="!pb-5 md:!pb-16 theme-heading">
+              {data.headingThree}
+            </h3>
+            <div className="space-y-10 md:space-y-16">
+              {data.priorities.map(({ item }, i) => (
+                <Priorities
+                  length={data.priorities.length}
+                  item={item}
+                  i={i}
+                  key={i}
+                />
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
 
       <section className="text-center bg-primary-dark">
         <BackgroundImage
