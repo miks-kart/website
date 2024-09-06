@@ -1,7 +1,6 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 import ListItem from "@components/ListItem";
-import Slideshow from "@components/Slideshow";
 import Link from "next/link";
 import markdownToHtml from "../lib/markdownToHtml";
 
@@ -151,7 +150,6 @@ export async function getStaticProps() {
       data: content.default.attributes,
       seo: seo.default.attributes,
       points,
-      gallery,
     },
   };
 }
