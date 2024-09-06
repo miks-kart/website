@@ -68,16 +68,11 @@ export default function Index({ data, points, contactForm }) {
             <p className="theme-text">{data.textFour}</p>
               {data.pointsSix.map(({ point }) => (
                 <div key={point.text}>
-                  <p className="pb-5 text-3xl italic font-black uppercase md:text-4xl">
+                  <p className="pb-5 text-center text-3xl italic font-black uppercase md:text-4xl">
                     {point.heading}
                   </p>
                 </div>
               ))}
-            <ul className="pt-5 pl-4 space-y-5 md:pt-8">
-              {data.pointsSix.map(({ point }) => (
-                <ListItem key={point.text} point={point} />
-              ))}
-            </ul>
           </article>
         </div>
       </section>
