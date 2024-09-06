@@ -3,6 +3,7 @@ description: Наша компания МИКС КАРТ уже 20 лет зан
 title: МIKS Электро
 gallery: 
   - /images/miks-electro-1.jpg
+  - /images/miks-electro-1.jpg
 headingOne: Новое направление
 textOne: >-
   Наша компания МИКС КАРТ уже 20 лет занимается открытием и управлением
