@@ -64,7 +64,7 @@ export default function Index({ data, points, contactForm }) {
       <section className="w-screen bg-white ">
         <div className="page-container md:!py-16 pb-16 wide">
           <article id={data.headingThreeId} className="narrow-container">
-            <p className="theme-text pb-8">{data.textFour}</p>
+            <p className="theme-text pb-8">{data.textTwo}</p>
               {data.pointsSix.map(({ point }) => (
                 <div key={point.text}>
                   <p className="pb-5 text-center text-3xl italic font-black uppercase md:text-4xl">
