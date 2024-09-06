@@ -56,12 +56,6 @@ headerAnchors:
   - anchor:
     text: Рама
     link: "#rama"
-  - anchor:
-    text: Почему MIKS
-    link: "#pochemu-miks"
-  - anchor:
-    text: Наши разработки
-    link: "#nashi-razrabotki"
 texts:
   - link:
       id: osnova-karta
