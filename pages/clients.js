@@ -149,6 +149,7 @@ export async function getStaticProps() {
       data: content.default.attributes,
       seo: seo.default.attributes,
       points,
+      headerNotTrasnparent: true,
     },
   };
 }
