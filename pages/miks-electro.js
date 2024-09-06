@@ -134,16 +134,30 @@ export default function Index({ data, gallery, gallery2, hero }) {
 export async function getStaticProps() {
   const locale = "ru";
   const content = await import(`../cms/pages/${locale}/miks-electro.md`);
-  const contactForm = await import(`../cms/config/${locale}/contactForm.md`);
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
 
-  content.default.attributes.models = await Promise.all(
-    content.default.attributes.models.map(async ({ model }) => ({
-      ...model,
-      image: await getFluidImage(model.image),
+   content.default.attributes.newTexts = await Promise.all(
+    content.default.attributes.texts.map(async ({ link }) => ({
+      ...link,
+      text: await markdownToHtml(link.text),
     }))
+  ).then((res) => res);
+
+  const gallery = await Promise.all(
+    content.default.attributes.gallery.map(
+      async (img) =>
+        await getFluidImage(img, {
+          webp: true,
+        })
+    )
+  ).then((res) => res);
+
+  const gallery2 = await Promise.all(
+    content.default.attributes.gallery2.map(
+      async (img) => await getFluidImage(img, { avif: false, webp: true })
+    )
   ).then((res) => res);
 
   const hero = await getFluidImage(content.default.attributes.testdrive.image, {
@@ -152,11 +166,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      contactForm: contactForm.default.attributes,
       header: header.default.attributes,
       footer: footer.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
+      gallery,
+      gallery2,
       hero,
     },
   };
