@@ -16,7 +16,7 @@ export default function Index({ data, points }) {
         </div>
       </section>
       <section className="w-screen bg-white ">
-        <div className="page-container !py-16 md:!pt-32  wide">
+        <div className="page-container !py-16 wide">
           <article className="pb-5 space-y-10 text-center md:space-y-16 md:pb-0">
             {points.map((point) => (
               <div className="" key={point.text}>
@@ -62,59 +62,25 @@ export default function Index({ data, points }) {
           </div>
         </div>
       </section>
-      <section className="w-screen md:bg-white bg-primary-dark">
-        <div className="page-container wide !space-y-0 !py-0">
-          <article className="py-5 text-center text-white md:py-10 md:px-16 bg-primary-dark default-container">
-            <p className="text-sm font-bold !leading-normal whitespace-pre-line">
-              {data.teaser.one}
-            </p>
-            <p className="px-2 pt-5 text-2xl italic font-bold uppercase whitespace-pre-line">
-              {data.teaser.two}
-            </p>
-            <p className="theme-text !leading-normal whitespace-pre-line">
-              {data.teaser.three}
-            </p>
-            <p className="pt-5 text-2xl italic font-bold uppercase whitespace-pre-line">
-              {data.teaser.four}
-            </p>
-            <p className="theme-text !leading-normal whitespace-pre-line">
-              {data.teaser.five}
-            </p>
-            <p className="pt-5 text-2xl italic font-bold uppercase whitespace-pre-line">
-              {data.teaser.six}
-            </p>
-            <p className="theme-text !leading-normal whitespace-pre-line">
-              {data.teaser.seven}
-            </p>
-          </article>
-        </div>
-      </section>
       <section className="w-screen bg-white ">
-        <div className="page-container md:!py-32 pb-16 wide">
+        <div className="page-container md:!py-16 pb-16 wide">
           <article id={data.headingThreeId} className="narrow-container">
-            <h3 className="theme-heading">{data.headingThree}</h3>
             <p className="theme-text">{data.textFour}</p>
             <ul className="pt-5 pl-4 space-y-5 md:pt-8">
-              {data.pointsTwo.map(({ point }) => (
+              {data.pointsSix.map(({ point }) => (
                 <ListItem key={point.text} point={point} />
               ))}
             </ul>
           </article>
         </div>
       </section>
-      <section className="bg-[#F7F7F7] md:py-32 py-10">
-        <div className="text-center page-container !py-0">
-          <article>
-            <p className="pb-5 font-bold text-primary-dark">
-              {data.headingFour}
-            </p>
-            <h4 className="theme-heading text-3xl md:!text-5xl pb-5 md:!pb-10">
-              {data.headingFive}
-            </h4>
-            <Link href={data.buttonOne.link} className="theme-button">
-              <span className="relative">{data.buttonOne.text}</span>
-            </Link>
-          </article>
+     <section className="md:bg-[#F7F7F7]">
+        <div className="page-container md:!pb-32">
+          <ContactForm
+            className="bg-white"
+            contactForm={contactForm}
+            data={data}
+          />
         </div>
       </section>
     </AnchorSmoothScroll>
@@ -124,6 +90,7 @@ export default function Index({ data, points }) {
 export async function getStaticProps() {
   const locale = "ru";
   const content = await import(`../cms/pages/${locale}/clients.md`);
+  const contactForm = await import(`../cms/config/${locale}/contactForm.md`);
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
@@ -144,6 +111,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      contactForm: contactForm.default.attributes,
       header: header.default.attributes,
       footer: footer.default.attributes,
       data: content.default.attributes,
