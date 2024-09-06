@@ -1,10 +1,15 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
+import { Fragment } from "react";
+import ListItem from "@components/ListItem";
 import { getFluidImage } from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
 import Carousel from "@components/Carousel";
 import markdownToHtml from "../lib/markdownToHtml";
+import Link from "next/link";
+import BackgroundImage from "@components/image/BackgroundImage";
+import Priorities from "@components/Priorities";
 
-export default function Index({ data, points, gallery, gallery2 }) {
+export default function Index({ data, gallery, gallery2, hero }) {
   return (
     <AnchorSmoothScroll>
     <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0">
@@ -129,7 +134,7 @@ export default function Index({ data, points, gallery, gallery2 }) {
 
 export async function getStaticProps() {
   const locale = "ru";
-  const content = await import(`../cms/pages/${locale}/clients.md`);
+  const content = await import(`../cms/pages/${locale}/miks-electro.md`);
   const contactForm = await import(`../cms/config/${locale}/contactForm.md`);
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
@@ -142,12 +147,9 @@ export async function getStaticProps() {
     }))
   ).then((res) => res);
 
-  const points = await Promise.all(
-    content.default.attributes.points.map(async ({ point }) => ({
-      ...point,
-      heading: await markdownToHtml(point.heading),
-    }))
-  ).then((res) => res);
+  const hero = await getFluidImage(content.default.attributes.testdrive.image, {
+    webp: true,
+  });
 
   return {
     props: {
