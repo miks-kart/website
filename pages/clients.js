@@ -1,10 +1,11 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 import ListItem from "@components/ListItem";
+import ContactForm from "@components/ContactForm";
 import Link from "next/link";
 import markdownToHtml from "../lib/markdownToHtml";
 
-export default function Index({ data, points }) {
+export default function Index({ data, points, contactForm }) {
   return (
     <AnchorSmoothScroll>
       <section className="w-screen bg-[#F7F7F7]">
