@@ -2,10 +2,7 @@
 description: Наша компания МИКС КАРТ уже 20 лет занимается открытием и управлением развлекательных картинг-центров в России. Благодаря богатому опыту в автоспорте, мы точно знаем, что необходимо владельцу и оператору картинг-центра для успешной работы. Поэтому при проектировании и производстве картов делаем упор на надежность, безопасность, удобную и доступную эксплуатацию.
 title: МIKS Электро
 gallery: 
-  - /images/09.jpg
-  - /images/80.jpg
-  - /images/76.jpg
-  - /images/90.jpg
+  - /images/miks-electro-1.jpg
 headingOne: Новое направление
 textOne: >-
   Наша компания МИКС КАРТ уже 20 лет занимается открытием и управлением
@@ -15,12 +12,10 @@ textOne: >-
   картов делаем упор на надежность, безопасность, удобную и доступную
   эксплуатацию.
 gallery2:
-  - /images/34.jpg
-  - /images/22.jpg
-  - /images/14.jpg
-  - /images/38.jpg
-  - /images/40.jpg
-  - /images/24.jpg
+  - /images/miks-electro-2-1.jpg
+  - /images/miks-electro-2-2.jpg
+  - /images/miks-electro-2-3.jpg
+  - /images/miks-electro-2-4.jpg
 headingTwo: Наше производство картов
 textTwo: >-
   Важнейшими задачами инжинирингового центра являются: выявление потребности в
@@ -159,10 +154,10 @@ priorities:
       text: Карт в первую очередь должен нравится клиенту. Мы вкладываем много сил в
         разработку дизайна как карта в целом, так и его компонентов.
 testdrive:
-  image: /images/Rectangle 39.jpg
+  image: /images/miks-electro-3.jpg
   heading: |-
     Пройдите тест-драйв на нашем
     картодроме в Москве
   text: Записаться
-  link: https://forza-karting.ru
+  link: https://miks-electrokarting.ru/electrokarting/
 ---
