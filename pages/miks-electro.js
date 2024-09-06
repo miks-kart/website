@@ -158,7 +158,6 @@ export async function getStaticProps() {
       footer: footer.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
-      points,
       headerNotTrasnparent: true,
     },
   };
