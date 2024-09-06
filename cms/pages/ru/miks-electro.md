@@ -61,7 +61,7 @@ headerAnchors:
 - anchor:
   text: Наши разработки
   link: "#nashi-razrabotki"
-  texts:
+texts:
 - link:
   id: osnova-karta
   heading: Основа карта
