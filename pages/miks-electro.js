@@ -4,7 +4,6 @@ import ListItem from "@components/ListItem";
 import { getFluidImage } from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
 import Carousel from "@components/Carousel";
-import markdownToHtml from "../lib/markdownToHtml";
 import Link from "next/link";
 import BackgroundImage from "@components/image/BackgroundImage";
 import Priorities from "@components/Priorities";
@@ -158,7 +157,7 @@ export async function getStaticProps() {
       footer: footer.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
-      headerNotTrasnparent: true,
+      hero,
     },
   };
 }
