@@ -7,8 +7,7 @@ import markdownToHtml from "../lib/markdownToHtml";
 export default function Index({ data, points }) {
   return (
     <AnchorSmoothScroll>
-      <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
-      <section className="w-screen bg-white ">
+      <section className="w-screen bg-[#F7F7F7]">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
           <article id={data.headingOneId} className="narrow-container">
             <h1 className=" theme-heading">{data.headingOne}</h1>
