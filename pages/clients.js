@@ -2,7 +2,6 @@ import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 import ListItem from "@components/ListItem";
 import ContactForm from "@components/ContactForm";
-import Link from "next/link";
 import markdownToHtml from "../lib/markdownToHtml";
 
 export default function Index({ data, points, contactForm }) {
