@@ -42,20 +42,20 @@ textTwo: >-
 
 headerAnchors:
   - anchor:
-    text: Основа карта
-    link: "#osnova-karta"
+      text: Основа карта
+      link: "#osnova-karta"
   - anchor:
-    text: Дизайн и реализация
-    link: "#dizajn-i-realizaciya"
+      text: Дизайн и реализация
+      link: "#dizajn-i-realizaciya"
   - anchor:
-    text: Проверка качества
-    link: "#proverka-kachestva"
+      text: Проверка качества
+      link: "#proverka-kachestva"
   - anchor:
-    text: Стенд
-    link: "#stend"
+      text: Стенд
+      link: "#stend"
   - anchor:
-    text: Рама
-    link: "#rama"
+      text: Рама
+      link: "#rama"
 texts:
   - link:
       id: osnova-karta
@@ -164,5 +164,5 @@ testdrive:
     Пройдите тест-драйв на нашем
     картодроме в Москве
   text: Записаться
-  link: https://miks-electrokarting.ru/electrokarting/
+  link: https://forza-karting.ru
 ---
