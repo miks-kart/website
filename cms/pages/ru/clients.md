@@ -29,6 +29,8 @@ points:
   - point:
       heading: "*более* ***10***"
       text: картинг-центров России используют карты нашего производства
+imageOne: /images/alexander-andrews-17qgMrxcvGs-unsplash 1.jpg
+imageTwo: /images/alexander-andrews-17qgMrxcvGs-unsplash 1 (1) (1).jpg
 pointsFive:
   - point:
       heading: Реальный спрос
