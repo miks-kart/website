@@ -60,25 +60,25 @@ pointsFive:
         объеме до предельного состояния
 pointsSix:
   - point:
-      text: Сириус Автодром
+      heading: Сириус Автодром
   - point:
-      text: Extreme 39
+      heading: Extreme 39
   - point:
-      text: Лидер
+      heading: Лидер
   - point:
-      text: Shikana 58
+      heading: Shikana 58
   - point:
-      text: RacePlace
+      heading: RacePlace
   - point:
-      text: KartFactory
+      heading: KartFactory
   - point:
-      text: V-karting
+      heading: V-karting
   - point:
-      text: liberty-karting
+      heading: liberty-karting
   - point:
-      text: ЦТВС МОСКВА
+      heading: ЦТВС МОСКВА
   - point:
-      text: MIKS KARTING
+      heading: MIKS KARTING
 headingTwoId: nashi-modeli
 headingTwo: "Наши модели:"
 models:
