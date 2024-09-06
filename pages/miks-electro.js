@@ -7,6 +7,7 @@ import Carousel from "@components/Carousel";
 import Link from "next/link";
 import BackgroundImage from "@components/image/BackgroundImage";
 import Priorities from "@components/Priorities";
+import markdownToHtml from "../lib/markdownToHtml";
 
 export default function Index({ data, gallery, gallery2, hero }) {
   return (
