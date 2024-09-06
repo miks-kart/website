@@ -160,4 +160,17 @@ testdrive:
     электрокартодроме в Москве
   text: Записаться
   link: https://miks-electrokarting.ru/electrokarting/
+points:
+  - point:
+      icon: /images/phone.svg
+      heading: "Телефон:"
+      text: +7 495 150 04-07
+  - point:
+      icon: /images/mail.svg
+      heading: "E-mail:"
+      text: manager@miks-electrokarting.ru
+  - point:
+      icon: /images/pin.svg
+      heading: "Адрес:"
+      text: "Москва, Смоленская площадь, д.5"
 ---
