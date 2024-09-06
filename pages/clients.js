@@ -9,9 +9,6 @@ import markdownToHtml from "../lib/markdownToHtml";
 export default function Index({ data, gallery, points }) {
   return (
     <AnchorSmoothScroll>
-      <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0">
-        <Slideshow slides={gallery} />
-      </section>
       <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
       <section className="w-screen bg-white ">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
@@ -19,20 +16,6 @@ export default function Index({ data, gallery, points }) {
             <h1 className=" theme-heading">{data.headingOne}</h1>
             <p className="theme-text">{data.textOne}</p>
           </article>
-        </div>
-      </section>
-      <section className="w-screen md:bg-white bg-primary-dark">
-        <div className="page-container wide !space-y-0 !py-0">
-          <div className="flex flex-col-reverse items-start justify-between py-5 md:py-16 md:flex-row md:space-x-32 md:px-24 bg-primary-dark">
-            <p className="max-w-2xl text-xl italic font-bold text-white uppercase whitespace-pre-line md:text-2xl">
-              {data.textTwo}
-            </p>
-            <img
-              src={data.skolkovoLogo}
-              alt="skolkovo"
-              className="w-12 h-auto pb-5 md:w-28 md:pb-0"
-            />
-          </div>
         </div>
       </section>
       <section className="w-screen bg-white ">
@@ -50,35 +33,36 @@ export default function Index({ data, gallery, points }) {
               </div>
             ))}
           </article>
-          <article id={data.headingTwoId}>
-            <h2 className="md:!pb-16 theme-heading">{data.headingTwo}</h2>
-            <div className="grid gap-5 md:gap-3 md:grid-cols-2">
-              {data.models.map((model) => (
-                <div className="" key={model.name}>
-                  <Image
-                    style={{ aspectRatio: model.image.aspectRatio }}
-                    sizes="(max-width: 1200px) 100vw, 800px"
-                    src={model.image}
-                    alt={model.name}
-                    className="w-full h-auto"
-                  />
-                  <Link
-                    href={model.link}
-                    className="flex pt-5 text-2xl italic font-bold uppercase md:pt-10 text-primary-dark"
-                  >
-                    {model.name}
-                    <span className="ml-[0.625rem] mt-[0.3125rem]">
-                      <img src="/images/check-up.svg" alt="check up" />
-                    </span>
-                  </Link>
-                  <p className="theme-text pb-3 pt-3 md:pt-5 !font-bold">
-                    {model.heading}
+        </div>
+        <div className="relative bg-primary-dark">
+          <img
+            src={data.imageOne}
+            alt="karting"
+            className="absolute top-0 left-0 hidden w-full h-auto md:block"
+          />
+          <img
+            src={data.imageTwo}
+            alt="karting"
+            className="absolute top-0 left-0 w-full h-auto md:hidden"
+          />
+          <div className="relative narrow-container !pt-16 md:!pt-32 page-container !pb-10 md:!pb-16 !space-y-0">
+            <h2
+              id={data.headingSevenId}
+              className="theme-heading !text-white !pb-5 md:!pb-7"
+            >
+              {data.headingSeven}
+            </h2>
+            <article className="space-y-5 text-white">
+              {data.pointsFive.map(({ point }) => (
+                <div key={point.text}>
+                  <p className="pb-2 text-xl font-bold md:pb-5 md:text-2xl">
+                    {point.heading}
                   </p>
-                  <p className="theme-text">{model.text}</p>
+                  <p className="theme-text">{point.text}</p>
                 </div>
               ))}
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
       <section className="w-screen md:bg-white bg-primary-dark">
@@ -142,7 +126,7 @@ export default function Index({ data, gallery, points }) {
 
 export async function getStaticProps() {
   const locale = "ru";
-  const content = await import(`../cms/pages/${locale}/about.md`);
+  const content = await import(`../cms/pages/${locale}/clients.md`);
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
