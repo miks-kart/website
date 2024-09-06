@@ -1,12 +1,11 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
-import Image from "@components/image/ImageSimple";
 import { getFluidImage } from "@components/image/imageFunctions";
 import ListItem from "@components/ListItem";
 import Slideshow from "@components/Slideshow";
 import Link from "next/link";
 import markdownToHtml from "../lib/markdownToHtml";
 
-export default function Index({ data, gallery, points }) {
+export default function Index({ data, points }) {
   return (
     <AnchorSmoothScroll>
       <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
@@ -136,15 +135,6 @@ export async function getStaticProps() {
       ...model,
       image: await getFluidImage(model.image),
     }))
-  ).then((res) => res);
-
-  const gallery = await Promise.all(
-    content.default.attributes.gallery.map(
-      async (img) =>
-        await getFluidImage(img, {
-          webp: true,
-        })
-    )
   ).then((res) => res);
 
   const points = await Promise.all(
