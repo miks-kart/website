@@ -160,7 +160,7 @@ testdrive:
     электрокартодроме в Москве
   text: Записаться
   link: https://miks-electrokarting.ru/electrokarting/
-headingThree: Контакты
+headingFour: Контакты
 points:
   - point:
       icon: /images/phone.svg
