@@ -133,7 +133,7 @@ export default function Index({ data, gallery, gallery2, hero }) {
       <section className="w-screen md:bg-[#F7F7F7]">
         <div className="page-container md:!pt-16 !pb-16">
           <article>
-            <h1 className="md:!pb-10 theme-heading">{data.headingOne}</h1>
+            <h1 className="md:!pb-10 theme-heading">{data.headingThree}</h1>
             <iframe
               src="https://yandex.ru/map-widget/v1/?um=constructor%3Ace6dbf66bc7736dca1a6636d498957cb401f1bdd73fc9574939f4aa95ac0d3e5&amp;source=constructor"
               frameBorder="1"
