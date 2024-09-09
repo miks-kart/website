@@ -12,8 +12,14 @@ links:
       text: Спортивные карты
       link: /sportivnye-karty
   - item:
+      text: МIKS Электро
+      link: /miks-electro
+  - item:
       text: Компания
       link: /o-kompanii
+  - item:
+      text: Наши клиенты
+      link: /clients
   - item:
       text: Производство
       link: /proizvodstvo
