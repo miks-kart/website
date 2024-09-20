@@ -26,10 +26,4 @@ text: >-
   В новом выпуске программы "Новости с колёс" на канале Авто Плюс, подробности о том, как прошел финальный этап командного чемпионата на выносливость AIMOL MIKS MARATHON 2024.\
 
   Интересные кадры, ключевые моменты соревнования, интервью с техническим директором - ждёт Вас в выпуске!
-
-
-  <video autoplay="" muted="" loop="" disablepictureinpicture="" webkit-playsinline="" playsinline="" pip="false" poster="/local/templates/new/images/pic/bg_main.jpg" style="width: 1334.03px; min-width: 0px; height: 750.391px; min-height: 0px;">
-  					<source src="https://miks-karting.ru/upload/video/intro.webm" type="video/webm">
-  					<source src="https://miks-karting.ru/upload/video/intro.mp4" type="video/mp4">
-  				</video>
 ---
