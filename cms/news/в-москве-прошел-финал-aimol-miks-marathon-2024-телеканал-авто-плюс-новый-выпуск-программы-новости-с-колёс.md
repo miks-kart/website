@@ -24,5 +24,20 @@ text: >-
   Интересные кадры, ключевые моменты соревнования, интервью с техническим директором - ждёт Вас в выпуске!
 
 
-  Виидео: <https://vk.com/video/@mikskarting?z=video-18370270_456239730%2Fclub18370270>
+  Видео: <https://vk.com/video/@mikskarting?z=video-18370270_456239730%2Fclub18370270>
+
+
+
+
+  Выпуск программы также был опубликован на ресурсах партнера:
+
+
+
+  RuTube: <https://rutube.ru/video/1bc09033e609330eae4968a8238d26cb/>
+
+  Яндекс Дзен: <https://dzen.ru/video/watch/66f5b86c736120505f7cb5a0>
+
+  YouTube: <https://youtu.be/jYv-0RWLQdQ>
+
+  Группа Вконтакте Авто Плюс - Новости: <https://vk.com/autoplustvnews?w=wall-219748240_781>
 ---
