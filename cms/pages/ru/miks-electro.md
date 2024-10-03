@@ -12,10 +12,10 @@ textOne: >-
 
   Тенденция развития электромобилей рождает у рынка потребность в быстрых и мощных электрических картах, поэтому мы разработали новую модель карта - MIKS ELECTRO.
 gallery2:
-  - /images/miks-electro-2-1.jpg
-  - /images/miks-electro-2-2.jpg
-  - /images/miks-electro-2-3.jpg
-  - /images/miks-electro-2-4.jpg
+  - /images/miks-electro-2.jpg
+  - /images/miks-electro-3.jpg
+  - /images/miks-electro-4.jpg
+  - /images/miks-electro-5.jpg
 headingTwo: Наше производство картов
 textTwo: >-
   Важнейшими задачами инжинирингового центра являются: выявление потребности в
@@ -154,7 +154,7 @@ priorities:
       text: Карт в первую очередь должен нравится клиенту. Мы вкладываем много сил в
         разработку дизайна как карта в целом, так и его компонентов.
 testdrive:
-  image: /images/miks-electro-3.jpg
+  image: /images/miks-electro-6.jpg
   heading: |-
     Пройдите тест-драйв на нашем
     электрокартодроме в Москве
