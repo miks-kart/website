@@ -2,6 +2,7 @@
 User-agent: *
 Allow: /
 Disallow: /novinki
+Disallow: /miks-electro
 
 # Host
 Host: https://miks-kart.ru
