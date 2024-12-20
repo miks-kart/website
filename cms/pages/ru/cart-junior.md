@@ -106,17 +106,17 @@ engines:
   - item:
       heading: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
       headingSimple: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
-      price: 23000
+      price: 25000
 tiresHeading: резина
 tires:
   - item:
       heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
-      price: 8500
+      price: 10000
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
-      price: 12000
+      price: 14000
 optionsHeading: дополнительные опции
 headingExtrasJunior: Для МИКС КАРТ Юниор
 options:
