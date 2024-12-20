@@ -25,11 +25,11 @@ baseCarts:
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 1.jpg
       headingSimple: МИКС Карт Спорт
-      price: 300000
+      price: 315000
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 3.jpg
       headingSimple: МИКС Карт Юниор
-      price: 260000
+      price: 275000
 headingFive: двигатель
 enginesId: dvigatel
 engines:
@@ -38,7 +38,7 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 25000
+      price: 27000
       from: "true"
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
@@ -52,7 +52,7 @@ engines:
   - item:
       heading: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
       headingSimple: Lifan 160F c редуктором (120 см.куб.) 4 л.с.
-      price: 23000
+      price: 24999
   - item:
       heading: "**Z﻿ongshen ZS 188 FA2** Бензиновый, четырехтактный с ручным
         стартером, мощностью 10 л.с, 7.4 кВт Объёмом 370 см3"
@@ -65,11 +65,11 @@ tires:
   - item:
       heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
-      price: 8500
+      price: 10000
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
-      price: 12000
+      price: 14000
 headingSeven: запчасти
 extrasId: zapchasti
 headingExtrasSport: "Для МИКС КАРТ Спорт "
