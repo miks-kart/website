@@ -43,7 +43,7 @@ imageOne: /images/group-356-_1_.webp
 imageTwo: /images/Group 513.png
 kart:
   headingSimple: МИКС Карт Спорт
-  price: 314999
+  price: 315000
 features:
   - feature:
       image: /images/Group.svg
