@@ -43,7 +43,7 @@ imageOne: /images/group-356-_1_.webp
 imageTwo: /images/Group 513.png
 kart:
   headingSimple: МИКС Карт Спорт
-  price: 300000
+  price: 314999
 features:
   - feature:
       image: /images/Group.svg
@@ -110,7 +110,7 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 25000
+      price: 27000
       from: "true"
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
@@ -133,12 +133,12 @@ tires:
   - item:
       heading: Резина **Мега (Россия)**
       headingSimple: Резина Мега (Россия)
-      price: 8500
+      price: 10000
       from: "false"
   - item:
       heading: Резина **Duro (Китай)**
       headingSimple: Резина Duro (Китай)
-      price: 12000
+      price: 14000
 optionsHeading: дополнительные опции
 headingExtrasSport: Для МИКС КАРТ Спорт
 options:
