@@ -10,7 +10,7 @@ carts:
       heading: МИКС Карт Спорт
       text: для любителей и опытных пилотов
       link: /prokatnye-karty/sport
-      image: /images/44.jpg
+      image: /images/19 (1).jpg
   - cart:
       heading: МИКС Карт Юниор
       text: для юных пилотов
