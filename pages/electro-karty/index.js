@@ -170,7 +170,7 @@ export default function Index({ data, heroOne, heroTwo }) {
 
 export async function getStaticProps() {
   const locale = "ru";
-  const content = await import(`../../cms/pages/${locale}/carts.md`);
+  const content = await import(`../../cms/pages/${locale}/carts-electro.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
   const footer = await import(`../../cms/config/${locale}/footer.md`);
   const seo = await import(`../../cms/config/${locale}/seo.md`);
