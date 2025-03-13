@@ -9,7 +9,6 @@ export default function Index({
 }) {
   return (
     <section className="w-screen">
-      {/* <PDFTest sport shoppingCart={shoppingCart} data={data} pdf={pdf} /> */}
       <div className="!py-0 page-container full-width wide">
         <Carousel slides={gallery} />
       </div>
@@ -35,7 +34,6 @@ export default function Index({
 
 export async function getStaticProps() {
   const locale = "ru";
-  const pdf = await import(`../../cms/pages/${locale}/pdf.md`);
   const content = await import(`../../cms/pages/${locale}/cart-electro.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
   const footer = await import(`../../cms/config/${locale}/footer.md`);
