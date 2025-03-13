@@ -51,7 +51,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      pdf: pdf.default.attributes,
       header: header.default.attributes,
       footer: footer.default.attributes,
       data: content.default.attributes,
