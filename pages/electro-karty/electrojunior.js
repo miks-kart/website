@@ -35,7 +35,7 @@ export default function Index({
 
 export async function getStaticProps() {
   const locale = "ru";
-  const content = await import(`../../cms/pages/${locale}/cart-electro.md`);
+  const content = await import(`../../cms/pages/${locale}/cart-electrojunior.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
   const footer = await import(`../../cms/config/${locale}/footer.md`);
   const seo = await import(`../../cms/config/${locale}/seo.md`);
