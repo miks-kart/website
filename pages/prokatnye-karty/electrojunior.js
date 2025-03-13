@@ -10,7 +10,6 @@ export default function Index({
   
   return (
     <section className="w-screen">
-      {/* <PDFTest sport shoppingCart={shoppingCart} data={data} pdf={pdf} /> */}
       <div className="!py-0 page-container full-width wide">
         <Carousel slides={gallery} />
       </div>
