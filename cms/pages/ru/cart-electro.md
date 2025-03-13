@@ -11,7 +11,7 @@ headerAnchors:
       link: /prokatnye-karty/electro
   - anchor:
       text: МИКС КАРТ ЭЛЕКТРО ЮНИОР
-      link: /prokatnye-karty/electro-dzhunior
+      link: /prokatnye-karty/electro-junior
 gallery:
   - /images/MIKS_ELECTRO_0014.jpg
   - /images/MIKS_ELECTRO_0014.jpg
