@@ -1,17 +1,11 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Carousel from "@components/Carousel";
-import CartFeatures from "@components/CartFeatures";
 import markdownToHtml from "../../lib/markdownToHtml";
 import { getFluidImage } from "@components/image/imageFunctions";
-// import PDFTest from "@components/PDFTest";
 
 export default function Index({
   data,
   postOne,
-  gallery,
-  contactSale,
-  pdf,
+  gallery
 }) {
   return (
     <section className="w-screen">
@@ -33,7 +27,6 @@ export default function Index({
             className="markdown-text theme-text"
             dangerouslySetInnerHTML={{ __html: postOne }}
           />
-          <Image src={data.imageTwo} alt="slide" className="w-full md:hidden" />
         </article>
       </div>
     </section>
@@ -44,7 +37,6 @@ export async function getStaticProps() {
   const locale = "ru";
   const pdf = await import(`../../cms/pages/${locale}/pdf.md`);
   const content = await import(`../../cms/pages/${locale}/cart-electro.md`);
-  const contactSale = await import(`../../cms/config/${locale}/contactSale.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
   const footer = await import(`../../cms/config/${locale}/footer.md`);
   const seo = await import(`../../cms/config/${locale}/seo.md`);
@@ -61,7 +53,6 @@ export async function getStaticProps() {
     props: {
       pdf: pdf.default.attributes,
       header: header.default.attributes,
-      contactSale: contactSale.default.attributes,
       footer: footer.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
