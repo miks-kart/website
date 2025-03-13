@@ -7,6 +7,7 @@ export default function Index({
   postOne,
   gallery
 }) {
+  
   return (
     <section className="w-screen">
       {/* <PDFTest sport shoppingCart={shoppingCart} data={data} pdf={pdf} /> */}
