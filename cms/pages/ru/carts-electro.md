@@ -14,7 +14,7 @@ carts:
   - cart:
       heading: МИКС Карт Электро Юниор
       text: для юных пилотов
-      link: /electro-karty/electrojhunior
+      link: /electro-karty/electrojunior
       image: /images/MIKS_ELECTRO_0039.jpg
 imageOne: /images/Objects copy 1 2.png
 headingOne: ЗАПЧАСТИ
