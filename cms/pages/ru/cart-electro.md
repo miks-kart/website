@@ -8,10 +8,10 @@ title: Продажа спортивных прокатных картов в М
 headerAnchors:
   - anchor:
       text: МИКС КАРТ ЭЛЕКТРО
-      link: /prokatnye-karty/electro
+      link: /electro-karty/electro
   - anchor:
       text: МИКС КАРТ ЭЛЕКТРО ЮНИОР
-      link: /prokatnye-karty/electrojunior
+      link: /electro-karty/electrojunior
 gallery:
   - /images/MIKS_ELECTRO_0014.jpg
   - /images/MIKS_ELECTRO_0014.jpg
