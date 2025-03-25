@@ -15,10 +15,27 @@ export default function Index({ data, gallery, points }) {
       <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
       <section className="w-screen bg-white ">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
-          <article id={data.headingOneId} className="narrow-container">
-            <h1 className=" theme-heading">{data.headingOne}</h1>
-            <p className="theme-text">{data.textOne}</p>
-          </article>
+          <div className="grid gap-5 md:gap-3 md:grid-cols-2">
+            <div className="flex direction-columnt justify-between">
+              <p>Забронируйте заезд по номеру телефона</p>
+              <a className="theme-button" href="tel:+74956403302">+7 (495) 640 33 02</a>
+              <div>
+                <p>Часы работы: ежедневно (10:00-18:00)</p>
+                <p>За исключением дней определенных администрацией для подготовки трассы или иных работ.</p>
+              </div>
+            </div>
+            <div className="flex direction-columnt justify-center">
+              <p>Приезжайте на трассу за 20 минут до начала заезда</p>
+              <p>Приезжайте по адресу: <span className="text-red">г. Рязань, пос. Секиотово <br>Комплекс расположен в 15 минутах от центра Рязани по Михайловскому шоссе.Поворот с трассы М5 на г. Тула.</p>
+              <a className="theme-button" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
+              <a className="theme-button" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
+            </div>
+            <div className="flex direction-columnt justify-between">
+              <p>Получите экипировку</p>
+              <p>Пройдите инструктаж</p>
+              <p className="text-red">Прыгайте в карт и гоняйте!</p>
+            </div>
+          </div>
         </div>
       </section>
       <section className="w-screen md:bg-white bg-primary-dark">
