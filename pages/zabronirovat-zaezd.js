@@ -6,20 +6,24 @@ import BackgroundImage from "@components/image/BackgroundImage";
 export default function Index({ hero, heroTwo }) {
   return (
     <AnchorSmoothScroll>
-    <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0 text-center bg-primary-dark">
+    <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed z-[-1] top-0 bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full"
-            className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
+            className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-32 md:pb-32"
             image={hero}
           >
-          <div className="flex direction-column md:direction-row justify-space-between">
-            <img src="/images/logo-atron.png" />
-            <img src="/images/logo-miks-kart.png" />
-            <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
-              ИСПЫТАЙТЕ КАРТЫ MIKS KART В ATRON INTERNATIONAL CIRCUIT! 
-            </p>
+          <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
+            <div>
+              <div className="flex direction-column md:direction-row justify-space-between">
+                <img src="/images/logo-atron.png" />
+                <img src="/images/logo-miks-kart.png" />
+                <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
+                  ИСПЫТАЙТЕ КАРТЫ MIKS KART В ATRON INTERNATIONAL CIRCUIT! 
+                </p>
+              </div>
+              <a className="theme-button mx-auto" href="tel:+74956403302">ЗАБРОНИРОВАТЬ ЗАЕЗД</a>
+            </div>
           </div>
-              <a className="theme-button" href="tel:+74956403302">ЗАБРОНИРОВАТЬ ЗАЕЗД</a>
           </BackgroundImage>
         </section>
       <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
@@ -104,7 +108,7 @@ export default function Index({ hero, heroTwo }) {
           </div>
         </div>
       </section>
-      <section className="text-center bg-primary-dark">
+      <section className="aspect-square heroTwo-bron md:aspect-[2.327] text-center bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full"
             className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
