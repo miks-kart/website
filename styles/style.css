@@ -369,9 +369,6 @@ footer .nav-icon {
   padding-top: 0;
   padding-bottom: 0;
 }
-.pb-110 {
-  padding-bottom: 110px !important;
-}
 .mb-14px {
   margin-bottom: 14px;
 }
@@ -513,6 +510,9 @@ footer .nav-icon {
   .md\:direction-row {
     flex-direction: row;
   }
+  .md\:pb-110 {
+    padding-bottom: 110px !important;
+  }
 }
 @media (min-width: 1280px) {
   .page-container.full-width,
@@ -539,5 +539,45 @@ h1.prokatnye-karty {
         bottom:unset;
         position:relative;
     }
-    
+    .hero-bron .page-container {
+      margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+    }
+    .hero-bron p {
+      font-size: 20px;
+    }
+    .hero-bron .page-container img + img {
+      display: none;
+    }
+    .hero-bron .theme-button {
+      font-size: 19px;
+    }
+    .grey-card {
+      padding: 40px 20px;
+    }
+    .cart-card {
+      margin-top: 100px;
+    }
+    .big-header {
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .big-header > span {
+      font-size: 24px;
+    }
+    .big-header span span {
+      font-size: 40px;
+    }
+    .text-huge {
+      font-size: 23px;
+      padding-top: 20px;
+    }
+    .text-extra-huge {
+      font-size: 29px;
+    }
+    .button-rounded.text-extra-huge {
+      margin-top: 40px;
+    }
 }
