@@ -409,6 +409,9 @@ footer .nav-icon {
   border-radius: 20px;
   padding: 35px 40px;
 }
+.dark-grey-card img {
+  margin-right: 15px;
+}
 .big-header {
   font-size: 96px;
   font-weight: 900;
@@ -445,6 +448,18 @@ footer .nav-icon {
   font-size: 18px;
   font-weight: 400;
   padding: .9375rem 0.738rem;
+}
+.hero-bron p {
+  max-width: 730px;
+}
+.hero-bron .page-container img {
+  margin-top: 14px;
+}
+.hero-bron .theme-button {
+  width: 100%;
+  max-width: 500px;
+  font-size: 30px;
+  line-height: 1.4;
 }
 
 
