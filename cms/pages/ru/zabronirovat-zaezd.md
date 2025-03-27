@@ -6,7 +6,9 @@ description: МИКС КАРТ уже 20 лет занимается откры�
 title: Забронировать заезд
 gallery:
   - /images/bg-bron-main.jpg
-imageOne: /images/bg-bron-second.jpg
+  - /images/bg-bron-main.jpg
+imageOne: /images/bg-bron-main.jpg
+imageTwo: /images/bg-bron-second.jpg
 buttonOne:
   text: О франшизе
   link: /franshiza
