@@ -1,6 +1,7 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
+import BackgroundImage from "@components/image/BackgroundImage";
 
 export default function Index({ gallery, hero }) {
   return (
@@ -14,7 +15,7 @@ export default function Index({ gallery, hero }) {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             <div className="flex grey-card direction-column bg-grey justify-space-between">
               <p className="text-big">Забронируйте заезд по номеру телефона</p>
-              <a className="theme-button" href="tel:+74956403302">+7 (495) 640 33 02</a>
+              <a className="theme-button button-rounded" href="tel:+74956403302">+7 (495) 640 33 02</a>
               <div>
                 <p className="text-small mb-14">Часы работы: ежедневно (10:00-18:00)</p>
                 <p className="text-small">За исключением дней определенных администрацией для подготовки трассы или иных работ.</p>
@@ -26,7 +27,7 @@ export default function Index({ gallery, hero }) {
               <a className="theme-button button-rounded mb-14" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
               <a className="theme-button button-rounded" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
             </div>
-            <div className="flex grey-card direction-column bg-grey justify-space-between mb-110">
+            <div className="flex grey-card direction-column bg-grey justify-space-between pb-110">
               <p className="text-big">Получите экипировку</p>
               <p className="text-big">Пройдите инструктаж</p>
               <p className="text-big text-red">Прыгайте в карт и гоняйте!</p>
@@ -97,21 +98,16 @@ export default function Index({ gallery, hero }) {
             image={hero}
           >
             <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
-              {data.testdrive.heading}
+              ИСПЫТАЙТЕ MIKS KART!
             </p>
-            <Link
-              target="_blank"
-              href={data.testdrive.link}
-              className="theme-button"
-            >
-              <span className="relative">{data.testdrive.text}</span>
+              <span className="relative">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
             </Link>
           </BackgroundImage>
         </section>
       <section className="w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide text-center">
-          <p>ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
-          <a className="theme-button button-rounded" href="tel:+74956403302">+7 (495) 640 33 02</a>
+          <p className="text-extra-huge">ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
+          <a className="theme-button button-rounded text-extra-huge" href="tel:+74956403302">+7 (495) 640 33 02</a>
         </div>
       </section>
     </AnchorSmoothScroll>
