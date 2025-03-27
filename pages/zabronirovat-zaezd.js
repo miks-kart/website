@@ -1,7 +1,6 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
-import markdownToHtml from "../lib/markdownToHtml";
 
 export default function Index({ gallery }) {
   return (
@@ -103,6 +102,7 @@ export default function Index({ gallery }) {
 
 export async function getStaticProps() {
   const locale = "ru";
+  const content = await import(`../cms/pages/${locale}/about.md`);
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
