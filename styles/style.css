@@ -356,6 +356,15 @@ footer .nav-icon {
 .align-items-center {
   align-items: center;
 }
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+.justify-center {
+  justify-content: center;
+}
 .pb-110 {
   padding-bottom: 110px !important;
 }
