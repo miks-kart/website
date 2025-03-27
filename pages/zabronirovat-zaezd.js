@@ -8,12 +8,9 @@ export default function Index({ hero, heroTwo }) {
     <AnchorSmoothScroll>
     <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed z-[-1] top-0 bg-primary-dark">
           <BackgroundImage
-            containerClassName="z-20 w-full"
-            className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-32 md:pb-32"
-            image={hero}
-          >
-          <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
-            <div>
+            containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center pt-0 pb-0"
+            className="flex h-full object-cover w-full px-4 pt-16 pb-16 md:pt-32 md:pb-32"
+            image={hero}>
               <div className="flex direction-column md:direction-row justify-space-between">
                 <img src="/images/logo-atron.png" />
                 <img src="/images/logo-miks-kart.png" />
@@ -22,8 +19,6 @@ export default function Index({ hero, heroTwo }) {
                 </p>
               </div>
               <a className="theme-button mx-auto" href="tel:+74956403302">ЗАБРОНИРОВАТЬ ЗАЕЗД</a>
-            </div>
-          </div>
           </BackgroundImage>
         </section>
       <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
@@ -110,7 +105,7 @@ export default function Index({ hero, heroTwo }) {
       </section>
       <section className="aspect-square heroTwo-bron md:aspect-[2.327] text-center bg-primary-dark">
           <BackgroundImage
-            containerClassName="z-20 w-full"
+            containerClassName="z-20 w-full h-full"
             className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
             image={heroTwo}
           >
