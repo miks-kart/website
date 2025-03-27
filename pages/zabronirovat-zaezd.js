@@ -1,12 +1,9 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
-import Image from "@components/image/ImageSimple";
 import { getFluidImage } from "@components/image/imageFunctions";
-import ListItem from "@components/ListItem";
 import Slideshow from "@components/Slideshow";
-import Link from "next/link";
 import markdownToHtml from "../lib/markdownToHtml";
 
-export default function Index({ data, gallery, points }) {
+export default function Index({ gallery }) {
   return (
     <AnchorSmoothScroll>
       <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0">
@@ -106,17 +103,9 @@ export default function Index({ data, gallery, points }) {
 
 export async function getStaticProps() {
   const locale = "ru";
-  const content = await import(`../cms/pages/${locale}/about.md`);
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
-
-  content.default.attributes.models = await Promise.all(
-    content.default.attributes.models.map(async ({ model }) => ({
-      ...model,
-      image: await getFluidImage(model.image),
-    }))
-  ).then((res) => res);
 
   const gallery = await Promise.all(
     content.default.attributes.gallery.map(
@@ -127,20 +116,12 @@ export async function getStaticProps() {
     )
   ).then((res) => res);
 
-  const points = await Promise.all(
-    content.default.attributes.points.map(async ({ point }) => ({
-      ...point,
-      heading: await markdownToHtml(point.heading),
-    }))
-  ).then((res) => res);
-
   return {
     props: {
       header: header.default.attributes,
       footer: footer.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
-      points,
       gallery,
     },
   };
