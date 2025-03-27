@@ -29,14 +29,14 @@ export default function Index({ hero, heroTwo }) {
               <p className="text-big">Забронируйте заезд по номеру телефона</p>
               <a className="theme-button button-rounded" href="tel:+74956403302">+7 (495) 640 33 02</a>
               <div>
-                <p className="text-small mb-14">Часы работы: ежедневно (10:00-18:00)</p>
+                <p className="text-small mb-14px">Часы работы: ежедневно (10:00-18:00)</p>
                 <p className="text-small">За исключением дней определенных администрацией для подготовки трассы или иных работ.</p>
               </div>
             </div>
             <div className="flex grey-card direction-column bg-grey justify-space-between">
               <p className="text-big">Приезжайте на трассу за 20 минут до начала заезда</p>
-              <p className="text-small">Приезжайте по адресу: <span className="text-red d-block">г. Рязань, пос. Секиотово <br />Комплекс расположен в 15 минутах от центра Рязани по Михайловскому шоссе. <br />Поворот с трассы М5 на г. Тула.</span></p>
-              <a className="theme-button button-rounded mb-14" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
+              <p className="text-small mb-14px">Приезжайте по адресу: <span className="text-red d-block">г. Рязань, пос. Секиотово <br />Комплекс расположен в 15 минутах от центра Рязани по Михайловскому шоссе. <br />Поворот с трассы М5 на г. Тула.</span></p>
+              <a className="theme-button button-rounded mb-14px" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
               <a className="theme-button button-rounded" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
             </div>
             <div className="flex grey-card direction-column bg-grey justify-space-between pb-110">
@@ -105,14 +105,14 @@ export default function Index({ hero, heroTwo }) {
       </section>
       <section className="aspect-square heroTwo-bron md:aspect-[2.327] text-center bg-primary-dark">
           <BackgroundImage
-            containerClassName="z-20 w-full h-full"
-            className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
+            containerClassName="z-20 w-full h-full flex direction-column justify-space-between"
+            className="relative flex h-full object-cover w-full px-4 pt-20 pb-16"
             image={heroTwo}
           >
-            <p className="pb-400 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
+            <p className="italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
               ИСПЫТАЙТЕ MIKS KART!
             </p>
-              <span className="relative">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
+              <span className="relative text-white text-2xl">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
           </BackgroundImage>
         </section>
       <section className="w-screen bg-white">
