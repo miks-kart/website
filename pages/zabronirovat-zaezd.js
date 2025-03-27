@@ -6,7 +6,7 @@ import BackgroundImage from "@components/image/BackgroundImage";
 export default function Index({ hero, heroTwo }) {
   return (
     <AnchorSmoothScroll>
-    <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed z-[-1] top-0 bg-primary-dark">
+    <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed top-0 bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center py-0"
             className="flex h-full object-cover w-full px-4 pt-20 pb-10 md:pb-16"
@@ -22,7 +22,7 @@ export default function Index({ hero, heroTwo }) {
           </BackgroundImage>
         </section>
       <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
-      <section className="w-screen bg-white">
+      <section className="relative w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             <div className="flex grey-card direction-column bg-grey justify-space-between">
@@ -47,7 +47,7 @@ export default function Index({ hero, heroTwo }) {
           </div>
         </div>
       </section>
-      <section className="w-screen bg-white">
+      <section className="relative w-screen bg-white">
         <div className="page-container md:!pt-20 md:!pb-20 !pb-20 wide">
           <div className="flex direction-column justify-center md:direction-row">
             <div className="cart-card">
@@ -71,7 +71,7 @@ export default function Index({ hero, heroTwo }) {
           </div>
         </div>
       </section>
-      <section className="w-screen bg-white">
+      <section className="relative w-screen bg-white">
         <div className="page-container wide !space-y-0 !py-0 text-center">
           <h2 className="big-header">
             САМАЯ ПРОТЯЖЕННАЯ
@@ -81,7 +81,7 @@ export default function Index({ hero, heroTwo }) {
           <p className="text-huge">ПРОТЯЖЕННОСТЬ: <span className="text-red">1400 МЕТРОВ</span></p>
         </div>
       </section>
-      <section className="w-screen bg-white">
+      <section className="relative w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="flex dark-grey-card bg-dark-grey align-items-center">
@@ -103,7 +103,7 @@ export default function Index({ hero, heroTwo }) {
           </div>
         </div>
       </section>
-      <section className="aspect-square heroTwo-bron md:aspect-[2.327] text-center bg-primary-dark">
+      <section className="relative aspect-square heroTwo-bron md:aspect-[2.327] text-center bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full h-full flex direction-column justify-space-between"
             className="relative flex h-full object-cover w-full px-4 pt-12 md:pt-20 pb-10 md:pb-16"
@@ -115,7 +115,7 @@ export default function Index({ hero, heroTwo }) {
               <span className="relative text-white md:text-2xl">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
           </BackgroundImage>
         </section>
-      <section className="w-screen bg-white">
+      <section className="relative w-screen bg-white">
         <div className="page-container md:!pt-20 md:!pb-20 !pb-20 wide text-center">
           <div>
             <p className="text-extra-huge italic">ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
