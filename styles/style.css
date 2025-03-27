@@ -378,13 +378,16 @@ footer .nav-icon {
   font-family: PFDinDisplayPro;
   text-align: center;
 }
+.cart-card img {
+  margin-top: -100px;
+}
 .cart-card img + p {
   font-weight: bold;
   font-size: 24px;
   margin-left: 40px;
   margin-right: 40px;
 }
-.cart-card p + p  {
+.cart-card > p + p  {
   color: #F00;
   font-weight: bold;
   margin-bottom: 30px;
