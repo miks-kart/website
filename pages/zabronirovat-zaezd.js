@@ -101,7 +101,6 @@ export default function Index({ gallery, hero }) {
               ИСПЫТАЙТЕ MIKS KART!
             </p>
               <span className="relative">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
-            </Link>
           </BackgroundImage>
         </section>
       <section className="w-screen bg-white">
