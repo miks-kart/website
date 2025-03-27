@@ -513,6 +513,9 @@ footer .nav-icon {
   .md\:pb-110 {
     padding-bottom: 110px !important;
   }
+  .md:\mb-0 {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 1280px) {
   .page-container.full-width,
@@ -555,6 +558,13 @@ h1.prokatnye-karty {
     }
     .grey-card {
       padding: 40px 20px;
+      min-height: 250px;
+    }
+    .dark-grey-card {
+      padding: 20px;
+    }
+    .dark-grey-card img {
+      max-width: 60px;
     }
     .cart-card {
       margin-top: 100px;
@@ -569,6 +579,9 @@ h1.prokatnye-karty {
     }
     .big-header span span {
       font-size: 40px;
+    }
+    .text-big {
+      font-size: 16px;
     }
     .text-huge {
       font-size: 23px;
