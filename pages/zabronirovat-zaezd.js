@@ -16,17 +16,17 @@ export default function Index({ gallery }) {
               <p className="text-big">Забронируйте заезд по номеру телефона</p>
               <a className="theme-button" href="tel:+74956403302">+7 (495) 640 33 02</a>
               <div>
-                <p className="text-small">Часы работы: ежедневно (10:00-18:00)</p>
+                <p className="text-small mb-14">Часы работы: ежедневно (10:00-18:00)</p>
                 <p className="text-small">За исключением дней определенных администрацией для подготовки трассы или иных работ.</p>
               </div>
             </div>
             <div className="flex grey-card direction-column bg-grey justify-space-between">
               <p className="text-big">Приезжайте на трассу за 20 минут до начала заезда</p>
               <p className="text-small">Приезжайте по адресу: <span className="text-red">г. Рязань, пос. Секиотово <br />Комплекс расположен в 15 минутах от центра Рязани по Михайловскому шоссе. <br />Поворот с трассы М5 на г. Тула.</span></p>
-              <a className="theme-button" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
-              <a className="theme-button" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
+              <a className="theme-button button-rounded mb-14" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
+              <a className="theme-button button-rounded" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
             </div>
-            <div className="flex grey-card direction-column bg-grey justify-space-between">
+            <div className="flex grey-card direction-column bg-grey justify-space-between mb-110">
               <p className="text-big">Получите экипировку</p>
               <p className="text-big">Пройдите инструктаж</p>
               <p className="text-big text-red">Прыгайте в карт и гоняйте!</p>
@@ -36,22 +36,22 @@ export default function Index({ gallery }) {
       </section>
       <section className="w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
-          <div className="flex direction-column md:direction-row">
+          <div className="flex direction-column justify-center md:direction-row">
             <div className="cart-card">
               <img src="/images/cart-bron.png" alt="Miks Kart SPORT 9л.с." />
               <p>Miks Kart SPORT 9л.с.</p>
               <p>Производитель</p>
               <div className="flex justify-space-between">
-                <p>ПН-ВС </p>
+                <p>ПН-ВС</p>
                 <p><b>2000₽</b></p>
               </div>
             </div>
             <div className="cart-card">
-              <img src="/images/cart-bron.png" alt="Miks Kart SPORT 9л.с." />
-              <p>Miks Kart SPORT 9л.с.</p>
+              <img src="/images/cart-bron.png" alt="Miks Kart 5,5 л.с. (детский)" />
+              <p>Miks Kart 5,5 л.с. (детский)</p>
               <p>Производитель</p>
               <div className="flex justify-space-between">
-                <p>ПН-ВС </p>
+                <p>ПН-ВС</p>
                 <p><b>2000₽</b></p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function Index({ gallery }) {
         <div className="page-container wide !space-y-0 !py-0 text-center">
           <h2 className="big-header">
             САМАЯ ПРОТЯЖЕННАЯ
-            <span>ОТКРЫТАЯ ТРАССА ДЛЯ КАРТИНГА В РОССИИ!</span>
+            <span>ОТКРЫТАЯ <span>ТРАССА</span> ДЛЯ КАРТИНГА <span>В РОССИИ!</span></span>
           </h2>
           <img src="/images/track.jpg" alt="Трасса" />
           <p className="text-huge">ПРОТЯЖЕННОСТЬ: <span className="text-red">1400 МЕТРОВ</span></p>
@@ -93,7 +93,7 @@ export default function Index({ gallery }) {
       <section className="w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide text-center">
           <p>ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
-          <a className="theme-button" href="tel:+74956403302">+7 (495) 640 33 02</a>
+          <a className="theme-button button-rounded" href="tel:+74956403302">+7 (495) 640 33 02</a>
         </div>
       </section>
     </AnchorSmoothScroll>
