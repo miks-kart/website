@@ -1,14 +1,27 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
-import Slideshow from "@components/Slideshow";
+//import Slideshow from "@components/Slideshow";
 import BackgroundImage from "@components/image/BackgroundImage";
 
-export default function Index({ gallery, heroTwo }) {
+export default function Index({ hero, heroTwo }) {
   return (
     <AnchorSmoothScroll>
-      <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0">
-        <Slideshow slides={gallery} />
-      </section>
+    <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0 text-center bg-primary-dark">
+          <BackgroundImage
+            containerClassName="z-20 w-full"
+            className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
+            image={hero}
+          >
+          <div className="flex direction-column md:direction-row justify-space-between">
+            <img src="/images/logo-atron.png" />
+            <img src="/images/logo-miks-kart.png" />
+            <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
+              ИСПЫТАЙТЕ КАРТЫ MIKS KART В ATRON INTERNATIONAL CIRCUIT! 
+            </p>
+          </div>
+              <a className="theme-button" href="tel:+74956403302">ЗАБРОНИРОВАТЬ ЗАЕЗД</a>
+          </BackgroundImage>
+        </section>
       <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
       <section className="w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
@@ -23,7 +36,7 @@ export default function Index({ gallery, heroTwo }) {
             </div>
             <div className="flex grey-card direction-column bg-grey justify-space-between">
               <p className="text-big">Приезжайте на трассу за 20 минут до начала заезда</p>
-              <p className="text-small">Приезжайте по адресу: <span className="text-red">г. Рязань, пос. Секиотово <br />Комплекс расположен в 15 минутах от центра Рязани по Михайловскому шоссе. <br />Поворот с трассы М5 на г. Тула.</span></p>
+              <p className="text-small">Приезжайте по адресу: <span className="text-red d-block">г. Рязань, пос. Секиотово <br />Комплекс расположен в 15 минутах от центра Рязани по Михайловскому шоссе. <br />Поворот с трассы М5 на г. Тула.</span></p>
               <a className="theme-button button-rounded mb-14" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
               <a className="theme-button button-rounded" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
             </div>
@@ -36,7 +49,7 @@ export default function Index({ gallery, heroTwo }) {
         </div>
       </section>
       <section className="w-screen bg-white">
-        <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
+        <div className="page-container md:!pt-20 md:!pb-20 !pb-20 wide">
           <div className="flex direction-column justify-center md:direction-row">
             <div className="cart-card">
               <img src="/images/cart-bron.png" alt="Miks Kart SPORT 9л.с." />
@@ -65,7 +78,7 @@ export default function Index({ gallery, heroTwo }) {
             САМАЯ ПРОТЯЖЕННАЯ
             <span>ОТКРЫТАЯ <span>ТРАССА</span> ДЛЯ КАРТИНГА <span>В РОССИИ!</span></span>
           </h2>
-          <img src="/images/track.jpg" alt="Трасса" />
+          <img className="d-block mx-auto" src="/images/track.jpg" alt="Трасса" />
           <p className="text-huge">ПРОТЯЖЕННОСТЬ: <span className="text-red">1400 МЕТРОВ</span></p>
         </div>
       </section>
@@ -97,16 +110,16 @@ export default function Index({ gallery, heroTwo }) {
             className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
             image={heroTwo}
           >
-            <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
+            <p className="pb-400 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
               ИСПЫТАЙТЕ MIKS KART!
             </p>
-              <span className="relative">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
+              <span className="relative" style="color: #fff;font-size: 21px;">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
           </BackgroundImage>
         </section>
       <section className="w-screen bg-white">
-        <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide text-center">
+        <div className="page-container md:!pt-20 md:!pb-20 !pb-20 wide text-center">
           <div>
-            <p className="text-extra-huge">ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
+            <p className="text-extra-huge italic">ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
             <a className="theme-button button-rounded text-extra-huge" href="tel:+74956403302">+7 (495) 640 33 02</a>
           </div>
         </div>
@@ -122,18 +135,18 @@ export async function getStaticProps() {
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
 
-  const gallery = await Promise.all(
+  /*const gallery = await Promise.all(
     content.default.attributes.gallery.map(
       async (img) =>
         await getFluidImage(img, {
           webp: true,
         })
     )
-  ).then((res) => res);
+  ).then((res) => res);*/
 
-  /*const hero = await getFluidImage(content.default.attributes.imageOne, {
+  const hero = await getFluidImage(content.default.attributes.imageOne, {
     webp: true,
-  });*/
+  });
   const heroTwo = await getFluidImage(content.default.attributes.imageTwo, {
     webp: true,
   });
@@ -144,8 +157,8 @@ export async function getStaticProps() {
       footer: footer.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
-      gallery,
-      //hero,
+      //gallery,
+      hero,
       heroTwo
     },
   };
