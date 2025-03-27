@@ -113,7 +113,7 @@ export default function Index({ hero, heroTwo }) {
             <p className="pb-400 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
               ИСПЫТАЙТЕ MIKS KART!
             </p>
-              <span className="relative" style="color: #fff;font-size: 21px;">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
+              <span className="relative">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
           </BackgroundImage>
         </section>
       <section className="w-screen bg-white">
