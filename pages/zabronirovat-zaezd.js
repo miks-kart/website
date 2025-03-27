@@ -51,8 +51,8 @@ export default function Index({ hero, heroTwo }) {
         <div className="page-container md:!pt-20 md:!pb-20 !pb-20 wide">
           <div className="flex direction-column justify-center md:direction-row">
             <div className="cart-card">
-              <img src="/images/cart-bron.png" alt="Miks Kart SPORT 9л.с." />
-              <p>Miks Kart SPORT 9л.с.</p>
+              <img src="/images/cart-bron.png" alt="Miks Kart SPORT 9 л.с." />
+              <p>Miks Kart SPORT 9 л.с.</p>
               <p>Производитель</p>
               <div className="flex justify-space-between">
                 <p>ПН-ВС</p>
