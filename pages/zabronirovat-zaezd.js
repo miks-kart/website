@@ -3,7 +3,7 @@ import { getFluidImage } from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
 import BackgroundImage from "@components/image/BackgroundImage";
 
-export default function Index({ gallery, hero }) {
+export default function Index({ gallery, heroTwo }) {
   return (
     <AnchorSmoothScroll>
       <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0">
