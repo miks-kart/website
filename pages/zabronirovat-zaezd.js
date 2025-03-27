@@ -2,7 +2,7 @@ import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 import Slideshow from "@components/Slideshow";
 
-export default function Index({ gallery }) {
+export default function Index({ gallery, hero }) {
   return (
     <AnchorSmoothScroll>
       <section className="aspect-square md:aspect-[2.327] w-screen fixed z-[-1] top-0">
@@ -90,6 +90,24 @@ export default function Index({ gallery }) {
           </div>
         </div>
       </section>
+      <section className="text-center bg-primary-dark">
+          <BackgroundImage
+            containerClassName="z-20 w-full"
+            className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
+            image={hero}
+          >
+            <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
+              {data.testdrive.heading}
+            </p>
+            <Link
+              target="_blank"
+              href={data.testdrive.link}
+              className="theme-button"
+            >
+              <span className="relative">{data.testdrive.text}</span>
+            </Link>
+          </BackgroundImage>
+        </section>
       <section className="w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide text-center">
           <p>ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
@@ -116,6 +134,10 @@ export async function getStaticProps() {
     )
   ).then((res) => res);
 
+  const hero = await getFluidImage(content.default.attributes.imageOne, {
+    webp: true,
+  });
+
   return {
     props: {
       header: header.default.attributes,
@@ -123,6 +145,7 @@ export async function getStaticProps() {
       data: content.default.attributes,
       seo: seo.default.attributes,
       gallery,
+      hero
     },
   };
 }
