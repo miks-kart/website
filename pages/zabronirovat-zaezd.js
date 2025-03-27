@@ -8,13 +8,13 @@ export default function Index({ hero, heroTwo }) {
     <AnchorSmoothScroll>
     <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed z-[-1] top-0 bg-primary-dark">
           <BackgroundImage
-            containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center pt-0 pb-0"
-            className="flex h-full object-cover w-full px-4 pt-16 pb-16 md:pt-32 md:pb-32"
+            containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center py-0"
+            className="flex h-full object-cover w-full px-4 pt-20 pb-16"
             image={hero}>
-              <div className="flex direction-column md:direction-row justify-space-between">
+              <div className="flex w-full direction-column items-start md:direction-row justify-space-between">
                 <img src="/images/logo-atron.png" />
                 <img src="/images/logo-miks-kart.png" />
-                <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
+                <p className="italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
                   ИСПЫТАЙТЕ КАРТЫ MIKS KART В ATRON INTERNATIONAL CIRCUIT! 
                 </p>
               </div>
