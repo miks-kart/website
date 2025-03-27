@@ -95,7 +95,7 @@ export default function Index({ gallery, hero }) {
           <BackgroundImage
             containerClassName="z-20 w-full"
             className="flex items-end justify-start object-cover w-full px-4 pt-20 pb-16 md:pt-40 md:pb-32"
-            image={hero}
+            image={heroTwo}
           >
             <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
               ИСПЫТАЙТЕ MIKS KART!
@@ -105,8 +105,10 @@ export default function Index({ gallery, hero }) {
         </section>
       <section className="w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide text-center">
-          <p className="text-extra-huge">ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
-          <a className="theme-button button-rounded text-extra-huge" href="tel:+74956403302">+7 (495) 640 33 02</a>
+          <div>
+            <p className="text-extra-huge">ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
+            <a className="theme-button button-rounded text-extra-huge" href="tel:+74956403302">+7 (495) 640 33 02</a>
+          </div>
         </div>
       </section>
     </AnchorSmoothScroll>
@@ -129,7 +131,10 @@ export async function getStaticProps() {
     )
   ).then((res) => res);
 
-  const hero = await getFluidImage(content.default.attributes.imageOne, {
+  /*const hero = await getFluidImage(content.default.attributes.imageOne, {
+    webp: true,
+  });*/
+  const heroTwo = await getFluidImage(content.default.attributes.imageTwo, {
     webp: true,
   });
 
@@ -140,7 +145,8 @@ export async function getStaticProps() {
       data: content.default.attributes,
       seo: seo.default.attributes,
       gallery,
-      hero
+      //hero,
+      heroTwo
     },
   };
 }
