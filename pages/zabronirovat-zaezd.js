@@ -9,7 +9,7 @@ export default function Index({ hero, heroTwo }) {
     <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed z-[-1] top-0 bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center py-0"
-            className="flex h-full object-cover w-full px-4 pt-20 pb-16"
+            className="flex h-full object-cover w-full px-4 pt-20 pb-10 md:pb-16"
             image={hero}>
               <div className="flex w-full direction-column items-start md:direction-row justify-space-between">
                 <img src="/images/logo-atron.png" />
@@ -39,7 +39,7 @@ export default function Index({ hero, heroTwo }) {
               <a className="theme-button button-rounded mb-14px" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
               <a className="theme-button button-rounded" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
             </div>
-            <div className="flex grey-card direction-column bg-grey justify-space-between pb-110">
+            <div className="flex grey-card direction-column bg-grey justify-space-between md:pb-110">
               <p className="text-big">Получите экипировку</p>
               <p className="text-big">Пройдите инструктаж</p>
               <p className="text-big text-red">Прыгайте в карт и гоняйте!</p>
@@ -106,13 +106,13 @@ export default function Index({ hero, heroTwo }) {
       <section className="aspect-square heroTwo-bron md:aspect-[2.327] text-center bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full h-full flex direction-column justify-space-between"
-            className="relative flex h-full object-cover w-full px-4 pt-20 pb-16"
+            className="relative flex h-full object-cover w-full px-4 pt-12 md:pt-20 pb-10 md:pb-16"
             image={heroTwo}
           >
             <p className="italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
               ИСПЫТАЙТЕ MIKS KART!
             </p>
-              <span className="relative text-white text-2xl">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
+              <span className="relative text-white md:text-2xl">Универсальный гоночный карт, который отлично подходит простым любителям и опытным пилотам <br />для использования в помещении и на открытом треке, для проката и проведения соревнований</span>
           </BackgroundImage>
         </section>
       <section className="w-screen bg-white">
