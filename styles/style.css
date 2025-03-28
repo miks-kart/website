@@ -597,6 +597,8 @@ h1.prokatnye-karty {
     }
     .bg-grey:nth-child(2)::after, .bg-grey:nth-child(2)::before {
       background-image: url(/images/arrow-mob.png);
+      width: 70px;
+      height: 102px;
     }
     .bg-grey:nth-child(2)::before {
       left: 81%;
