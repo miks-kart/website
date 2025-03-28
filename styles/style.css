@@ -429,8 +429,8 @@ footer { position: relative; }
 .cart-card img + p {
   font-weight: bold;
   font-size: 24px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .cart-card > p + p  {
   color: #F00;
