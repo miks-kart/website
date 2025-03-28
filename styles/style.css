@@ -376,6 +376,26 @@ footer .nav-icon {
   border-radius: 20px;
   padding: 60px 20px;
   text-align: center;
+  position: relative;
+}
+.bg-grey:nth-child(2) {
+  z-index: 2;
+}
+.bg-grey:nth-child(2)::before, .bg-grey:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 165px;
+  height: 54px;
+  background: url(/images/arrow.png) no-repeat 0 0;
+}
+.bg-grey:nth-child(2)::before {
+  left: -86px;
+}
+.bg-grey:nth-child(2)::after {
+  right: -103px;
+  transform: scaleY(-1);
+  top: 77px;
 }
 .cart-card {
   max-width: 250px;
@@ -387,6 +407,19 @@ footer .nav-icon {
   margin-right: 50px;
   font-family: PFDinDisplayPro;
   text-align: center;
+}
+.cart-card .label {
+  position: absolute;
+  left: 16px;
+  top: 80px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #F00;
+  font-size: 15px;
+  line-height: 1;
+  padding-top: 3px;
+  font-weight: bold;
 }
 .cart-card img {
   margin-top: -100px;
