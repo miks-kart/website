@@ -407,6 +407,7 @@ footer .nav-icon {
   margin-right: 50px;
   font-family: PFDinDisplayPro;
   text-align: center;
+  position: relative;
 }
 .cart-card .label {
   position: absolute;
@@ -471,6 +472,7 @@ footer .nav-icon {
 }
 .text-small {
   font-size: 16px;
+  color: #868686;
 }
 .text-red {
   color: #F00;
@@ -577,8 +579,8 @@ h1.prokatnye-karty {
     }
     .hero-bron .page-container {
       margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+      margin-right: 0;
+      width: 100%;
     }
     .hero-bron p {
       font-size: 20px;
@@ -592,6 +594,18 @@ h1.prokatnye-karty {
     .grey-card {
       padding: 40px 20px;
       min-height: 250px;
+    }
+    .bg-grey:nth-child(2)::after, .bg-grey:nth-child(2)::before {
+      background-image: url(/images/arrow-mob.png);
+    }
+    .bg-grey:nth-child(2)::before {
+      left: 81%;
+      top: -63px;
+    }
+    .bg-grey:nth-child(2)::after {
+      right: 81%;
+      top: 93%;
+      transform: scaleX(-1);
     }
     .dark-grey-card {
       padding: 20px;
