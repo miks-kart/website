@@ -34,7 +34,7 @@ export default function Index({ hero, heroTwo }) {
               </div>
             </div>
             <div className="flex grey-card direction-column bg-grey justify-space-between">
-              <p className="text-big mb-14px md:mb-0">Приезжайте на трассу за 20 минут до начала заезда</p>
+              <p className="text-big mb-14px md:mb-0">Приезжайте на трассу <br />за 20 минут до начала заезда</p>
               <p className="text-small mb-14px">Приезжайте по адресу: <span className="text-red d-block">г. Рязань, пос. Секиотово <br />Комплекс расположен в 15 минутах от центра Рязани по Михайловскому шоссе. <br />Поворот с трассы М5 на г. Тула.</span></p>
               <a className="theme-button button-rounded mb-14px" href="tel:+74956403302">Проложить маршрут на Яндекс Картах</a>
               <a className="theme-button button-rounded" href="tel:+74956403302">Проложить маршрут в Яндекс Навигаторе</a>
