@@ -51,6 +51,7 @@ export default function Index({ hero, heroTwo }) {
         <div className="page-container md:!pt-20 md:!pb-20 !pb-20 wide">
           <div className="flex direction-column justify-center md:direction-row">
             <div className="cart-card">
+              <span class="label">10 мин</span>
               <img src="/images/cart-bron.png" alt="Miks Kart SPORT 9 л.с." />
               <p>Miks Kart SPORT 9 л.с.</p>
               <p>Производитель</p>
@@ -60,6 +61,7 @@ export default function Index({ hero, heroTwo }) {
               </div>
             </div>
             <div className="cart-card">
+              <span class="label">10 мин</span>
               <img src="/images/cart-bron.png" alt="Miks Kart 5,5 л.с. (детский)" />
               <p>Miks Kart 5,5 л.с. (детский)</p>
               <p>Производитель</p>
