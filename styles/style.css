@@ -406,7 +406,7 @@ footer {
   max-width: 250px;
   background: linear-gradient(180deg, #1D2225 49.98%, #4F1313 100%);
   color: #fff;
-  padding-bottom: 55px;
+  padding-bottom: 30px;
   border-radius: 15px;
   margin-left: 50px;
   margin-right: 50px;
@@ -417,7 +417,7 @@ footer {
 .cart-card .label {
   position: absolute;
   right: 32px;
-  top: 185px;
+  top: 200px;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -435,11 +435,12 @@ footer {
   font-size: 24px;
   margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .cart-card > div {
   padding: 20px 30px;
   background: rgba(217, 217, 217, 0.15);
+  margin-bottom: 15px;
 }
 .cart-card p.text-red {
   font-weight: bold;
@@ -451,7 +452,6 @@ footer {
 .cart-card .flex {
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 15px;
   justify-content: space-between;
 }
 .cart-card p.flex {
