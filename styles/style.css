@@ -416,15 +416,15 @@ footer {
 }
 .cart-card .label {
   position: absolute;
-  left: 16px;
-  top: 80px;
+  right: 30px;
+  top: 215px;
   width: 42px;
   height: 42px;
   border-radius: 50%;
   background: #F00;
   font-size: 15px;
   line-height: 1;
-  padding-top: 3px;
+  padding-top: 4px;
   font-weight: bold;
 }
 .cart-card img {
@@ -621,7 +621,7 @@ h1.prokatnye-karty {
       margin-top: 100px;
     }
     .big-header {
-      font-size: 48px;
+      font-size: 30px;
       margin-bottom: 20px;
       line-height: 1;
     }
@@ -635,7 +635,7 @@ h1.prokatnye-karty {
       font-size: 26px;
     }
     .text-huge {
-      font-size: 23px;
+      font-size: 20px;
       padding-top: 20px;
     }
     .text-extra-huge {
