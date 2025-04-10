@@ -59,8 +59,8 @@ export default function Index({ hero, heroTwo }) {
                 <p>ПН-ВС</p>
                 <p><b>2000 ₽</b></p>
               </div>
-              <p>ПАРАМЕТРЫ:</p>
-              <p className="flex"><span>Рост:</span> <span>от 145 см.</span></p>
+              <p className="text-red">Параметры:</p>
+              <p className="flex"><span>Рост</span> <span>от 145 см</span></p>
             </div>
             <div className="cart-card">
               <span class="label">10 мин</span>
@@ -71,8 +71,8 @@ export default function Index({ hero, heroTwo }) {
                 <p><b>2000 ₽</b></p>
               </div>
               <p className="text-red">Параметры:</p>
-              <p className="flex"><span>Рост:</span> <span>от 125 см.</span></p>
-              <p className="flex"><span>Возраст:</span> <span>от 8 лет</span></p>
+              <p className="flex"><span>Рост</span> <span>от 125 см</span></p>
+              <p className="flex"><span>Возраст</span> <span>от 8 лет</span></p>
             </div>
           </div>
         </div>
