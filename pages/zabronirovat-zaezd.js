@@ -2,12 +2,10 @@ import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 //import Slideshow from "@components/Slideshow";
 import BackgroundImage from "@components/image/BackgroundImage";
+import 'styles/landing.css';
 
 export default function Index({ hero, heroTwo }) {
   return (
-    <style>
-      #header, footer { display: none; }
-    </style>
     <AnchorSmoothScroll>
     <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed top-0 bg-primary-dark">
           <BackgroundImage
