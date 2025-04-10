@@ -7,10 +7,13 @@ import NavExtra from "@components/mobile menu/NavExtra";
 import { AnimatePresence, motion } from "framer-motion";
 import { headerBg, menuScreen } from "@components/mobile menu/Variants";
 import MobileMenuToggle from "@components/mobile menu/MobileMenuToggle";
+import { useRouter } from 'next/router';
 
 export default function Header({ data, bg, currentPage, headerAnchors }) {
   const [color, setColor] = useState(!!bg);
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const path = router.pathname;
   function toggleNav() {
     setIsOpen(!isOpen);
     document.querySelector("body").style.overflow = isOpen
@@ -112,7 +115,7 @@ export default function Header({ data, bg, currentPage, headerAnchors }) {
       )}
       <nav
         id="header"
-        className="fixed top-0 z-50 w-screen pointer-events-auto {currentPage}"
+        className="fixed top-0 z-50 w-screen pointer-events-auto {path=='/zabronirovat-zaezd' && landing}"
       >
         <motion.div
           variants={headerBg}
