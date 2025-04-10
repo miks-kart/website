@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Vk from "./icons/Vk";
 import Youtube from "./icons/Youtube";
+import { useRouter } from 'next/router';
 
 export default function Footer({ data, currentPage }) {
+  const router = useRouter();
+  const path = router.pathname;
+  
   return (
     <footer className={`${
             path == '/zabronirovat-zaezd' ? "landing" : ""
