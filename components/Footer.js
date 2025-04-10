@@ -4,7 +4,9 @@ import Youtube from "./icons/Youtube";
 
 export default function Footer({ data, currentPage }) {
   return (
-    <footer className="pt-8 pb-8 pointer-events-auto md:pb-16 bg-primary-dark">
+    <footer className={`${
+            path == '/zabronirovat-zaezd' ? "landing" : ""
+          } pt-8 pb-8 pointer-events-auto md:pb-16 bg-primary-dark`}>
       <div className="px-[1.375rem] mx-auto md:flex justify-between items-start">
         <Link href="/">
           <img
