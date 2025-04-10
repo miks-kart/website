@@ -512,7 +512,7 @@ footer {
   border-radius: 50px;
   margin-top: 70px;
 }
-
+#header.landing, footer.landing { display: none; }
 
 @media (hover: hover) and (pointer: fine) {
   .group:hover .group-hover-custom\:text-primary-dark {
@@ -589,9 +589,6 @@ h1.prokatnye-karty {
     }
     .hero-bron p {
       font-size: 20px;
-    }
-    .hero-bron .page-container img + img {
-      display: none;
     }
     .hero-bron .theme-button {
       font-size: 19px;
