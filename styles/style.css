@@ -416,7 +416,7 @@ footer {
 }
 .cart-card .label {
   position: absolute;
-  right: 30px;
+  right: 32px;
   top: 185px;
   width: 42px;
   height: 42px;
@@ -437,14 +437,28 @@ footer {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.cart-card > p + p  {
-  color: #F00;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
 .cart-card > div {
   padding: 20px 30px;
   background: rgba(217, 217, 217, 0.15);
+}
+.cart-card p.text-red {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.cart-card .flex {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+.cart-card p.flex {
+ font-weight: bold;
+}
+.cart-card p:last-child {
+  margin-bottom: 0;
 }
 .dark-grey-card {
   border-radius: 20px;
