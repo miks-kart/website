@@ -113,10 +113,17 @@ export default function Header({ data, bg, currentPage, headerAnchors }) {
           )}
         </section>
       )}
+      {path == '/zabronirovat-zaezd' ? (
       <nav
         id="header"
-        className="fixed top-0 z-50 w-screen pointer-events-auto {path=='/zabronirovat-zaezd' && landing}"
+        className="fixed top-0 z-50 w-screen pointer-events-auto landing"
       >
+      ) : (
+        <nav
+        id="header"
+        className="fixed top-0 z-50 w-screen pointer-events-auto "
+      >
+          )}
         <motion.div
           variants={headerBg}
           initial={false}
