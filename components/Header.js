@@ -114,7 +114,7 @@ export default function Header({ data, bg, currentPage, headerAnchors }) {
         id="header"
         className="{`${
           window.location.pathname == '/zabronirovat-zaezd' ? "landing" : ""
-        }
+        }}
           fixed top-0 z-50 w-screen pointer-events-auto"
       >
         <motion.div
