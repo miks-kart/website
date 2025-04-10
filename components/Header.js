@@ -112,7 +112,7 @@ export default function Header({ data, bg, currentPage, headerAnchors }) {
       )}
       <nav
         id="header"
-        className="fixed top-0 z-50 w-screen pointer-events-auto"
+        className="fixed top-0 z-50 w-screen pointer-events-auto {currentPage}"
       >
         <motion.div
           variants={headerBg}
