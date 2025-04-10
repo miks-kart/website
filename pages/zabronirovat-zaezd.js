@@ -99,7 +99,7 @@ export default function Index({ hero, heroTwo }) {
             </div>
             <div className="flex dark-grey-card bg-dark-grey align-items-center">
               <img src="/images/icon-bron-3.png" alt="icon" />
-              <p>Минимальный рост для детей в одноместном карте составляет 125 см. Минимальный возраст для заезда на 2х-местном карте пассажиром — 6 лет</p>
+              <p>Минимальный рост для детей в одноместном карте составляет 125 см.</p>
             </div>
             <div className="flex dark-grey-card bg-dark-grey align-items-center">
               <img src="/images/icon-bron-4.png" alt="icon" />
