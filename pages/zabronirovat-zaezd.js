@@ -2,7 +2,7 @@ import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 import { getFluidImage } from "@components/image/imageFunctions";
 //import Slideshow from "@components/Slideshow";
 import BackgroundImage from "@components/image/BackgroundImage";
-import '@styles/landing.css';
+//import '@styles/landing.css';
 
 export default function Index({ hero, heroTwo }) {
   return (
