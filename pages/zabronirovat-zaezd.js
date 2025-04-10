@@ -12,7 +12,7 @@ export default function Index({ hero, heroTwo }) {
             containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center py-0"
             className="flex h-full object-cover w-full px-4 pt-20 pb-10 md:pb-16"
             image={hero}>
-              <div className="flex w-full direction-column items-start md:direction-row justify-space-between">
+              <div className="flex w-full items-start md:direction-row justify-center md:justify-space-between">
                 <img src="/images/logo-atron.png" />
                 <img src="/images/logo-miks-kart.png" />
                 <p className="italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
@@ -53,23 +53,25 @@ export default function Index({ hero, heroTwo }) {
           <div className="flex direction-column justify-center md:direction-row">
             <div className="cart-card">
               <span class="label">10 мин</span>
-              <img src="/images/cart-bron.png" alt="Miks Kart SPORT 9 л.с." />
-              <p>Miks Kart SPORT 9 л.с.</p>
-              <p>Производитель</p>
+              <img src="/images/cart-bron.png" alt="Miks Kart SPORT 15 л.с." />
+              <p>Miks Kart SPORT 15 л.с.</p>
               <div className="flex justify-space-between">
                 <p>ПН-ВС</p>
                 <p><b>2000₽</b></p>
               </div>
+              <p>ПАРАМЕТРЫ:</p>
+              <p>Рост: от 145 см.</p>
             </div>
             <div className="cart-card">
               <span class="label">10 мин</span>
-              <img src="/images/cart-bron.png" alt="Miks Kart 5,5 л.с. (детский)" />
-              <p>Miks Kart 5,5 л.с. (детский)</p>
-              <p>Производитель</p>
+              <img src="/images/cart-bron.png" alt="Miks Kart Юниор 4 л.с." />
+              <p>Miks Kart Юниор 4 л.с.</p>
               <div className="flex justify-space-between">
                 <p>ПН-ВС</p>
                 <p><b>2000₽</b></p>
               </div>
+              <p>ПАРАМЕТРЫ:</p>
+              <p>Рост: от 125 см.</p>
             </div>
           </div>
         </div>
@@ -77,8 +79,7 @@ export default function Index({ hero, heroTwo }) {
       <section className="relative w-screen bg-white">
         <div className="page-container wide !space-y-0 !py-0 text-center">
           <h2 className="big-header">
-            САМАЯ ПРОТЯЖЕННАЯ
-            <span>ОТКРЫТАЯ <span>ТРАССА</span> ДЛЯ КАРТИНГА <span>В РОССИИ!</span></span>
+            САМАЯ ПРОТЯЖЕННАЯ ОТКРЫТАЯ ТРАССА ДЛЯ КАРТИНГА В РОССИИ!
           </h2>
           <img className="d-block mx-auto" src="/images/track.jpg" alt="Трасса" />
           <p className="text-huge">ПРОТЯЖЕННОСТЬ: <span className="text-red">1400 МЕТРОВ</span></p>
@@ -97,11 +98,11 @@ export default function Index({ hero, heroTwo }) {
             </div>
             <div className="flex dark-grey-card bg-dark-grey align-items-center">
               <img src="/images/icon-bron-3.png" alt="icon" />
-              <p>Минимальный рост для детей в одноместном карте составляет 150см. Минимальный возраст для заезда на 2х-местном карте пассажиром — 6 лет</p>
+              <p>Минимальный рост для детей в одноместном карте составляет 125 см. Минимальный возраст для заезда на 2х-местном карте пассажиром — 6 лет</p>
             </div>
             <div className="flex dark-grey-card bg-dark-grey align-items-center">
               <img src="/images/icon-bron-4.png" alt="icon" />
-              <p>Запись на заезды осуществляется только по номеру телефону ресепшен комплекса </p>
+              <p>Запись на заезды осуществляется только по номеру телефону <a href="tel:+74956403302">+7 (495) 640 33 02</a></p>
             </div>
           </div>
         </div>
