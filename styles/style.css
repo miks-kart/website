@@ -471,11 +471,12 @@ footer {
   white-space: nowrap;
 }
 .big-header {
-  font-size: 96px;
+  font-size: 65px;
   font-weight: 900;
   font-style: italic;
   color: #FF0000;
-  line-height: 80%;
+  line-height: 100%;
+  margin-bottom: 30px;
 }
 .big-header > span {
   color: #000;
