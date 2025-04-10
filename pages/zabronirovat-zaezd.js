@@ -10,7 +10,7 @@ export default function Index({ hero, heroTwo }) {
     <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed top-0 bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center py-0"
-            className="flex h-full object-cover w-full px-4 pt-20 pb-10 md:pb-16"
+            className="flex h-full object-cover w-full px-4 pt-5 md:pt-20 pb-10 md:pb-16"
             image={hero}>
               <div className="flex w-full items-start md:direction-row justify-center md:justify-space-between">
                 <img src="/images/logo-atron.png" />
@@ -54,13 +54,13 @@ export default function Index({ hero, heroTwo }) {
             <div className="cart-card">
               <span class="label">10 мин</span>
               <img src="/images/cart-bron.png" alt="Miks Kart SPORT 15 л.с." />
-              <p>Miks Kart SPORT 15 л.с.</p>
+              <p>Miks Kart <br />SPORT 15 л.с.</p>
               <div className="flex justify-space-between">
                 <p>ПН-ВС</p>
-                <p><b>2000₽</b></p>
+                <p><b>2000 ₽</b></p>
               </div>
               <p>ПАРАМЕТРЫ:</p>
-              <p>Рост: от 145 см.</p>
+              <p className="flex"><span>Рост:</span> <span>от 145 см.</span></p>
             </div>
             <div className="cart-card">
               <span class="label">10 мин</span>
@@ -68,10 +68,11 @@ export default function Index({ hero, heroTwo }) {
               <p>Miks Kart Юниор 4 л.с.</p>
               <div className="flex justify-space-between">
                 <p>ПН-ВС</p>
-                <p><b>2000₽</b></p>
+                <p><b>2000 ₽</b></p>
               </div>
-              <p>ПАРАМЕТРЫ:</p>
-              <p>Рост: от 125 см.</p>
+              <p className="text-red">Параметры:</p>
+              <p className="flex"><span>Рост:</span> <span>от 125 см.</span></p>
+              <p className="flex"><span>Возраст:</span> <span>от 8 лет</span></p>
             </div>
           </div>
         </div>
