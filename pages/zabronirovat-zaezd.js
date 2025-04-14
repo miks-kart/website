@@ -7,7 +7,7 @@ import BackgroundImage from "@components/image/BackgroundImage";
 export default function Index({ hero, heroTwo }) {
   return (
     <AnchorSmoothScroll>
-    <section className="aspect-square md:aspect-[2.327] hero-bron w-screen fixed top-0 bg-primary-dark">
+    <section className="aspect-square md:aspect-[1.8] hero-bron w-screen fixed top-0 bg-primary-dark">
           <BackgroundImage
             containerClassName="z-20 w-full page-container wide flex direction-column justify-space-between items-center py-0"
             className="flex h-full object-cover w-full px-4 pt-5 md:pt-20 pb-10 md:pb-16"
