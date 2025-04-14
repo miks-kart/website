@@ -110,8 +110,8 @@ export default function Index({ hero, heroTwo }) {
       </section>
       <section className="relative aspect-square heroTwo-bron md:aspect-[1.8] text-center bg-primary-dark">
           <BackgroundImage
-            containerClassName="z-20 w-full h-full flex direction-column justify-space-between"
-            className="relative flex h-full object-cover w-full px-4 pt-12 md:pt-20 pb-10 md:pb-16"
+            containerClassName="z-20 w-full h-full flex direction-column justify-space-between px-4 pt-12 md:pt-20 pb-10 md:pb-16"
+            className="relative flex h-full object-cover w-full"
             image={heroTwo}
           >
             <p className="italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
