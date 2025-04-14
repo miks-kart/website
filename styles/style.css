@@ -612,7 +612,7 @@ h1.prokatnye-karty {
         bottom:unset;
         position:relative;
     }
-    .aspect-square.hero-bron {
+    .aspect-square.hero-bron, .aspect-square.hero-bron + section.aspect-square {
       aspect-ratio: 1/1.25;
     }
     .hero-bron > div > div > div {
