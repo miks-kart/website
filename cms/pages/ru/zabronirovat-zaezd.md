@@ -8,7 +8,7 @@ gallery:
   - /images/bg-bron-main.jpg
   - /images/bg-bron-main.jpg
 imageOne: /images/bg-bron-main.jpg
-imageTwo: /images/bg-bron-second.jpg
+imageTwo: /images/bg-bron-second-new.jpg
 buttonOne:
   text: О франшизе
   link: /franshiza
