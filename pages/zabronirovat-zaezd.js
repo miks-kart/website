@@ -22,7 +22,7 @@ export default function Index({ hero, heroTwo }) {
               <a className="theme-button mx-auto" href="tel:+74956403302">ЗАБРОНИРОВАТЬ ЗАЕЗД</a>
           </BackgroundImage>
         </section>
-      <section className="aspect-square md:aspect-[2.327] w-screen bg-transparent"></section>
+      <section className="aspect-square md:aspect-[1.8] w-screen bg-transparent"></section>
       <section className="relative w-screen bg-white">
         <div className="page-container md:!pt-16 md:!pb-9 !pb-5 wide">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
