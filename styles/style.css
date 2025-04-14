@@ -514,6 +514,7 @@ footer {
 }
 .hero-bron .page-container img {
   margin-top: 14px;
+  height: 36px;
 }
 .hero-bron .theme-button {
   width: 100%;
@@ -579,6 +580,9 @@ footer {
   .md:\mb-0 {
     margin-bottom: 0;
   }
+  .md\:aspect-\[1\.8\] {
+    aspect-ratio: 1.8;
+  }
 }
 @media (min-width: 1280px) {
   .page-container.full-width,
@@ -605,6 +609,9 @@ h1.prokatnye-karty {
         bottom:unset;
         position:relative;
     }
+    .aspect-square.hero-bron {
+      aspect-ratio: 1/1.25;
+    }
     .hero-bron > div > div > div {
       flex-wrap: wrap;
       align-items: center;
@@ -620,6 +627,9 @@ h1.prokatnye-karty {
     }
     .hero-bron .theme-button {
       font-size: 19px;
+    }
+    .hero-bron .page-container img {
+      margin: 5px 8px 8px;
     }
     .grey-card {
       padding: 40px 20px;
