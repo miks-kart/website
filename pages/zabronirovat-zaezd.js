@@ -19,7 +19,7 @@ export default function Index({ hero, heroTwo }) {
                   ИСПЫТАЙТЕ КАРТЫ MIKS KART В ATRON INTERNATIONAL CIRCUIT! 
                 </p>
               </div>
-              <a className="theme-button mx-auto" href="tel:+74956403302">ЗАБРОНИРОВАТЬ ЗАЕЗД</a>
+              <a className="theme-button mx-auto" href="tel:+74912434376">ЗАБРОНИРОВАТЬ ЗАЕЗД</a>
           </BackgroundImage>
         </section>
       <section className="aspect-square md:aspect-[1.8] w-screen bg-transparent"></section>
@@ -28,7 +28,7 @@ export default function Index({ hero, heroTwo }) {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             <div className="flex grey-card direction-column bg-grey justify-space-between">
               <p className="text-big mb-14px md:mb-0">Забронируйте заезд по номеру телефона</p>
-              <a className="theme-button button-rounded mb-14px md:mb-0" href="tel:+74956403302">+7 (495) 640 33 02</a>
+              <a className="theme-button button-rounded mb-14px md:mb-0" href="tel:+74912434376">+7 (491) 243-43-76</a>
               <div>
                 <p className="text-small mb-14px">Часы работы: ежедневно (10:00-18:00)</p>
                 <p className="text-small">За исключением дней определенных администрацией для подготовки трассы или иных работ.</p>
@@ -103,7 +103,7 @@ export default function Index({ hero, heroTwo }) {
             </div>
             <div className="flex dark-grey-card bg-dark-grey align-items-center">
               <img src="/images/icon-bron-4.png" alt="icon" />
-              <p>Запись на заезды осуществляется только по номеру телефону <a href="tel:+74956403302">+7 (495) 640 33 02</a></p>
+              <p>Запись на заезды осуществляется только по номеру телефону <a href="tel:+74912434376">+7 (491) 243-43-76</a></p>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function Index({ hero, heroTwo }) {
         <div className="page-container md:!pt-20 md:!pb-20 !pb-20 wide text-center">
           <div>
             <p className="text-extra-huge italic">ЗАБРОНИРУЙТЕ ЗАЕЗД ПО ТЕЛЕФОНУ:</p>
-            <a className="theme-button button-rounded text-extra-huge" href="tel:+74956403302">+7 (495) 640 33 02</a>
+            <a className="theme-button button-rounded text-extra-huge" href="tel:+74912434376">+7 (491) 243-43-76</a>
           </div>
         </div>
       </section>
