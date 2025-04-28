@@ -41,8 +41,8 @@ links:
       link: /kontakty
       sublinks:
         - subitem:
-            text: +7 926 244 70 83
-            link: tel:+79262447083
+            text: "+7(495) 150-12-08 "
+            link: tel:+74951501208
         - subitem:
             text: manager@miks-kart.ru
             link: mailto:manager@miks-kart.ru
