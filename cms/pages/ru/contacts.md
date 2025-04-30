@@ -8,7 +8,7 @@ points:
   - point:
       icon: /images/phone.svg
       heading: "Телефон:"
-      text: +7 926 244 70 83
+      text: +7(495) 150-12-08
   - point:
       icon: /images/mail.svg
       heading: "E-mail:"
