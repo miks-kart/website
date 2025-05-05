@@ -37,10 +37,8 @@ buttonTwo:
   text: О картах
   link: /prokatnye-karty
 testdrive:
-  image: /images/Rectangle 39.jpg
-  heading: |-
-    Пройдите тест-драйв на нашем
-    картодроме в Москве
+  image: /images/9e6hxfsd02rkd4kymnbf6ma3usc3latm.png
+  heading: Пройдите тест-драйв в одном из наших картинг центров в Москве
   text: Записаться
   link: https://forza-karting.ru
 headingThree: Наши приоритеты
