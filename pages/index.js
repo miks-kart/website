@@ -7,7 +7,6 @@ import Priorities from "@components/Priorities";
 import VideoHero from "@components/VideoHero";
 import Link from "next/link";
 import markdownToHtml from "../lib/markdownToHtml";
-import Image from "next/image";
 
 export default function Index({ data, postOne, postTwo, contactForm, hero }) {
   return (
@@ -87,7 +86,7 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
             </Link>
                 <div className="pb-5 flex-around">
       <Link target="_blank" href="https://miks-electrokarting.ru/">
-        <Image 
+        <img 
           src="/images/miks-e-carting.svg" 
           width={135} 
           height={41}
@@ -95,7 +94,7 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
         />
       </Link>
       <Link target="_blank" href="https://miks-karting.ru/">
-        <Image 
+        <img 
           src="/images/miks-carting.svg" 
           width={135} 
           height={41}
