@@ -64,7 +64,7 @@ export default function Index({ hero, heroTwo }) {
             </div>
             <div className="cart-card">
               <span class="label">10 мин</span>
-              <img src="/images/cart-bron.png" alt="Miks Kart Юниор 4 л.с." />
+              <img src="/images/IMG_8581.PNG" alt="Miks Kart Юниор 4 л.с." />
               <p>Miks Kart Юниор 4 л.с.</p>
               <div className="flex justify-space-between">
                 <p>ПН-ВС</p>
