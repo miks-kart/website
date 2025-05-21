@@ -305,7 +305,15 @@ footer .nav-icon {
 .prose a {
   font-weight: inherit !important;
 }
-
+.flex-around {
+	display: flex;
+	gap: 25px;
+	justify-content: center;
+}
+.pb-5.flex-around a {
+	background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
 #modal .prose :is(:where(h1, h2, h3, h4, h5, h6, th):first-child) {
   margin-top: 0rem;
 }
