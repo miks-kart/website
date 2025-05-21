@@ -85,19 +85,23 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
               <span className="relative">{data.testdrive.text}</span>
             </Link>
                 <div className="pb-5 flex-around">
-                <Link
-              target="_blank"
-              href="https://miks-electrokarting.ru/"
-                >
-                <Image src="/images/miks-e-carting.svg" width={135} height={41} />
-                  </Link>
-                <Link
-              target="_blank"
-              href="https://miks-karting.ru/"
-                >
-                <Image src="/images/miks-carting.svg" width={135} height={41} />
-                  </Link>
-                </div>
+      <Link target="_blank" href="https://miks-electrokarting.ru/">
+        <Image 
+          src="/images/miks-e-carting.svg" 
+          width={135} 
+          height={41}
+          alt="MIKS Electrokarting"
+        />
+      </Link>
+      <Link target="_blank" href="https://miks-karting.ru/">
+        <Image 
+          src="/images/miks-carting.svg" 
+          width={135} 
+          height={41}
+          alt="MIKS Karting"
+        />
+      </Link>
+    </div>
           </BackgroundImage>
         </section>
         <div className="page-container !pt-10 md:!pt-16 !pb-4">
