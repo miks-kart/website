@@ -7,6 +7,7 @@ import Priorities from "@components/Priorities";
 import VideoHero from "@components/VideoHero";
 import Link from "next/link";
 import markdownToHtml from "../lib/markdownToHtml";
+import Image from "next/image";
 
 export default function Index({ data, postOne, postTwo, contactForm, hero }) {
   return (
