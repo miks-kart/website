@@ -77,14 +77,7 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
             <p className="pb-5 md:pb-10 italic font-bold text-white uppercase md:whitespace-pre-line !leading-tight text-3xl md:text-5xl">
               {data.testdrive.heading}
             </p>
-            <Link
-              target="_blank"
-              href={data.testdrive.link}
-              className="theme-button"
-            >
-              <span className="relative">{data.testdrive.text}</span>
-            </Link>
-                <div className="pb-5 flex-around">
+            <div className="pb-5 flex-around">
       <Link target="_blank" href="https://miks-electrokarting.ru/">
         <img 
           src="/images/miks-e-carting.svg" 
