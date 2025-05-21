@@ -84,9 +84,7 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
             >
               <span className="relative">{data.testdrive.text}</span>
             </Link>
-                <div
-                className="pb-5 flex-around"
-              />
+                <div className="pb-5 flex-around">
                 <Link
               target="_blank"
               href="https://miks-electrokarting.ru/"
