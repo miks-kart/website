@@ -84,6 +84,11 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
             >
               <span className="relative">{data.testdrive.text}</span>
             </Link>
+                <Link
+              target="_blank"
+              href="https://miks-electrokarting.ru/"
+                <Image src="https://miks-electrokarting.ru/local/templates/miks-electrokarting_pages/img/miks-logo.svg" width={135} height={41} />
+                  </Link>
           </BackgroundImage>
         </section>
         <div className="page-container !pt-10 md:!pt-16 !pb-4">
