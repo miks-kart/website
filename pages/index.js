@@ -87,6 +87,7 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
                 <Link
               target="_blank"
               href="https://miks-electrokarting.ru/"
+                >
                 <Image src="https://miks-electrokarting.ru/local/templates/miks-electrokarting_pages/img/miks-logo.svg" width={135} height={41} />
                   </Link>
           </BackgroundImage>
