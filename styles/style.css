@@ -310,6 +310,12 @@ footer .nav-icon {
 	gap: 25px;
 	justify-content: center;
 }
+.flex-around a {
+	transition: .3s;
+}
+.flex-around a {
+	transform: scale(1.5);
+}
 .pb-5.flex-around a {
 	background: rgba(0, 0, 0, 0.7);
   padding: 10px;
