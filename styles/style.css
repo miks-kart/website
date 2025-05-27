@@ -310,10 +310,10 @@ footer .nav-icon {
 	gap: 25px;
 	justify-content: center;
 }
-.flex-around a:hover {
+.flex-around a {
 	transition: .3s;
 }
-.flex-around a {
+.flex-around a:hover {
 	transform: scale(1.5);
 }
 .pb-5.flex-around a {
