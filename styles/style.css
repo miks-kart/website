@@ -315,6 +315,7 @@ footer .nav-icon {
 }
 .flex-around a:hover {
 	transform: scale(1.5);
+	background: rgba(0,0,0,1);
 }
 .pb-5.flex-around a {
 	background: rgba(0, 0, 0, 0.7);
