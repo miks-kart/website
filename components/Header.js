@@ -211,6 +211,16 @@ export default function Header({ data, bg, currentPage, headerAnchors }) {
           />
         )}
       </nav>
+          <div className="fixed-btn">
+<Link target="_blank" href="https://api.whatsapp.com/send/?phone=79011809911&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9+%D0%B4%D0%B5%D0%BD%D1%8C%21+%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C+%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C+&type=phone_number&app_absent=0">
+        <img 
+          src="/images/wa.svg" 
+          width={32} 
+          height={32}
+          alt="watsapp"
+        />
+      </Link>
+</div>
     </>
   );
 }
