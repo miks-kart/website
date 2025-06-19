@@ -185,7 +185,19 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
+.fixed-btn {
+	position: fixed;
+	max-width: 70px;
+	height: 130px;
+	border: 3px solid #e20912;
+	background: #fff;
+	border-right: 0;
+	padding: 20px;
+	right: 0;
+	top: 190px;
+	border-radius: 35px 0 0 35px;
+	z-index: 100;
+}
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
