@@ -241,24 +241,27 @@ export async function getStaticProps() {
   const seo = await import(`../../cms/config/${locale}/seo.md`);
 
   const postOne = await markdownToHtml(content.default.attributes.textThree);
+
   content.default.attributes.imageOne = await getFluidImage(
     content.default.attributes.imageOne
   );
   content.default.attributes.imageTwo = await getFluidImage(
     content.default.attributes.imageTwo
   );
+
   const gallery = await Promise.all(
     content.default.attributes.gallery.map(
       async (img) => await getFluidImage(img, { avif: false, webp: true })
     )
   ).then((res) => res);
+
   content.default.attributes.base = await Promise.all(
     content.default.attributes.base.map(async ({ item }) => ({
       ...item,
       image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
- 
+
   return {
     props: {
       pdf: pdf.default.attributes,
