@@ -102,9 +102,6 @@ base:
 summary:
   heading: Стоимость товаров
   kart: Карт
-  engine: Двигатель
-  tire: Резина
-  extras: Запчасти
   total: "Итого:"
   buy: Купить
 ---
