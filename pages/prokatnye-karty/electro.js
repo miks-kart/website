@@ -258,26 +258,7 @@ export async function getStaticProps() {
       image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
-  content.default.attributes.options = await Promise.all(
-    content.default.attributes.options.map(async ({ item }) => ({
-      ...item,
-      image: await getFluidImage(item.image),
-    }))
-  ).then((res) => res);
-
-  const saleItemsOne = await Promise.all(
-    content.default.attributes.engines.map(async ({ item }) => ({
-      ...item,
-      heading: await markdownToHtml(item.heading),
-    }))
-  ).then((res) => res);
-  const saleItemsTwo = await Promise.all(
-    content.default.attributes.tires.map(async ({ item }) => ({
-      ...item,
-      heading: await markdownToHtml(item.heading),
-    }))
-  ).then((res) => res);
-  
+ 
   return {
     props: {
       pdf: pdf.default.attributes,
