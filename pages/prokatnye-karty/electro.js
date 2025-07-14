@@ -1,12 +1,43 @@
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Carousel from "@components/Carousel";
 import markdownToHtml from "../../lib/markdownToHtml";
 import { getFluidImage } from "@components/image/imageFunctions";
+import CartFeatures from "@components/CartFeatures";
+import SaleItem from "@components/SaleItem";
+import { useStore } from "@components/Store";
+import DropdownHeading from "@components/DropdownHeading";
+import PurchaseSummary from "@components/PurchaseSummary";
+import HorizontalScrolling from "@components/HorizontalScrolling";
+import Image from "@components/image/ImageSimple";
+// import PDFTest from "@components/PDFTest";
 
 export default function Index({
   data,
   postOne,
-  gallery
+  saleItemsOne,
+  saleItemsTwo,
+  gallery,
+  contactSale,
+  pdf,
 }) {
+  const [isOpenOne, setIsOpenOne] = useState(false);
+  const [isOpenTwo, setIsOpenTwo] = useState(false);
+  const [isOpenThree, setIsOpenThree] = useState(false);
+  const [isOpenFour, setIsOpenFour] = useState(false);
+  const shoppingCart = useStore((state) => state.shoppingCart);
+  const setShoppingCart = useStore((state) => state.setShoppingCart);
+
+  useEffect(() => {
+    setShoppingCart({
+      priceListKarts: { ...data.kart, amount: 1 },
+      priceListEngines: null,
+      priceListTires: null,
+      priceListOptions: [],
+      priceListOptionsSport: [],
+      priceListOptionsJunior: [],
+    });
+  }, []);
   return (
     <section className="w-screen">
       <div className="!py-0 page-container full-width wide">
@@ -202,27 +233,63 @@ export default function Index({
 
 export async function getStaticProps() {
   const locale = "ru";
+  const pdf = await import(`../../cms/pages/${locale}/pdf.md`);
   const content = await import(`../../cms/pages/${locale}/cart-electro.md`);
+  const contactSale = await import(`../../cms/config/${locale}/contactSale.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
   const footer = await import(`../../cms/config/${locale}/footer.md`);
   const seo = await import(`../../cms/config/${locale}/seo.md`);
 
   const postOne = await markdownToHtml(content.default.attributes.textThree);
-
+  content.default.attributes.imageOne = await getFluidImage(
+    content.default.attributes.imageOne
+  );
+  content.default.attributes.imageTwo = await getFluidImage(
+    content.default.attributes.imageTwo
+  );
   const gallery = await Promise.all(
     content.default.attributes.gallery.map(
       async (img) => await getFluidImage(img, { avif: false, webp: true })
     )
   ).then((res) => res);
+  content.default.attributes.base = await Promise.all(
+    content.default.attributes.base.map(async ({ item }) => ({
+      ...item,
+      image: await getFluidImage(item.image),
+    }))
+  ).then((res) => res);
+  content.default.attributes.options = await Promise.all(
+    content.default.attributes.options.map(async ({ item }) => ({
+      ...item,
+      image: await getFluidImage(item.image),
+    }))
+  ).then((res) => res);
 
+  const saleItemsOne = await Promise.all(
+    content.default.attributes.engines.map(async ({ item }) => ({
+      ...item,
+      heading: await markdownToHtml(item.heading),
+    }))
+  ).then((res) => res);
+  const saleItemsTwo = await Promise.all(
+    content.default.attributes.tires.map(async ({ item }) => ({
+      ...item,
+      heading: await markdownToHtml(item.heading),
+    }))
+  ).then((res) => res);
+  
   return {
     props: {
+      pdf: pdf.default.attributes,
       header: header.default.attributes,
+      contactSale: contactSale.default.attributes,
       footer: footer.default.attributes,
       data: content.default.attributes,
       seo: seo.default.attributes,
       headerNotTrasnparent: true,
       postOne,
+      saleItemsOne,
+      saleItemsTwo,
       gallery,
     },
   };
