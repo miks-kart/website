@@ -15,8 +15,6 @@ import Image from "@components/image/ImageSimple";
 export default function Index({
   data,
   postOne,
-  saleItemsOne,
-  saleItemsTwo,
   gallery,
   contactSale,
   pdf,
@@ -272,8 +270,6 @@ export async function getStaticProps() {
       seo: seo.default.attributes,
       headerNotTrasnparent: true,
       postOne,
-      saleItemsOne,
-      saleItemsTwo,
       gallery,
     },
   };
