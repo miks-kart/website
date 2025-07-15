@@ -20,20 +20,14 @@ export default function Index({
   pdf,
 }) {
   const [isOpenOne, setIsOpenOne] = useState(false);
-  const [isOpenTwo, setIsOpenTwo] = useState(false);
-  const [isOpenThree, setIsOpenThree] = useState(false);
-  const [isOpenFour, setIsOpenFour] = useState(false);
   const shoppingCart = useStore((state) => state.shoppingCart);
   const setShoppingCart = useStore((state) => state.setShoppingCart);
 
   useEffect(() => {
     setShoppingCart({
       priceListKarts: { ...data.kart, amount: 1 },
-      priceListEngines: null,
-      priceListTires: null,
       priceListOptions: [],
-      priceListOptionsSport: [],
-      priceListOptionsJunior: [],
+      priceListOptionsElectro: [],
     });
   }, []);
   return (
