@@ -236,7 +236,7 @@ export default function Index({
 export async function getStaticProps() {
   const locale = "ru";
   const pdf = await import(`../../cms/pages/${locale}/pdf.md`);
-  const content = await import(`../../cms/pages/${locale}/cart-sport.md`);
+  const content = await import(`../../cms/pages/${locale}/cart-electro.md`);
   const contactSale = await import(`../../cms/config/${locale}/contactSale.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
   const footer = await import(`../../cms/config/${locale}/footer.md`);
