@@ -23,13 +23,6 @@ export default function Index({
   const shoppingCart = useStore((state) => state.shoppingCart);
   const setShoppingCart = useStore((state) => state.setShoppingCart);
 
-  useEffect(() => {
-    setShoppingCart({
-      priceListKarts: { ...data.kart, amount: 1 },
-      priceListOptions: [],
-      priceListOptionsSport: [],
-    });
-  }, []);
   return (
     <section className="w-screen">
       <div className="!py-0 page-container full-width wide">
