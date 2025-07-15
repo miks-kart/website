@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Carousel from "@components/Carousel";
-import markdownToHtml from "../../lib/markdownToHtml";
-import { getFluidImage } from "@components/image/imageFunctions";
 import CartFeatures from "@components/CartFeatures";
+import markdownToHtml from "../../lib/markdownToHtml";
 import SaleItem from "@components/SaleItem";
 import { useStore } from "@components/Store";
 import DropdownHeading from "@components/DropdownHeading";
+import { getFluidImage } from "@components/image/imageFunctions";
 import PurchaseSummary from "@components/PurchaseSummary";
 import HorizontalScrolling from "@components/HorizontalScrolling";
 import Image from "@components/image/ImageSimple";
@@ -15,14 +15,33 @@ import Image from "@components/image/ImageSimple";
 export default function Index({
   data,
   postOne,
+  saleItemsOne,
+  saleItemsTwo,
   gallery,
   contactSale,
   pdf,
 }) {
   const [isOpenOne, setIsOpenOne] = useState(false);
+  const [isOpenTwo, setIsOpenTwo] = useState(false);
+  const [isOpenThree, setIsOpenThree] = useState(false);
+  const [isOpenFour, setIsOpenFour] = useState(false);
+  const shoppingCart = useStore((state) => state.shoppingCart);
+  const setShoppingCart = useStore((state) => state.setShoppingCart);
+
+  useEffect(() => {
+    setShoppingCart({
+      priceListKarts: { ...data.kart, amount: 1 },
+      priceListEngines: null,
+      priceListTires: null,
+      priceListOptions: [],
+      priceListOptionsSport: [],
+      priceListOptionsJunior: [],
+    });
+  }, []);
 
   return (
     <section className="w-screen">
+      {/* <PDFTest sport shoppingCart={shoppingCart} data={data} pdf={pdf} /> */}
       <div className="!py-0 page-container full-width wide">
         <Carousel slides={gallery} />
       </div>
@@ -40,10 +59,10 @@ export default function Index({
             className="markdown-text theme-text"
             dangerouslySetInnerHTML={{ __html: postOne }}
           />
-            <Image src={data.imageTwo} alt="slide" className="w-full md:hidden" />
+          <Image src={data.imageTwo} alt="slide" className="w-full md:hidden" />
         </article>
       </div>
-    <div className="relative hidden w-full md:block">
+      <div className="relative hidden w-full md:block">
         <HorizontalScrolling>
           <div className="inline-flex items-center justify-center h-screen min-w-screen">
             <div className="h-12 narrow-container-margin"></div>
@@ -91,6 +110,117 @@ export default function Index({
               </div>
             </motion.div>
           </article>
+          <article className="pt-5 md:pt-8">
+            <button onClick={() => setIsOpenTwo((isOpenTwo) => !isOpenTwo)}>
+              <DropdownHeading state={isOpenTwo} heading={data.engineHeading} />
+            </button>
+
+            <div className="pt-2 text-sm text-primary-gray-dark">
+              <p className="font-bold">
+                {shoppingCart["priceListEngines"]
+                  ? data.youHaveChosen
+                  : data.youHaventChosen}
+              </p>
+              {shoppingCart["priceListEngines"] && (
+                <p className="pt-2 font-light">
+                  {shoppingCart["priceListEngines"].headingSimple}
+                </p>
+              )}
+            </div>
+            <motion.div
+              transition={{ duration: 0.3 }}
+              className="h-0 overflow-hidden"
+              animate={{
+                height: !isOpenTwo ? 0 : "auto",
+              }}
+            >
+              <div className="grid gap-5 pb-5 mt-10 md:pb-8 md:grid-cols-2">
+                {saleItemsOne.map((item) => (
+                  <SaleItem
+                    category="priceListEngines"
+                    key={item.headingSimple}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </article>
+          <article className="pt-5 md:pt-8">
+            <button onClick={() => setIsOpenFour((isOpenFour) => !isOpenFour)}>
+              <DropdownHeading state={isOpenFour} heading={data.tiresHeading} />
+            </button>
+
+            <div className="pt-2 text-sm text-primary-gray-dark">
+              <p className="font-bold">
+                {shoppingCart["priceListTires"]
+                  ? data.youHaveChosen
+                  : data.youHaventChosen}
+              </p>
+              {shoppingCart["priceListTires"] && (
+                <p className="pt-2 font-light">
+                  {shoppingCart["priceListTires"].headingSimple}
+                </p>
+              )}
+            </div>
+            <motion.div
+              transition={{ duration: 0.3 }}
+              className="h-0 overflow-hidden"
+              animate={{
+                height: !isOpenFour ? 0 : "auto",
+              }}
+            >
+              <div className="grid gap-5 pb-5 mt-10 md:pb-8 md:grid-cols-2">
+                {saleItemsTwo.map((item) => (
+                  <SaleItem
+                    category="priceListTires"
+                    key={item.headingSimple}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </article>
+          <article className="pt-5 pb-10 md:pt-8 md:pb-16">
+            <button
+              onClick={() => setIsOpenThree((isOpenThree) => !isOpenThree)}
+            >
+              <DropdownHeading
+                state={isOpenThree}
+                heading={data.optionsHeading}
+              />
+            </button>
+
+            <div className="pt-2 text-sm text-primary-gray-dark">
+              <p className="font-bold">
+                {shoppingCart["priceListOptions"].length > 0
+                  ? data.youHaveChosen
+                  : data.youHaventChosen}
+              </p>
+              {shoppingCart["priceListOptions"].length > 0 &&
+                shoppingCart["priceListOptions"].map((item) => (
+                  <p className="pt-2 font-light" key={item.headingSimple}>
+                    {item.headingSimple}
+                  </p>
+                ))}
+            </div>
+            <motion.div
+              transition={{ duration: 0.5 }}
+              className="h-0 overflow-hidden"
+              animate={{
+                height: !isOpenThree ? 0 : "auto",
+              }}
+            >
+              <div className="grid gap-5 mt-10 md:grid-cols-2">
+                {data.options.map((item) => (
+                  <SaleItem
+                    category="priceListOptions"
+                    key={item.headingSimple}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </article>
           <PurchaseSummary
             sport
             pdf={pdf}
@@ -106,7 +236,7 @@ export default function Index({
 export async function getStaticProps() {
   const locale = "ru";
   const pdf = await import(`../../cms/pages/${locale}/pdf.md`);
-  const content = await import(`../../cms/pages/${locale}/cart-electro.md`);
+  const content = await import(`../../cms/pages/${locale}/cart-sport.md`);
   const contactSale = await import(`../../cms/config/${locale}/contactSale.md`);
   const header = await import(`../../cms/config/${locale}/header.md`);
   const footer = await import(`../../cms/config/${locale}/footer.md`);
@@ -133,6 +263,25 @@ export async function getStaticProps() {
       image: await getFluidImage(item.image),
     }))
   ).then((res) => res);
+  content.default.attributes.options = await Promise.all(
+    content.default.attributes.options.map(async ({ item }) => ({
+      ...item,
+      image: await getFluidImage(item.image),
+    }))
+  ).then((res) => res);
+
+  const saleItemsOne = await Promise.all(
+    content.default.attributes.engines.map(async ({ item }) => ({
+      ...item,
+      heading: await markdownToHtml(item.heading),
+    }))
+  ).then((res) => res);
+  const saleItemsTwo = await Promise.all(
+    content.default.attributes.tires.map(async ({ item }) => ({
+      ...item,
+      heading: await markdownToHtml(item.heading),
+    }))
+  ).then((res) => res);
 
   return {
     props: {
@@ -144,6 +293,8 @@ export async function getStaticProps() {
       seo: seo.default.attributes,
       headerNotTrasnparent: true,
       postOne,
+      saleItemsOne,
+      saleItemsTwo,
       gallery,
     },
   };
