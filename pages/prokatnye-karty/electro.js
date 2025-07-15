@@ -110,7 +110,117 @@ export default function Index({
               </div>
             </motion.div>
           </article>
-          
+          <article className="pt-5 md:pt-8 hidden">
+            <button onClick={() => setIsOpenTwo((isOpenTwo) => !isOpenTwo)}>
+              <DropdownHeading state={isOpenTwo} heading={data.engineHeading} />
+            </button>
+
+            <div className="pt-2 text-sm text-primary-gray-dark">
+              <p className="font-bold">
+                {shoppingCart["priceListEngines"]
+                  ? data.youHaveChosen
+                  : data.youHaventChosen}
+              </p>
+              {shoppingCart["priceListEngines"] && (
+                <p className="pt-2 font-light">
+                  {shoppingCart["priceListEngines"].headingSimple}
+                </p>
+              )}
+            </div>
+            <motion.div
+              transition={{ duration: 0.3 }}
+              className="h-0 overflow-hidden"
+              animate={{
+                height: !isOpenTwo ? 0 : "auto",
+              }}
+            >
+              <div className="grid gap-5 pb-5 mt-10 md:pb-8 md:grid-cols-2">
+                {saleItemsOne.map((item) => (
+                  <SaleItem
+                    category="priceListEngines"
+                    key={item.headingSimple}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </article>
+          <article className="pt-5 md:pt-8 hidden">
+            <button onClick={() => setIsOpenFour((isOpenFour) => !isOpenFour)}>
+              <DropdownHeading state={isOpenFour} heading={data.tiresHeading} />
+            </button>
+
+            <div className="pt-2 text-sm text-primary-gray-dark">
+              <p className="font-bold">
+                {shoppingCart["priceListTires"]
+                  ? data.youHaveChosen
+                  : data.youHaventChosen}
+              </p>
+              {shoppingCart["priceListTires"] && (
+                <p className="pt-2 font-light">
+                  {shoppingCart["priceListTires"].headingSimple}
+                </p>
+              )}
+            </div>
+            <motion.div
+              transition={{ duration: 0.3 }}
+              className="h-0 overflow-hidden"
+              animate={{
+                height: !isOpenFour ? 0 : "auto",
+              }}
+            >
+              <div className="grid gap-5 pb-5 mt-10 md:pb-8 md:grid-cols-2">
+                {saleItemsTwo.map((item) => (
+                  <SaleItem
+                    category="priceListTires"
+                    key={item.headingSimple}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </article>
+          <article className="pt-5 pb-10 md:pt-8 md:pb-16 hidden">
+            <button
+              onClick={() => setIsOpenThree((isOpenThree) => !isOpenThree)}
+            >
+              <DropdownHeading
+                state={isOpenThree}
+                heading={data.optionsHeading}
+              />
+            </button>
+
+            <div className="pt-2 text-sm text-primary-gray-dark">
+              <p className="font-bold">
+                {shoppingCart["priceListOptions"].length > 0
+                  ? data.youHaveChosen
+                  : data.youHaventChosen}
+              </p>
+              {shoppingCart["priceListOptions"].length > 0 &&
+                shoppingCart["priceListOptions"].map((item) => (
+                  <p className="pt-2 font-light" key={item.headingSimple}>
+                    {item.headingSimple}
+                  </p>
+                ))}
+            </div>
+            <motion.div
+              transition={{ duration: 0.5 }}
+              className="h-0 overflow-hidden"
+              animate={{
+                height: !isOpenThree ? 0 : "auto",
+              }}
+            >
+              <div className="grid gap-5 mt-10 md:grid-cols-2">
+                {data.options.map((item) => (
+                  <SaleItem
+                    category="priceListOptions"
+                    key={item.headingSimple}
+                    item={item}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </article>
           <PurchaseSummary
             sport
             pdf={pdf}
