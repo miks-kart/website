@@ -27,7 +27,7 @@ export default function Index({
     setShoppingCart({
       priceListKarts: { ...data.kart, amount: 1 },
       priceListOptions: [],
-      priceListOptionsElectro: [],
+      priceListOptionsSport: [],
     });
   }, []);
   return (
