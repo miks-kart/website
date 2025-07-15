@@ -20,8 +20,6 @@ export default function Index({
   pdf,
 }) {
   const [isOpenOne, setIsOpenOne] = useState(false);
-  const shoppingCart = useStore((state) => state.shoppingCart);
-  const setShoppingCart = useStore((state) => state.setShoppingCart);
 
   return (
     <section className="w-screen">
