@@ -107,7 +107,7 @@ export default function Index({ data, heroOne, heroTwo, heroThree }) {
             onBlur={() => setHoveredSlide(null)}
             onMouseOver={() => setHoveredSlide(1)}
             onMouseLeave={() => setHoveredSlide(null)}
-            className="block pb-2 md:pb-5"
+            className="pb-2 md:pb-5"
             onClick={() => setActiveSlide(1)}
           >
             <p
