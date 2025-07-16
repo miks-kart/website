@@ -47,6 +47,14 @@ export default function Index({ data, heroOne, heroTwo }) {
             isFirst ? "opacity-0" : "opacity-100"
           } !absolute inset-0 w-full h-full transition-opacity duration-500`}
         />
+		<Image
+          loading="eager"
+          src={heroThree}
+          alt=""
+          className={`${
+            isFirst ? "opacity-0" : "opacity-100"
+          } !absolute inset-0 w-full h-full transition-opacity duration-500`}
+        />
         <div
           style={{
             background:
@@ -136,6 +144,46 @@ export default function Index({ data, heroOne, heroTwo }) {
               {data.carts[1].cart.text}
             </p>
           </Link>
+		  <Link
+            href={data.carts[2].cart.link}
+            onFocus={() => setTherd(true)}
+            onBlur={() => setTherd(false)}
+            onMouseOver={() => setTherd(true)}
+            onMouseLeave={() => setTherd(false)}
+            className="group"
+          >
+            <p
+              className={`${
+                !first && !second
+                  ? "underline underline-offset-8 decoration-4"
+                  : ""
+              } ${
+                !isFirst && second
+                  ? "underline decoration-primary-red underline-offset-8 decoration-4"
+                  : ""
+              } font-black inline-flex text-3xl md:text-6xl italic uppercase text-[#F6F6F6]`}
+            >
+              <span>{data.carts[2].cart.heading}</span>
+              <span
+                className={`${
+                  !isFirst && second ? "!opacity-100" : ""
+                } mt-1 md:ml-6 ml-2 duration-150 opacity-0`}
+              >
+                <img
+                  src="/images/check-up.svg"
+                  alt="check up"
+                  className="w-4 h-4 md:w-5 md:h-5"
+                />
+              </span>
+            </p>
+            <p
+              className={`${
+                !isFirst ? "!opacity-100" : ""
+              } md:text-xl font-light text-white duration-150 opacity-0`}
+            >
+              {data.carts[2].cart.text}
+            </p>
+          </Link>
         </div>
       </div>
       <section className="bg-[#f7f7f7]">
@@ -187,6 +235,12 @@ export async function getStaticProps() {
       webp: true,
     }
   );
+  const heroThree = await getFluidImage(
+    content.default.attributes.carts[2].cart.image,
+    {
+      webp: true,
+    }
+  );
 
   return {
     props: {
@@ -196,6 +250,7 @@ export async function getStaticProps() {
       seo: seo.default.attributes,
       heroOne,
       heroTwo,
+	  heroThree,
     },
   };
 }
