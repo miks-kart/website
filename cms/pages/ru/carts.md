@@ -16,6 +16,11 @@ carts:
       text: для юных пилотов
       link: /prokatnye-karty/dzhunior
       image: /images/29 (1).jpg
+  - cart:
+      heading: МИКС Карт Электро
+      text: для любителей и опытных пилотов
+      link: /prokatnye-karty/electro
+      image: /images/me1.jpg
 imageOne: /images/Objects copy 1 2.png
 headingOne: ЗАПЧАСТИ
 textOne: Собственное производство позволяет в кратчайшие сроки произвести любую деталь
