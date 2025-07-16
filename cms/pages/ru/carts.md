@@ -7,6 +7,11 @@ title: Прокатные карты от производителя и конс
   разработка картинговых машин МИКС Спорт и Юниор
 carts:
   - cart:
+      heading: МИКС Карт Электро
+      text: для любителей и опытных пилотов
+      link: /prokatnye-karty/electro
+      image: /images/me1.jpg
+  - cart:
       heading: МИКС Карт Спорт
       text: для любителей и опытных пилотов
       link: /prokatnye-karty/sport
