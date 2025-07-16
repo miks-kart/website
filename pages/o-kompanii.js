@@ -93,10 +93,10 @@ export default function Index({ data, gallery, points }) {
             <p className="theme-text !leading-normal whitespace-pre-line">
               {data.teaser.three}
             </p>
-            <p className="pt-5 text-2xl italic font-bold uppercase whitespace-pre-line">
+            <p className="pt-5 text-2xl italic font-bold uppercase whitespace-pre-line hidden">
               {data.teaser.four}
             </p>
-            <p className="theme-text !leading-normal whitespace-pre-line">
+            <p className="theme-text !leading-normal whitespace-pre-line hidden">
               {data.teaser.five}
             </p>
             <p className="pt-5 text-2xl italic font-bold uppercase whitespace-pre-line">
