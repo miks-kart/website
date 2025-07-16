@@ -40,7 +40,7 @@ textThree: |-
   **Высота (с дугой безопасности)** – 1140±30 мм
   **Вес электрокарта с электроприводом (без топлива)** – 210±5 кг
 imageOne: /images/Screenshot_126.png
-imageTwo: /images/Group 513.png
+imageTwo: /images/Screenshot_126.png
 kart:
   headingSimple: МИКС Карт Электро
   price: 315000
