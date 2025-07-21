@@ -24,16 +24,16 @@ buttonOne:
   link: /o-kompanii
 imageOne: /images/122.jpg
 headingTwo: Наши карты
-textTwo: >-
+textTwo: |-
   В настоящий момент мы производим:
-   - Электрический прокатный карт – [МИКС КАРТ ЭЛЕКТРО](/prokatnye-karty/electro)
-   - Прокатный карт для взрослых – [МИКС КАРТ СПОРТ](/prokatnye-karty/sport)
-   - Прокатный карт для детей – [МИКС КАРТ ЮНИОР](/prokatnye-karty/dzhunior)
 
-   
+  * Прокатный карт для взрослых – [МИКС КАРТ СПОРТ](/prokatnye-karty/sport)
+  * Прокатный карт для детей – [МИКС КАРТ ЮНИОР](/prokatnye-karty/dzhunior)
+
   В разработке:
-   - Линейка картов для спорта в сотрудничестве с SMP RACING
-   - Универсальный прокатный карт
+
+  * Линейка картов для спорта в сотрудничестве с SMP RACING
+  * Универсальный прокатный карт
 buttonTwo:
   text: О картах
   link: /prokatnye-karty
