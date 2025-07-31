@@ -6,6 +6,7 @@ const Schema = Yup.object().shape({
   name: Yup.string().min(2).max(64).required(),
   email: Yup.string().email().required(),
   phone: Yup.string().min(8).max(25).required(),
+  policy: Yup.boolean().oneOf([true], 'Необходимо принять условия политики конфиденциальности'),
 });
 
 export default function FormWithMessage({ contactForm }) {
@@ -58,10 +59,12 @@ export default function FormWithMessage({ contactForm }) {
         showError();
       });
   }
+
   function clearForm(actions) {
     actions.resetForm();
     setSendingStatus("notSending");
   }
+
   const BUTTON_STATES = {
     notSending: {
       buttonText: contactForm.button.default,
@@ -76,6 +79,7 @@ export default function FormWithMessage({ contactForm }) {
       buttonText: contactForm.button.sent,
     },
   };
+
   return (
     <>
       <Formik
@@ -84,6 +88,7 @@ export default function FormWithMessage({ contactForm }) {
           message: "",
           phone: "",
           email: "",
+          policy: false,
         }}
         validationSchema={Schema}
         onSubmit={(values, actions) => {
@@ -130,10 +135,29 @@ export default function FormWithMessage({ contactForm }) {
                 component="textarea"
               />
             </div>
+
+            {/* Добавленный блок с чекбоксом */}
+            <div className="mt-5">
+              <label className="flex items-start cursor-pointer">
+                <Field 
+                  type="checkbox" 
+                  name="policy" 
+                  className="mt-1 mr-2"
+                />
+                <span className="text-xs">
+                  Нажимая на кнопку, Вы даете свое согласие на обработку персональных данных и соглашаетесь с{' '}
+                  <a href="/policy" className="underline">Политикой конфиденциальности</a>
+                </span>
+              </label>
+              {errors.policy && touched.policy && (
+                <div className="text-primary-red text-xs mt-1">{errors.policy}</div>
+              )}
+            </div>
+
             <button
               type="submit"
               disabled={sendingStatus === "sending"}
-              className="!block mt-5 md:mt-16 mx-auto theme-button"
+              className="!block mt-5 md:mt-8 mx-auto theme-button"
             >
               <span className="relative">
                 {BUTTON_STATES[sendingStatus]["buttonText"]}
