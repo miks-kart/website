@@ -108,9 +108,12 @@ export async function getStaticProps() {
   const seo = await import(`../cms/config/${locale}/seo.md`);
   return {
     props: {
+      data: {
+        title: "Политика конфиденциальности",
+        description: "Описание политики",
+      },
       header: header.default.attributes,
       footer: footer.default.attributes,
-      seo: seo.default.attributes,
-    },
+     },
   };
 }
