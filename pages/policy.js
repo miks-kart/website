@@ -110,7 +110,6 @@ export async function getStaticProps() {
     props: {
       header: header.default.attributes,
       footer: footer.default.attributes,
-      data: content.default.attributes,
       seo: seo.default.attributes,
     },
   };
