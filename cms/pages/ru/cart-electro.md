@@ -43,7 +43,7 @@ imageOne: /images/Miks-Electro-d.jpg
 imageTwo: /images/Miks-Electro-m.jpg
 kart:
   headingSimple: МИКС Карт Электро
-  price: 315000
+  price: 1000000
 features:
   - feature:
       image: /images/Group.svg
