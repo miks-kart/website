@@ -68,7 +68,6 @@ export default function Index({
        }}
 		>
           <div className="inline-flex items-center justify-center h-screen min-w-screen">
-            <div className="h-12 narrow-container-margin"></div>
             <Image
               style={{
                 aspectRatio: data.imageOne.aspectRatio,
@@ -79,7 +78,6 @@ export default function Index({
               src={data.imageOne}
               alt="slide"
             />
-            <div className="h-12 narrow-container-margin"></div>
           </div>
       </div>
       <div className="page-container !py-16 md:!pt-24 md:!pb-32 wide !space-y-0">
