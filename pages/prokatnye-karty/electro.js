@@ -65,7 +65,7 @@ export default function Index({
       <div className="relative hidden w-full md:block"
 	  style={{
         aspectRatio: data.imageOne.aspectRatio,
-		max-width: '1200px',
+		maxWidth: 1200,
        }}
 		>
           <div className="inline-flex items-center justify-center h-screen min-w-screen">
