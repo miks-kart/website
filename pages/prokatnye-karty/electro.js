@@ -63,7 +63,6 @@ export default function Index({
         </article>
       </div>
       <div className="relative hidden w-full md:block">
-        <HorizontalScrolling>
           <div className="inline-flex items-center justify-center h-screen min-w-screen">
             <div className="h-12 narrow-container-margin"></div>
             <Image
@@ -77,7 +76,6 @@ export default function Index({
             />
             <div className="h-12 narrow-container-margin"></div>
           </div>
-        </HorizontalScrolling>
       </div>
       <div className="page-container !py-16 md:!pt-24 md:!pb-32 wide !space-y-0">
         <div className="grid gap-5 md:grid-cols-3">
