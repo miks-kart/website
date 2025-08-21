@@ -42,7 +42,7 @@ textThree: |-
 imageOne: /images/Miks-Electro-d.jpg
 imageTwo: /images/Miks-Electro-m.jpg
 kart:
-  headingSimple: МИКС Карт Электро
+  headingSimple: МИКС Карт Электро (взрослый и детский)
   price: 1000000
 features:
   - feature:
