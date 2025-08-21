@@ -62,12 +62,16 @@ export default function Index({
           <Image src={data.imageTwo} alt="slide" className="w-full md:hidden" />
         </article>
       </div>
-      <div className="relative hidden w-full md:block">
+      <div className="relative hidden w-full md:block"
+	  style={{
+             text-align: 'center'
+             }}
+		>
           <div className="inline-flex items-center justify-center h-screen min-w-screen">
             <div className="h-12 narrow-container-margin"></div>
             <Image
               style={{
-                aspectRatio: data.imageOne.aspectRatio,
+                max-width: '1200px'
               }}
               className="w-[172.5vh] object-left max-w-none mt-24"
               sizes="173w"
