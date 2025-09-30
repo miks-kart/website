@@ -1,6 +1,6 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 
-export default function Index() {
+export default function PolicyPage() {
   return (
     <AnchorSmoothScroll>
       <section className="w-screen min-h-screen md:bg-[#F7F7F7]">
