@@ -2,6 +2,7 @@ import Link from "next/link";
 import Vk from "./icons/Vk";
 import Youtube from "./icons/Youtube";
 import { useRouter } from 'next/router';
+import CookieBanner from './CookieBanner';
 
 export default function Footer({ data, currentPage }) {
   const router = useRouter();
@@ -91,5 +92,6 @@ export default function Footer({ data, currentPage }) {
         </div>
       </div>
     </footer>
+<CookieBanner />
   );
 }
