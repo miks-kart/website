@@ -314,35 +314,13 @@ export default function Index() {
 }
 
 export async function getStaticProps() {
-  const locale = "ru";
-  
-  try {
-    const header = await import(`../cms/config/${locale}/header.md`);
-    const footer = await import(`../cms/config/${locale}/footer.md`);
-    const seo = await import(`../cms/config/${locale}/seo.md`);
-
-    return {
-      props: {
-        header: header.default.attributes,
-        footer: footer.default.attributes,
-        seo: seo.default.attributes || {}, // Добавляем fallback на пустой объект
-        headerNotTrasnparent: true,
+  return {
+    props: {
+      seo: {
+        title: "Политика конфиденциальности | Miks Kart",
+        description: "Политика обработки персональных данных компании Miks Kart"
       },
-    };
-  } catch (error) {
-    console.error('Error loading data for policy page:', error);
-    
-    // Возвращаем безопасные данные по умолчанию
-    return {
-      props: {
-        header: {},
-        footer: {},
-        seo: {
-          title: "Политика конфиденциальности",
-          description: "Политика обработки персональных данных"
-        },
-        headerNotTrasnparent: true,
-      },
-    };
-  }
+      headerNotTrasnparent: true,
+    },
+  };
 }
