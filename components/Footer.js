@@ -9,6 +9,7 @@ export default function Footer({ data, currentPage }) {
   const path = router.pathname;
   
   return (
+   <>
     <footer className={`${
             path == '/zabronirovat-zaezd' ? "landing" : ""
           } pt-8 pb-8 pointer-events-auto md:pb-16 bg-primary-dark`}>
@@ -93,5 +94,6 @@ export default function Footer({ data, currentPage }) {
       </div>
     </footer>
 <CookieBanner />
+  </>
   );
 }
