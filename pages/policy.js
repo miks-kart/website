@@ -315,12 +315,6 @@ export default function Index() {
 
 export async function getStaticProps() {
   return {
-    props: {
-      seo: {
-        title: "Политика конфиденциальности | Miks Kart",
-        description: "Политика обработки персональных данных компании Miks Kart"
-      },
-      headerNotTrasnparent: true,
-    },
+    props: {},
   };
 }
