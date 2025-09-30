@@ -1,14 +1,12 @@
 import AnchorSmoothScroll from "@components/AnchorSmoothScroll";
 
-export default function Index({ data }) {
+export default function Index() {
   return (
     <AnchorSmoothScroll>
       <section className="w-screen min-h-screen md:bg-[#F7F7F7]">
         <div className="page-container md:!pt-16 !pb-16">
           <article className="max-w-4xl mx-auto">
             <h1 className="md:!pb-10 theme-heading">Политика в отношении обработки персональных данных</h1>
-            
-            {/* Основной текстовый контент */}
             <div className="prose max-w-none theme-text">
               <p>
   1. Общие положения
@@ -318,8 +316,7 @@ export default function Index({ data }) {
 export async function getStaticProps() {
   const locale = "ru";
   
-  // Загружаем контент для страницы политики конфиденциальности
-  const content = await import(`../cms/pages/${locale}/policy.md`);
+  // Убрали загрузку policy.md, так как контент теперь в компоненте
   const header = await import(`../cms/config/${locale}/header.md`);
   const footer = await import(`../cms/config/${locale}/footer.md`);
   const seo = await import(`../cms/config/${locale}/seo.md`);
@@ -328,7 +325,6 @@ export async function getStaticProps() {
     props: {
       header: header.default.attributes,
       footer: footer.default.attributes,
-      //data: content.default.attributes,
       seo: seo.default.attributes,
       headerNotTrasnparent: true,
     },
