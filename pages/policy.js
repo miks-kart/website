@@ -314,7 +314,21 @@ export default function PolicyPage() {
 }
 
 export async function getStaticProps() {
+  const locale = "ru";
+  
+  // Загружаем контент для страницы политики конфиденциальности
+  const content = await import(`../cms/pages/${locale}/policy.md`);
+  const header = await import(`../cms/config/${locale}/header.md`);
+  const footer = await import(`../cms/config/${locale}/footer.md`);
+  const seo = await import(`../cms/config/${locale}/seo.md`);
+
   return {
-    props: {},
+    props: {
+      header: header.default.attributes,
+      footer: footer.default.attributes,
+      data: content.default.attributes,
+      seo: seo.default.attributes,
+      headerNotTrasnparent: true,
+    },
   };
 }
