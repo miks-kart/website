@@ -110,12 +110,12 @@ engines:
         **Zongshen ZS GB 168 FB-4** с редуктором
         (200 см.куб) **6.5 лс**
       headingSimple: Zongshen ZS GB 168 FB-4 с редуктором (200 см.куб) 6.5 лс
-      price: 27000
+      price: 33000
       from: "true"
   - item:
       heading: "**Zongshen ZS GB 270 B** с редуктором **9 лс**"
       headingSimple: Zongshen ZS GB 270 B с редуктором 9 лс
-      price: 39000
+      price: 43000
       from: "true"
   - item:
       heading: "**Z﻿ongshen ZS 188 FA2** бензиновый, четырехтактный с ручным
@@ -132,12 +132,12 @@ tiresHeading: "резина "
 tires:
   - item:
       heading: Резина **Мега (Россия)**
-      headingSimple: Резина Мега (Россия)
-      price: 10000
+      headingSimple: Мега (Россия) комплект 4 колеса
+      price: 11000
       from: "false"
   - item:
       heading: Резина **Duro (Китай)**
-      headingSimple: Резина Duro (Китай)
+      headingSimple: DURO (Китай) комплект 4 колеса
       price: 14000
 optionsHeading: дополнительные опции
 headingExtrasSport: Для МИКС КАРТ Спорт
@@ -150,7 +150,7 @@ options:
         возгорания при аварии; улучшить доступ для обслуживания двигателя,
         демонтировав штатный бак; повысить удобство управления, за счет снижения
         габаритов навесного оборудования двигателя
-      price: 13999
+      price: 14000
       from: "false"
   - item:
       image: /images/photo_2022-07-31 22.23 23.jpg
@@ -192,7 +192,7 @@ options:
       headingSimple: Спортивный руль
       text: Подчеркивает эксклюзивность карта, повышает удобство управления за счет
         особой эргономичной формы
-      price: 10999
+      price: 11000
   - item:
       image: /images/Rectangle 134.jpg
       headingSimple: Спортивные тормоза
