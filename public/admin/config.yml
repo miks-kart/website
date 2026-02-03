@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
-  repo: vradionovskii/miks
+  name: github
+  repo: miks-kart/website
   branch: main
+  base_url: https://admin.miks-kart.ru
+  auth_endpoint: /auth
 media_folder: public/images
 public_folder: /images
 locale: ru
