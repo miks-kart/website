@@ -25,11 +25,11 @@ baseCarts:
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 1.jpg
       headingSimple: МИКС Карт Спорт
-      price: 315000
+      price: 345000
   - item:
       image: /images/bastien-plu-r2OOrB0-rzo-unsplash 3.jpg
       headingSimple: МИКС Карт Юниор
-      price: 275000
+      price: 305000
 headingFive: двигатель
 enginesId: dvigatel
 engines:
