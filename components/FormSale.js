@@ -216,6 +216,7 @@ ${
           name: "",
           phone: "",
           email: "",
+          policy: false,
         }}
         validationSchema={Schema}
         onSubmit={(values, actions) => {
