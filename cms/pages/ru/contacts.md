@@ -12,7 +12,7 @@ points:
   - point:
       icon: /images/mail.svg
       heading: "E-mail:"
-      text: manager@miks-kart.ru
+      text: zavod@miks-karting.ru
   - point:
       icon: /images/pin.svg
       heading: "Адрес:"
