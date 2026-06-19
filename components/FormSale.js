@@ -6,6 +6,7 @@ const Schema = Yup.object().shape({
   name: Yup.string().min(2).max(64).required(),
   email: Yup.string().email().required(),
   phone: Yup.string().min(8).max(25).required(),
+  policy: Yup.boolean().oneOf([true], 'Необходимо принять условия политики конфиденциальности'),
 });
 
 export default function FormSale({
