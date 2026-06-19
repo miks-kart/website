@@ -254,24 +254,6 @@ ${
                 />
               </div>
 
-            {/* Добавленный блок с чекбоксом */}
-            <div className="mt-5">
-              <label className="flex items-start cursor-pointer">
-                <Field 
-                  type="checkbox" 
-                  name="policy" 
-                  className="mt-1 mr-2"
-                />
-                <span className="text-xs">
-                  Нажимая на кнопку, Вы даете свое согласие на обработку персональных данных и соглашаетесь с{' '}
-                  <a href="/policy" className="underline">Политикой конфиденциальности</a>
-                </span>
-              </label>
-              {errors.policy && touched.policy && (
-                <div className="text-primary-red text-xs mt-1">{errors.policy}</div>
-              )}
-            </div>
-
               <div className="!h-full bg-[#f7f7f7] py-5 mt-5 md:mt-0 px-5 md:px-8">
                 {shoppingCart.priceListKarts &&
                   JSON.stringify(shoppingCart.priceListKarts) !== "[]" && (
@@ -372,6 +354,24 @@ ${
                       </div>
                     )}
               </div>
+            </div>
+
+            {/* Добавленный блок с чекбоксом */}
+            <div className="mt-5">
+              <label className="flex items-start cursor-pointer">
+                <Field 
+                  type="checkbox" 
+                  name="policy" 
+                  className="mt-1 mr-2"
+                />
+                <span className="text-xs">
+                  Нажимая на кнопку, Вы даете свое согласие на обработку персональных данных и соглашаетесь с{' '}
+                  <a href="/policy" className="underline">Политикой конфиденциальности</a>
+                </span>
+              </label>
+              {errors.policy && touched.policy && (
+                <div className="text-primary-red text-xs mt-1">{errors.policy}</div>
+              )}
             </div>
             <button
               disabled={sendingStatus === "sending"}
