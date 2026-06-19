@@ -44,8 +44,8 @@ links:
             text: "+7(495) 150-12-08 "
             link: tel:+74951501208
         - subitem:
-            text: manager@miks-kart.ru
-            link: mailto:manager@miks-kart.ru
+            text: zavod@miks-karting.ru
+            link: mailto:zavod@miks-karting.ru
         - subitem:
             text: Miks Karting
             link: https://miks-karting.ru/
