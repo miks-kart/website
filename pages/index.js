@@ -41,20 +41,20 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
   {/* Новые блоки с логотипами и текстом */}
   <div className="space-y-6 md:space-y-4">
     {data.featureBlocks?.map((block, index) => (
-      <div 
-        key={index}
-        className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-4"
-      >
-        <img
-          src={block.logo}
-          alt={`logo ${index + 1}`}
-          className="w-12 h-auto md:w-16 flex-shrink-0"
-        />
-        <p className="text-base md:text-lg theme-text !ml-0">
-          {block.title}
-        </p>
-      </div>
-    ))}
+  <div 
+    key={index}
+    className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-4"
+  >
+    <img
+      src={block.logo}
+      alt={`logo ${index + 1}`}
+      className="w-12 h-auto md:w-16 flex-shrink-0"
+    />
+    <p className="text-base md:text-lg theme-text !ml-0">
+      {block.text}
+    </p>
+  </div>
+))}
   </div>
 
   {/* Оставляем только второй абзац текста */}
