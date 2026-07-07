@@ -16,38 +16,56 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
       <section className="bg-white">
         <div className="page-container !pt-10 md:!pt-16 !pb-16">
           <article className="pb-5 md:pb-0">
-            <h1 className="!pb-0 theme-heading !whitespace-initial md:!whitespace-pre-line">
-              {data.headingOne}
-            </h1>
-            <div className="flex items-start justify-between pt-5 pb-4 md:items-center md:pb-16">
-              <div className="md:flex">
-                <div
-                  className="text-2xl font-light uppercase md:text-4xl text-leader"
-                  dangerouslySetInnerHTML={{ __html: postOne }}
-                />
-                <div
-                  className="text-2xl font-light uppercase md:hidden md:text-4xl text-leader"
-                  dangerouslySetInnerHTML={{ __html: postTwo }}
-                />
-              </div>
-              <div
-                className="hidden text-2xl font-light uppercase md:block md:text-4xl text-leader"
-                dangerouslySetInnerHTML={{ __html: postTwo }}
-              />
+  <h1 className="!pb-0 theme-heading !whitespace-initial md:!whitespace-pre-line">
+    {data.headingOne}
+  </h1>
+  
+  <div className="flex items-start justify-between pt-5 pb-4 md:items-center md:pb-16">
+    <div className="md:flex">
+      <div
+        className="text-2xl font-light uppercase md:text-4xl text-leader"
+        dangerouslySetInnerHTML={{ __html: postOne }}
+      />
+      <div
+        className="text-2xl font-light uppercase md:hidden md:text-4xl text-leader"
+        dangerouslySetInnerHTML={{ __html: postTwo }}
+      />
+    </div>
+    <div
+      className="hidden text-2xl font-light uppercase md:block md:text-4xl text-leader"
+      dangerouslySetInnerHTML={{ __html: postTwo }}
+    />
+    {/* Убираем img с логотипом отсюда */}
+  </div>
 
-              <img
-                src={data.skolkovoLogo}
-                alt="skolkovo logo"
-                className="w-12 md:w-20"
-              />
-            </div>
-            <p className="narrow-container md:pb-10 pb-7 theme-text !ml-0">
-              {data.textOne}
-            </p>
-            <Link href={data.buttonOne.link} className="theme-button">
-              <span className="relative">{data.buttonOne.text}</span>
-            </Link>
-          </article>
+  {/* Новые блоки с логотипами и текстом */}
+  <div className="space-y-6 md:space-y-4">
+    {data.featureBlocks?.map((block, index) => (
+      <div 
+        key={index}
+        className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-4"
+      >
+        <img
+          src={block.logo}
+          alt={`logo ${index + 1}`}
+          className="w-12 h-auto md:w-16 flex-shrink-0"
+        />
+        <p className="text-base md:text-lg theme-text !ml-0">
+          {block.title}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  {/* Оставляем только второй абзац текста */}
+  <p className="narrow-container md:pb-10 pb-7 theme-text !ml-0">
+    Наш главный принцип – максимальное удовольствие от вождения при сохранении высокого уровня безопасности.
+  </p>
+  
+  <Link href={data.buttonOne.link} className="theme-button">
+    <span className="relative">{data.buttonOne.text}</span>
+  </Link>
+</article>
           <article>
             <Image
               sizes="(max-width: 1200px) 100vw, 1200px"
