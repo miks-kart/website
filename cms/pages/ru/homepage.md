@@ -12,7 +12,10 @@ heroVideo:
 headingOne: Российский производитель картов для проката и спорта
 statementOne: "***20 лет*** *на рынке*"
 statementTwo: "***5 лет*** *инноваций*"
-skolkovoLogo: /images/skolkovo-logo.svg
+headingOne: Российский производитель картов для проката и спорта
+statementOne: "***20 лет*** *на рынке*"
+statementTwo: "***5 лет*** *инноваций*"
+
 textOne: >-
   МИКС КАРТ – официальный резидент инновационного центра Сколково в области
   разработки микроавтомобилей «карт».
@@ -22,6 +25,13 @@ textOne: >-
 buttonOne:
   text: О компании
   link: /o-kompanii
+
+# Новые блоки с логотипами
+featureBlocks:
+  - logo: /images/skolkovo-logo.svg
+    title: "МИКС КАРТ – официальный резидент инновационного центра Сколково в области разработки микроавтомобилей «карт»."
+  - logo: /images/EPS_rgb.svg
+    title: "Текст для второго блока с логотипом"
 imageOne: /images/122.jpg
 headingTwo: Наши карты
 textTwo: |-
