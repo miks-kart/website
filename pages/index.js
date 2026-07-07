@@ -48,7 +48,7 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
     <img
       src={block.logo}
       alt={`logo ${index + 1}`}
-      className="w-12 h-auto md:w-16 flex-shrink-0"
+      className="w-20 h-auto md:w-20 flex-shrink-0"
     />
     <p className="text-base md:text-lg theme-text !ml-0">
       {block.text}
@@ -58,7 +58,7 @@ export default function Index({ data, postOne, postTwo, contactForm, hero }) {
   </div>
 
   {/* Оставляем только второй абзац текста */}
-  <p className="narrow-container md:pb-10 pb-7 theme-text !ml-0">
+  <p className="narrow-container md:pb-10 pb-7 pt-7 theme-text !ml-0">
     Наш главный принцип – максимальное удовольствие от вождения при сохранении высокого уровня безопасности.
   </p>
   
